@@ -85,7 +85,7 @@ export default {
   display: block;
   float: left;
   font-size: 40px;
-  left: -21em;
+  left: -17em;
   top: .5em;
 }
 

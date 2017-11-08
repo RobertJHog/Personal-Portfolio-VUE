@@ -29,7 +29,7 @@ export default {
   margin-left: 33em;
   margin-top: 2em;
   font-size: 20px;
-  height: 63em;
+  /*height: 63em;*/
 }
 
 .aboutme p {

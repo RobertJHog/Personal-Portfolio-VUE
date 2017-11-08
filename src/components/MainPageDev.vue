@@ -43,7 +43,7 @@ export default {
 
 #main-container-dev {
   border: solid 1px black;
-  height: 63em;
+  // height: 63em;
   background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
@@ -222,7 +222,7 @@ flex: 1;
 @media screen and (max-width:736px) {
   #main-container-dev {
     max-width: 100%;
-    min-height: 185vh;
+    // min-height: 185vh;
   }
   .nav-bar {
     position: absolute;

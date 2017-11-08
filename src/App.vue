@@ -442,6 +442,12 @@ input:checked + .slider:before {
   }
 }
 
+@media screen and (min-width:321px) and (max-width:380px) {
+  #switch-dev, #switch-sales {
+    width:4em;
+  }
+}
+
 @media screen and (max-width:320px) {
   /*#app {
     max-width: 100%;

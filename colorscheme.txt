@@ -1,0 +1,14 @@
+rechterglas:
+
+#A32B97
+#260905
+
+linkerglas:
+
+#2535C9
+#2535C9
+
+achtergrond:
+
+#E4D8D8
+#EBDFDF

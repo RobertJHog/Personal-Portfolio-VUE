@@ -26,7 +26,6 @@ export default {
 
 .switch-container {
   position: relative;
-  margin-top: 15em;
 }
 
 #switch-sales {

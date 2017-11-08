@@ -37,7 +37,6 @@ export default {
     position: relative;
     margin-left: 55em;
     display: inline-block;
-    width: 60%;
     top: 0em;
   }
 }

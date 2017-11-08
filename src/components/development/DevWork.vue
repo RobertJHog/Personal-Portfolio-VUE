@@ -56,7 +56,25 @@ export default {
   font-size: 20px;
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+@media screen and (max-width:1680px) {
+  .dev-work {
+    margin-left: 15em;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .dev-work {
+    margin-left: 15em;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .dev-work {
+    margin-left: 15em;
+  }
+}
+
+@media screen and (max-width:768px) {
   .dev-work {
     max-width: 100%;
     min-height: 70vh;
@@ -89,7 +107,7 @@ export default {
   }
 }
 
-@media screen and (min-width:320px) and (max-width:480px) {
+@media screen and (max-width:480px) {
   .dev-work {
     max-width: 100%;
     height: 100%;

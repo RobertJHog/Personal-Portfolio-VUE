@@ -25,6 +25,7 @@ export default {
 .footer-container {
   height:8.5em;
   position: sticky;
+  max-width: 100%;
 }
 
 .icon-container {
@@ -44,7 +45,13 @@ a {
   color: #2c3e50;
 }
 
-@media screen and (min-width:320px) and (max-width:480px) {
+/*@media screen and (min-width:768px) and (max-width:1024px) {
+  .footer-container {
+    max-width: 100%;
+  }
+}*/
+
+@media screen and (max-width:480px) {
   .footer-container {
     max-width: 100%;
   }
@@ -74,10 +81,6 @@ a {
   }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
-  .footer-container {
-    max-width: 100%;
-  }
-}
+
 
 </style>

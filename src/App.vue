@@ -56,6 +56,11 @@ export default {
 </script>
 
 <style>
+
+body {
+  min-height: 100%;
+  background-color: #0E0B16;
+}
 #app {
   font-family: 'Fjalla One', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -63,17 +68,43 @@ export default {
   text-align: center;
   color: #2c3e50;
   background-color: #0E0B16;
-  height: 100%;
-  width: 100%;
+}
+
+#main-container-dev {
+  border: solid 1px black;
+  height: 80vh;
+  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
+  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
+  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
+  background-image: linear-gradient(90deg, #EBDFDF 5%, #d0772b);
+  /*background-color: #5C5857;*/
+}
+
+#main-container-sales {
+  border: solid 1px black;
+  height: 80vh;
+  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  /*background-color: #5C5857;*/
 }
 
 .top-container {
   max-width: 100%;
   position: relative;
   display: inline-block;
-  height: 10em;
+  height: 10vh;
   top: 1em;
   left: 10em;
+}
+
+#footer-container {
+  height: 10vh;
+  max-height: 20vh;
+  position: relative;
+  max-width: 100%;
+  background-color: #0E0B16;
 }
 
 .switch-container {
@@ -171,11 +202,14 @@ input:checked + .slider:before {
   opacity: 0;
 }
 
-@media screen and (orientation:landscape) and (max-width:1690px) {
-  #app {
+@media screen and (max-width:1690px) {
+  body {
+    min-height: 100%;
+  }
+  /*#app {
     width: 100%;
     height: 100%;
-  }
+  }*/
   .top-container {
     max-width: 100%;
     height: 10vh;
@@ -227,10 +261,13 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:1280px) {
-  #app {
+  body {
+    min-height: 100%;
+  }
+  /*#app {
     width: 100%;
     height: 100%;
-  }
+  }*/
   .top-container {
     max-width: 100%;
     height: 10vh;
@@ -282,13 +319,16 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:980px) {
+  body {
+    min-height: 100%;
+    min-width: 111vw;
+  }
   #app {
     width: 100%;
     height: 100%;
   }
   .top-container {
     max-width: 100%;
-    height: 10vh;
     top: 1em;
     left: 0em;
     margin-bottom: 5em;
@@ -337,12 +377,18 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:736px) {
-  /*#app {
-    max-width: 100%;
-  }*/
+  body {
+    min-height: 100%;
+  }
+  #app {
+    height: 130vh;
+  }
+  .aboutme {
+    border-radius: 5px;
+  }
   .top-container {
     max-width: 100%;
-    height: 15em;
+    min-height: 15vh;
     top: 1em;
     left: 0em;
   }
@@ -390,12 +436,13 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:480px) {
-  /*#app {
-    max-width: 100%;
-  }*/
+  body {
+    min-height: 100%;
+  }
+
   .top-container {
     max-width: 100%;
-    height: 10em;
+    min-height: 20vh;
     top: 1em;
     left: 0em;
   }
@@ -449,11 +496,14 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:320px) {
-  /*#app {
-    max-width: 100%;
-  }*/
+  body {
+    min-height: 100%;
+  }
+  #app {
+    height: 150vh;
+  }
   .top-container {
-    height: 8em;
+    min-height: 20vh;
   }
   .switch {
   }
@@ -468,6 +518,10 @@ input:checked + .slider:before {
 
   #switch-dev {
     font-size: 22.5px;
+  }
+  #footer-container {
+    height: 15vh;
+    width: 100vw;
   }
   .switch {
   }

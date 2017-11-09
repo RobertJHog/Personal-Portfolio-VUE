@@ -41,16 +41,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-#main-container-dev {
-  border: solid 1px black;
-  // height: 63em;
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  /*background-color: #5C5857;*/
-}
-
 h1, h2 {
   font-weight: normal;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-container">
+  <div id="footer-container">
     <div class="icon-container">
       <i><a target="_blank" href="https://www.github.com" class="fa fa-github" aria-hidden="true"></a></i>
       <i><a target="_blank" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" class="fa fa-linkedin" aria-hidden="true"> </a></i>
@@ -21,12 +21,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.footer-container {
-  height:8.5em;
-  position: sticky;
-  max-width: 100%;
-}
 
 .icon-container {
   position: relative;

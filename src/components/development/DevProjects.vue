@@ -24,7 +24,7 @@
       </div>
     </div>
     <keep-alive>
-      <component v-bind:is="component"></component>
+      <component class="grow" v-bind:is="component"></component>
     </keep-alive>
   </div>
 </template>
@@ -56,7 +56,10 @@ export default {
 <style scoped>
 
 .dev-projects-container {
-  height: 55em;
+  height: 67vh;
+  max-height:75vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .project-intro {
@@ -68,11 +71,11 @@ export default {
 }
 
 .dev-projects {
-  margin-top: 5em;
   display: block;
   width: 30%;
   margin-left: 26em;
   margin-top: 8em;
+  flex-basis: 35%;
 }
 
 .project-flex {
@@ -95,6 +98,9 @@ export default {
   max-height: 12em;
   border: 2px solid #2c3e50;
   border-radius: 5px;
+  -webkit-box-shadow: 0 7px 4px #777;
+  -moz-box-shadow: 0 7px 4px #777;
+  box-shadow: 0 7px 4px #777;
 }
 
 .project-pic img {
@@ -167,6 +173,13 @@ button:hover{
  flex: 1;
 }
 
+.grow:hover
+{
+  -webkit-transform: scale(1.45);
+  -ms-transform: scale(1.45);
+  transform: scale(1.45);
+}
+
 @media screen and (max-width:1680px) {
   .dev-container {
     max-width: 100%;
@@ -227,11 +240,7 @@ button:hover{
 
   .project-flex {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-flow: row;
-    flex-wrap: wrap;
+    display: block;
   }
 
   .project-intro {
@@ -247,8 +256,8 @@ button:hover{
     /*max-width: 100vh;
     max-height: 40vh;*/
     width: 100%;
-    margin-left: 0em;
-    margin-top: 2em;
+    margin-left: 3em;
+    margin-top: 4em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -258,7 +267,7 @@ button:hover{
     flex: 1;
     width: 100%;
     height: 20%;
-    margin-bottom: 9em;
+    margin-bottom: 3em;
     /*background-color: #d0772b;*/
   }
 
@@ -373,9 +382,20 @@ button:hover{
   .project-pic {
     width: 100%;
   }
+
+  .lined-thin {
+    display: none;
+  }
 }
 
 @media screen and (max-width:480px) {
+  .dev-projects-container {
+    height: 150vh;
+    max-height:150vh;
+    display: flex;
+    flex-direction: row;
+  }
+
   .project-intro {
     width: 100vw;
     margin-bottom: 0em;
@@ -402,7 +422,6 @@ button:hover{
   .dev-project {
     flex: 1;
     width: 100vw;
-    height: 40vh;
     margin-bottom: 0em;
     /*background-color: #d0772b;*/
   }

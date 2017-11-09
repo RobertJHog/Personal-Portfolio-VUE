@@ -8,7 +8,7 @@
       </div>
       <div class="skill-type">
         <h2>Back-end </h2>
-        <p>NodeJS, PHP, APIs, MongoDB, MySQL </p>
+        <p>NodeJS, PHP, APIs, MongoDB, MySQL, Rails, Ruby </p>
       </div>
       <div class="skill-type">
         <h2> Apps </h2>
@@ -31,25 +31,30 @@ export default {
 <style scoped>
 
 .dev-skills-container {
-  max-height: 60vh;
+  height: 55vh;
+  max-height:70vh;
 }
 
 .certificate-pic {
-  width: 60em;
+  height: 30em;
+  max-width: 40em;
   opacity: 1;
 }
 
 .certificate-container {
   display: inline-block;
   position: relative;
-  left: 90em;
-  bottom: 37.5em;
-  width: 60em;
+  margin-left: 98em;
+  bottom: 29em;
+  height: 30em;
+  max-width: 40em;
   padding: 1em;
   /*border: solid 2px #0E0B16;*/
   border-radius: 15px;
   /*background-color: #db8237;*/
-  box-shadow: 7.5px 7.5px 3.5px #888888;
+  -webkit-box-shadow: 0 7px 4px #777;
+  -moz-box-shadow: 0 7px 4px #777;
+  box-shadow: 0 12px 8px #777;
   display: flex;
   flex-direction: row;
   opacity: .75;
@@ -71,8 +76,27 @@ export default {
   margin-top: 18em;
 }
 
+@media and (max-width:980px) {
+  .dev-skills-container {
+    max-width: 100%;
+    min-height: 100%;
+  }
+  .certificate-container {
+    display: none;
+  }
+  .skill-type {
+    margin-bottom: 3em;
+  }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+  .dev-skills {
+    display: block;
+    width: 100%;
+    margin-left: 0em;
+    margin-top: 0em;
+  }
+}
+
+@media and (max-width:736px) {
   .dev-skills-container {
     max-width: 100%;
     min-height: 100%;
@@ -89,11 +113,11 @@ export default {
     display: block;
     width: 100%;
     margin-left: 0em;
-    margin-top: 0em;
+    margin-top: 4em;
   }
 }
 
-@media screen and (min-width:320px) and (max-width:480px) {
+@media screen (max-width:480px) {
   .dev-skills-container {
     max-width: 100%;
     height: 100%;

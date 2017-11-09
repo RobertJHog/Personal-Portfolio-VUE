@@ -16,10 +16,10 @@ export default {
 
 .powered-vue {
   position: relative;
-  margin-left: 135em;
   display: inline-block;
   width: 20em;
   top: 0em;
+  margin-left: 120em;
 }
 
 .powered-vue span {
@@ -56,9 +56,9 @@ export default {
 @media screen and (max-width:736px) {
   .powered-vue {
     position: relative;
-    margin-left: 10em;
+    margin-left: -105em;
     display: inline-block;
-    width: 60%;
+    width: 40%;
     top: -2em;
   }
 

@@ -27,7 +27,7 @@ export default {
   display: block;
   width: 30em;
   margin-left: 33em;
-  margin-top: 2em;
+  margin-top: 4em;
   font-size: 20px;
   /*height: 63em;*/
 }

@@ -40,16 +40,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#main-container-sales {
-  border: solid 1px black;
-  height: 63em;
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  /*background-color: #5C5857;*/
-}
-
 h1, h2 {
   font-weight: normal;
 }

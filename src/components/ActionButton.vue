@@ -98,25 +98,9 @@ $corner-radius: 5px;
 
 @media screen and (max-width:980px) {
   .actionbutton {
-    // $col-primary: white;
-    //
-    // position: relative;
-    // font-weight: 300;
-    // font-size: 17px;
-    //
-    // display: inline-block;
-    // position: relative;
-    // text-align: center;
-    // color: $col-primary;
-    // border: 1px solid $col-primary;
-    // border-radius: 0;
-    // right: 0em;
-    // top: -9em;
-    // width: 100%;
-    //
-    // line-height: 2em;
-    // padding-left: 0em;
-    // padding-right: 0em;
+    right: -14.5em;
+    top: -4em;
+    font-size: 14px;
   }
 }
 

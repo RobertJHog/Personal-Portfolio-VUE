@@ -34,7 +34,8 @@ export default {
   flex-direction: row;
   margin-left: 35em;
   margin-top: 10em;
-  height: 53em;
+  height: 62.5vh;
+  max-height:80vh;
 }
 
 .job-description {

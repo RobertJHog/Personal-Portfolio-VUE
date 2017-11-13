@@ -55,6 +55,8 @@ export default {
 .job-text {
   width: 20em;
   font-size: 20px;
+  word-spacing: 1.5px;
+  line-height: 35px;
 }
 
 @media screen and (max-width:1680px) {

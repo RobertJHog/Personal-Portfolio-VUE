@@ -45,12 +45,11 @@ export default {
 <style scoped>
 
 .sales-work {
-  margin-top: 10em;
   display: flex;
   flex-direction: row;
   width: 100em;
-  margin-left: 35em;
-  margin-top: 10em;
+  margin-left: 25em;
+  margin-top: 14em;
 }
 
 .job-description {
@@ -67,6 +66,8 @@ export default {
 .job-text {
   width: 20em;
   font-size: 20px;
+  word-spacing: 1.5px;
+  line-height: 35px;
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {

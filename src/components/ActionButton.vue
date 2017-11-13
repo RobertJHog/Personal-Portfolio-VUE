@@ -27,7 +27,7 @@ $corner-radius: 5px;
   border: 1px solid $col-primary;
   border-radius: $corner-radius;
   right: -28em;
-  top: -2em;
+  top: -3.5em;
 
   line-height: 3em;
   padding-left: 5em;

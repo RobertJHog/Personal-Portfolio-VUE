@@ -3,7 +3,7 @@
     <img class="project-view-pic" src="../../../assets/images/rjhportfolio.jpg" alt="Personal Portfolio">
     <div class="project-text">
       <span> Using the Vue.js framework I have build my own portfolio site from the ground up.
-        The idea was to make a responsive single page application that feels like a menu,
+        The idea was to make a responsive single page application that feels like a menu.
       </span>
       <ul>
         <i class="devicon-vuejs-plain icon"></i>

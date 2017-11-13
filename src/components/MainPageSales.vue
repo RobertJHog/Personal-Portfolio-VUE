@@ -1,19 +1,20 @@
 <template>
-  <div id="main-container-sales">
-    <div class="nav-bar">
-      <button class="dashed-thin" v-on:click="component = 'AboutMeSales'"> About </button>
-      <button class="lined-thin" v-on:click="component = 'SalesSkills'"> Skills </button>
-      <button class="dotted-thick" v-on:click="component = 'SalesProjects'"> Projects </button>
-      <button class="lined-thick" v-on:click="component = 'SalesWork'"> Work </button>
+  <transition name="fadeOpacity">
+    <div id="main-container-sales">
+      <div class="nav-bar">
+        <button class="dashed-thin" v-on:click="component = 'AboutMeSales'"> About </button>
+        <button class="lined-thin" v-on:click="component = 'SalesSkills'"> Skills </button>
+        <button class="dotted-thick" v-on:click="component = 'SalesProjects'"> Projects </button>
+        <button class="lined-thick" v-on:click="component = 'SalesWork'"> Work </button>
+      </div>
+      <keep-alive>
+        <component v-bind:is="component"></component>
+      </keep-alive>
     </div>
-    <keep-alive>
-      <component v-bind:is="component"></component>
-    </keep-alive>
-  </div>
+  </transition>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar'
 import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeSales from '@/components/sales/AboutMeSales'
 import SalesSkills from '@/components/sales/SalesSkills'
@@ -22,7 +23,6 @@ import SalesProjects from '@/components/sales/SalesProjects'
 export default {
   name: 'MainPageSales',
   components: {
-    NavBar,
     SiteSwitch,
     AboutMeSales,
     SalesSkills,
@@ -33,12 +33,21 @@ export default {
     return {
       component: 'AboutMeSales'
     }
-  }
+  },
+  transition: 'fadeOpacity'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.fadeOpacity-enter-active {
+  transition: opacity .35s ease-out;
+}
+
+.fadeOpacity-enter, .fadeOpacity-leave-active {
+  opacity: 0;
+}
 
 h1, h2 {
   font-weight: normal;

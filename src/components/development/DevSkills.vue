@@ -3,16 +3,33 @@
     <div class="dev-skills">
       <br>
       <div class="skill-type">
-        <h2> Front-end </h2>
-        <p> HTML5, CSS3, Javascript(ES6), React, Vue </p>
+          <h2> Front-end </h2>
+          <!-- <p> HTML5, CSS3, Javascript(ES6), React, Vue </p> -->
+            <div class="front-logos">
+              <img class="logo" src="../../assets/images/logos/html5.png" alt="html logo">
+              <img class="logo" src="../../assets/images/logos/css3.png" alt="Css3 logo">
+              <img class="logo" src="../../assets/images/logos/javascript.png" alt="JS logo">
+              <img class="logo" src="../../assets/images/logos/vue.png" alt="Vue logo">
+              <img class="logo" src="../../assets/images/logos/react.png" alt="React logo">
+            </div>
       </div>
       <div class="skill-type">
         <h2>Back-end </h2>
-        <p>NodeJS, PHP, APIs, MongoDB, MySQL, Rails, Ruby </p>
+        <!-- <p>NodeJS, APIs, MongoDB, MySQL, Rails, Ruby </p> -->
+        <div class="front-logos">
+          <img class="logo" src="../../assets/images/logos/nodejs.png" alt="nodejs logo">
+          <img class="logo" src="../../assets/images/logos/mongodb.png" alt="mongodb logo">
+          <img class="logo" src="../../assets/images/logos/mysql.png" alt="mysql logo">
+          <img class="logo" src="../../assets/images/logos/rails.png" alt="rails logo">
+          <img class="logo" src="../../assets/images/logos/ruby.png" alt="ruby logo">
+        </div>
       </div>
       <div class="skill-type">
         <h2> Apps </h2>
-        <p> React Native </p>
+        <!-- <p> React Native </p> -->
+        <div class="front-logos">
+          <img class="logo" src="../../assets/images/logos/reactnative.png" alt="react native logo">
+        </div>
       </div>
     </div>
     <div class="certificate-container">
@@ -23,7 +40,8 @@
 
 <script>
 export default {
-  name: 'DevSkills'
+  name: 'DevSkills',
+  transition: 'fadeOpacity'
 }
 </script>
 
@@ -45,7 +63,8 @@ export default {
   display: inline-block;
   position: relative;
   margin-left: 98em;
-  bottom: 29em;
+  margin-top: -6em;
+  bottom: 34em;
   height: 30em;
   max-width: 40em;
   padding: 1em;
@@ -69,12 +88,28 @@ export default {
 }
 
 .dev-skills {
-  margin-top: 10em;
+  margin-top: 4em;
   display: block;
   width: 50em;
-  margin-left: 30em;
-  margin-top: 18em;
+  margin-left: 10em;
+  font-size: 150%;
 }
+
+.front-logos {
+  display: flex;
+  flex-direction: row;
+  width: 20em;
+  margin-left: 15em;
+  justify-content: center;
+}
+
+.logo {
+  height: 3em;
+  width: 3em;
+  display: block;
+  margin-right: 1em;
+}
+
 
 @media and (max-width:980px) {
   .dev-skills-container {

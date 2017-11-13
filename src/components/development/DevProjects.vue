@@ -24,7 +24,9 @@
       </div>
     </div>
     <keep-alive>
-      <component class="grow" v-bind:is="component"></component>
+      <!-- <transition name='moveIn'> -->
+        <component class="grow" v-bind:is="component"></component>
+      </transition>
     </keep-alive>
   </div>
 </template>
@@ -48,12 +50,22 @@ export default {
     return {
       component: ''
     }
-  }
+  },
+  transition: 'moveIn'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+
+.moveIn-enter-active {
+  transition: opacity .2s ease-out;
+}
+
+.moveIn-enter, .moveIn-leave-active {
+  opacity: 0;
+}
 
 .dev-projects-container {
   height: 67vh;
@@ -171,6 +183,8 @@ button:hover{
  .lined-thin{
  /*border:solid 2px #d0772b;*/
  flex: 1;
+ font-family: monospace;
+ font-size: 110%;
 }
 
 .grow:hover

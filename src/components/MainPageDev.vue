@@ -1,19 +1,20 @@
 <template>
-  <div id="main-container-dev">
-      <div class="nav-bar">
-        <button class="lined-thick" v-on:click="component = 'AboutMeDev'"> About </button>
-        <button class="dashed-thick" v-on:click="component = 'DevSkills'"> Skills </button>
-        <button class="lined-thin" v-on:click="component = 'DevProjects'"> Projects </button>
-        <button class="dotted-thin" v-on:click="component = 'DevWork'"> Work </button>
-      </div>
-      <keep-alive>
-        <component v-bind:is="component"></component>
-      </keep-alive>
-  </div>
+  <transition name="fadeOpacity">
+    <div id="main-container-dev">
+        <div class="nav-bar">
+          <button class="lined-thick" v-on:click="component = 'AboutMeDev'"> About </button>
+          <button class="dashed-thick" v-on:click="component = 'DevSkills'"> Skills </button>
+          <button class="lined-thin" v-on:click="component = 'DevProjects'"> Projects </button>
+          <button class="dotted-thin" v-on:click="component = 'DevWork'"> Work </button>
+        </div>
+        <keep-alive>
+          <component v-bind:is="component"></component>
+        </keep-alive>
+    </div>
+  </transition>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar'
 import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeDev from '@/components/development/AboutMeDev'
 import DevSkills from '@/components/development/DevSkills'
@@ -23,7 +24,6 @@ import DevProjects from '@/components/development/DevProjects'
 export default {
   name: 'MainPageDev',
   components: {
-    NavBar,
     SiteSwitch,
     AboutMeDev,
     DevSkills,
@@ -34,12 +34,21 @@ export default {
     return {
       component: 'AboutMeDev'
     }
-  }
+  },
+  transition: 'fadeOpacity'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.fadeOpacity-enter-active {
+  transition: opacity .35s ease-out;
+}
+
+.fadeOpacity-enter, .fadeOpacity-leave-active {
+  opacity: 0;
+}
 
 h1, h2 {
   font-weight: normal;

@@ -33,7 +33,8 @@ export default {
   display: block;
   width: 50em;
   margin-left: 30em;
-  margin-top: 18em;
+  margin-top: 12em;
+  font-size: 130%;
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {

@@ -1,5 +1,6 @@
 <template>
   <div class="aboutme">
+    <img class="my-pic" src="../../assets/images/RJHogerbruggeDev.jpg" alt="My pic">
     <section class="temporary-intro">
       <div>
         <p>After ten awesome years in sales and business development I felt it was time for a change in my career.
@@ -10,7 +11,6 @@
            to develop my skillset as a programmer. <br><br> Now it's time to venture into the world of web development...
         </p>
       </div>
-      <!-- <img class="my-pic" src="../../assets/images/RJHogerbruggeDev.jpg" alt="My pic"> -->
     </section>
     <!-- <div class="aboutme-photo-container grow">
       <img class="aboutdev-pic" src="../../assets/images/codaisseur-final.jpg" alt="Codaisseur final">
@@ -28,76 +28,22 @@ export default {
 <style scoped>
 
 .aboutme {
-  height: 100%;
-  max-height:100%;
-  display:flex;
-  flex-direction: row;
-}
-
-.aboutme:before {
-  background: url("../../assets/images/rjgek.jpg") no-repeat center right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.6;
-}
-
-.temporary-intro {
+  display: block;
   width: 30em;
-  height: 40em;
-  font-size: 22px;
-  flex-basis: 27.5%;
-  margin-left: 30em;
-  margin-top: 8em;
+  margin-left: 33em;
+  margin-top: 4em;
+  font-size: 20px;
+  /*height: 63em;*/
+}
+
+.aboutme p {
   line-height: 40px;
-}
-
-.temporary-intro p {
-  width: 25em;
-}
-
-.aboutme-photo-container {
-  display: inline-block;
-  position: relative;
-  flex: 1;
-  margin-left: 14em;
-  top: 12em;
-  height: 30em;
-  max-width: 40em;
-  padding: 1em;
-  /*border: solid 2px #0E0B16;*/
-  border-radius: 15px;
-  /*background-color: #db8237;*/
-  box-shadow: 7.5px 7.5px 3.5px #888888;
-  display: flex;
-  flex-direction: row;
-  opacity: .75;
-  background-image: -moz-linear-gradient(90deg, #d0772b 5%, #EBDFDF);
-  background-image: -webkit-linear-gradient(90deg, #d0772b 5%, #EBDFDF);
-  background-image: -ms-linear-gradient(90deg, #d0772b 5%, #EBDFDF);
-  background-image: linear-gradient(90deg, #d0772b 5%, #EBDFDF);
-}
-
-.aboutdev-pic {
-  max-width: 40em;
-  opacity: 1;
 }
 
 .my-pic {
   border-radius: 100%;
   height: 10em;
-  margin-left: 15em;
-  margin-top: 10em;
-  z-index: 99;
-  box-shadow: 5px 5px 2.5px #888888;
-}
-
-.grow:hover
-{
-        -webkit-transform: scale(1.6);
-        -ms-transform: scale(1.6);
-        transform: scale(1.6);
+  border: 3px solid #2c3e50
 }
 
 @media screen and (max-width:1690px) {

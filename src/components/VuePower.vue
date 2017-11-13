@@ -18,7 +18,7 @@ export default {
   position: relative;
   display: inline-block;
   width: 20em;
-  top: 0em;
+  bottom: 1em;
   margin-left: 120em;
 }
 

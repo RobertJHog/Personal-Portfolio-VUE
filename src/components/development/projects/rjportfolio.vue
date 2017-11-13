@@ -2,8 +2,9 @@
   <div class="project-view">
     <img class="project-view-pic" src="../../../assets/images/rjhportfolio.jpg" alt="Personal Portfolio">
     <div class="project-text">
-      <span> Using the Vue.js framework I have build my own portfolio site from the ground up.
-        The idea was to make a responsive single page application that feels like a menu.
+      <span> Using the Vue.js framework I have built my own portfolio site from the ground up.
+        Going in my idea was to make a responsive single page application that feels like a menu.
+        Unless on mobile there is no scrolling required.
       </span>
       <ul>
         <i class="devicon-vuejs-plain icon"></i>
@@ -33,15 +34,17 @@ export default {
 .project-view {
   position: relative;
   margin-left: 16em;
-  top:10em;
+  top:13em;
   display: block;
   flex: 1;
   max-width: 40em;
-  max-height: 35em;
+  max-height: 39em;
   /*border: solid 2px #0E0B16;*/
   border-radius: 15px;
   /*background-color: #db8237;*/
-  box-shadow: 7.5px 7.5px 3.5px #888888;
+  -webkit-box-shadow: 0 7px 4px #777;
+  -moz-box-shadow: 0 7px 4px #777;
+  box-shadow: 0 7px 4px #777;
   display: flex;
   flex-direction: column;
   /*opacity: .5;*/
@@ -73,10 +76,11 @@ export default {
   max-width: 38em;
   text-align: center;
   width: 55em;
-  color: white;
+  color: #bcbbbc;
   font-size: 16px;
   line-height: 45px;
   padding: 1em;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width:1024px) {

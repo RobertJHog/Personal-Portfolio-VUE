@@ -1,9 +1,8 @@
 <template>
   <div id="footer-container">
     <div class="icon-container">
-      <i><a target="_blank" href="https://www.github.com" class="fa fa-github" aria-hidden="true"></a></i>
+      <i><a target="_blank" href="https://github.com/RobertJHog" class="fa fa-github" aria-hidden="true"></a></i>
       <i><a target="_blank" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" class="fa fa-linkedin" aria-hidden="true"> </a></i>
-      <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
     </div>
     <VuePower></VuePower>
   </div>

@@ -63,7 +63,7 @@ body {
 
 #main-container-dev {
   border: solid 1px black;
-  height: 80vh;
+  min-height: 80vh;
   background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
@@ -73,7 +73,7 @@ body {
 
 #main-container-sales {
   border: solid 1px black;
-  height: 80vh;
+  min-height: 80vh;
   background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
   background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
@@ -82,7 +82,7 @@ body {
 }
 
 #footer-container {
-  height: 10vh;
+  min-height: 10vh;
   max-height: 20vh;
   position: relative;
   max-width: 100%;

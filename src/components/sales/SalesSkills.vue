@@ -35,6 +35,8 @@ export default {
   margin-left: 30em;
   margin-top: 12em;
   font-size: 130%;
+  word-spacing: 1.5px;
+  line-height: 35px;
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {

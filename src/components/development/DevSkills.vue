@@ -104,10 +104,10 @@ export default {
 }
 
 .logo {
-  height: 3em;
-  width: 3em;
+  height: 4.5em;
+  width: 3.8em;
   display: block;
-  margin-right: 1em;
+  margin: 0em 1em;
 }
 
 

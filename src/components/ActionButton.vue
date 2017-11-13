@@ -26,12 +26,13 @@ $corner-radius: 5px;
   color: $col-primary;
   border: 1px solid $col-primary;
   border-radius: $corner-radius;
-  right: -28em;
-  top: -3.5em;
+  height: 3em;
+  margin-top: 1em;
 
   line-height: 3em;
-  padding-left: 5em;
-  padding-right: 5em;
+  margin-left: 0em;
+  flex-basis: 25%;
+  max-width: 15em;
 
   box-shadow: 0 0 0 0 transparent;
 

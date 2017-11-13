@@ -86,7 +86,7 @@ export default {
   display: block;
   width: 30%;
   margin-left: 26em;
-  margin-top: 8em;
+  margin-top: 10em;
   flex-basis: 35%;
 }
 

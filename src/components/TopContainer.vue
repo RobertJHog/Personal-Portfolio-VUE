@@ -1,6 +1,9 @@
 <template>
   <div class="top-container">
     <h1 class="portfolio-name"> R.J. Hogerbrugge </h1>
+      <!-- <div class="popup-arrow">
+        <img class="arrow-pic" src="../assets/images/arrow.png" alt="Popup arrow">
+      </div> -->
     <div class="switch-container">
       <h1 id="switch-dev"> WebDev </h1>
       <label class="switch">
@@ -35,38 +38,48 @@ export default {
 .top-container {
   max-width: 100%;
   position: relative;
-  display: inline-block;
-  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  min-height: 10vh;
   top: 1em;
   left: 10em;
 }
 
 .switch-container {
-  margin-right: 20em;
+  flex-basis: 50%;
 }
 
 .portfolio-name {
-  position: absolute;
+  flex-basis: 20%;
+  position: relative;
   display: block;
-  float: left;
   font-size: 40px;
-  left: -17em;
-  top: 0em;
+  top: 0.25em;
 }
 
 #switch-sales {
   position: relative;
   display: inline-block;
   width: 5em;
-  top: 0em;
+  top: .6em;
 }
 
 #switch-dev {
   display: inline-block;
   position: relative;
   width: 5em;
-  top: 0em;
+  top: .6em;
 }
+
+/*.popup-arrow {
+  height: 2em;
+  margin-top: 3em;
+  left: 20em;
+}
+
+.arrow-pic {
+  width: 2em;
+}*/
 
 /* The switch - the box around the slider */
 .switch {
@@ -74,7 +87,7 @@ export default {
   display: inline-block;
   width: 60px;
   height: 34px;
-  top: 0em;
+  top: 1.5em;
 }
 
 /* Hide default HTML checkbox */

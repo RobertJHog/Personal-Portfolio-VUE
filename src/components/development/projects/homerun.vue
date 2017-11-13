@@ -3,7 +3,7 @@
     <img class="project-view-pic" src="../../../assets/images/homerun.jpg" alt="Project Homerun">
     <div class="project-text">
       <span> During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned
-         me the ropes on HTML, CSS, Javascript and mysql within a large web application. The main focus was transforming the main framework (Angular 1.X) into Vue.js.
+         me the ropes on HTML5, CSS3, Javascript, mysql and javascript libraries within a large web application. The main focus was transforming the main framework (Angular 1.X) into  the newest version of Vue.js.
          It was refactoring a lot of excisting code into the new framework.
       </span>
       <ul>
@@ -37,11 +37,11 @@ export default {
 .project-view {
   position: relative;
   margin-left: 16em;
-  top:10em;
+  top:10.5em;
   display: block;
   flex: 1;
   max-width: 40em;
-  max-height: 41em;
+  max-height: 45em;
   /*border: solid 2px #0E0B16;*/
   border-radius: 15px;
   /*background-color: #db8237;*/
@@ -79,10 +79,11 @@ export default {
   max-width: 38em;
   text-align: center;
   width: 55em;
-  color: white;
+  color: #bcbbbc;
   font-size: 16px;
   line-height: 45px;
   padding: 1em;
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width:1024px) {

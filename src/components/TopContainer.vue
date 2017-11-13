@@ -1,9 +1,6 @@
 <template>
   <div class="top-container">
     <h1 class="portfolio-name"> R.J. Hogerbrugge </h1>
-      <!-- <div class="popup-arrow">
-        <img class="arrow-pic" src="../assets/images/arrow.png" alt="Popup arrow">
-      </div> -->
     <div class="switch-container">
       <h1 id="switch-dev"> WebDev </h1>
       <label class="switch">
@@ -36,13 +33,11 @@ export default {
 <style scoped>
 
 .top-container {
-  max-width: 100%;
   position: relative;
   display: flex;
   flex-direction: row;
   min-height: 10vh;
   top: 1em;
-  left: 10em;
 }
 
 .switch-container {
@@ -70,16 +65,6 @@ export default {
   width: 5em;
   top: .6em;
 }
-
-/*.popup-arrow {
-  height: 2em;
-  margin-top: 3em;
-  left: 20em;
-}
-
-.arrow-pic {
-  width: 2em;
-}*/
 
 /* The switch - the box around the slider */
 .switch {
@@ -201,145 +186,38 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:1280px) {
-  .top-container {
-    max-width: 100%;
-    height: 10vh;
-    top: 1em;
-    left: 0em;
-    margin-bottom: 5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: 2.5em;
+  .switch-container {
+    top: 1.75em;
   }
   .portfolio-name {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    left: 1em;
-    top: -.5em;
-  }
-  .switch-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    max-height: 5vh;
-    left: 6em;
-  }
-  #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 4em;
-    top: -.5em;
-  }
-
-  #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 4em;
-    top: -.5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: -.5em;
+    margin-top: 1em;
   }
 }
 
 @media screen and (max-width:980px) {
-  .top-container {
-    max-width: 100%;
-    top: 1em;
-    left: 0em;
-    margin-bottom: 5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: 2.5em;
-  }
-  .portfolio-name {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    left: 1em;
-    top: -.5em;
-  }
   .switch-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    max-height: 5vh;
-    left: 6em;
-  }
-  #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 4em;
-    top: -.5em;
-  }
-
-  #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 4em;
-    top: -.5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: -.5em;
+    left: 2em;
+    top: .5em;
   }
 }
 
 @media screen and (max-width:736px) {
   .top-container {
-    max-width: 100%;
     min-height: 15vh;
-    top: 1em;
-    left: 0em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: 2.5em;
   }
   .portfolio-name {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
     left: 20%;
     top: .5em;
   }
   .switch-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
     max-height: 5vh;
     margin-right: 0em;
   }
   #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 4em;
     top: 0em;
   }
 
   #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 4em;
     top: 0em;
   }
   .switch {
@@ -353,51 +231,7 @@ input:checked + .slider:before {
 
 @media screen and (max-width:480px) {
   .top-container {
-    max-width: 100%;
     min-height: 20vh;
-    top: 1em;
-    left: 0em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: 2.5em;
-  }
-  .portfolio-name {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    left: 20%;
-    top: .5em;
-  }
-  .switch-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    max-height: 5vh;
-    left:0%;
-  }
-  #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 4em;
-    top: 0em;
-  }
-
-  #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 4em;
-    top: 0em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: .5em;
   }
 }
 

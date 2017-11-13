@@ -64,19 +64,37 @@ export default {
     font-size: 22px;
     flex-basis: 27.5%;
     margin-left: 10em;
-    margin-top: 8em;
+    margin-top: 4em;
     line-height: 40px;
   }
 
   .temporary-intro p {
     width: 25em;
   }
+  .aboutme {
+    margin-left: 0em;
+    margin-top: 4em;
+    font-size: 20px;
+  }
+  .my-pic {
+    margin-left: 17em;
+  }
 }
 
 @media screen and (max-width:980px) {
   .temporary-intro {
-    margin-left: 10em;
+    margin-left: 5em;
     margin-top: 2em;
+    width: 25em;
+  }
+
+  .aboutme {
+    margin-left: 0em;
+    margin-top: 4em;
+    font-size: 20px;
+  }
+  .my-pic {
+    margin-left: 10em;
   }
 }
 
@@ -107,13 +125,8 @@ export default {
 
 @media screen and (max-width:320px) {
   .temporary-intro {
-    width: 100vh;
-    height: 140vh;
     font-size: 14px;
-    flex-basis: 27.5%;
-    margin-left: 1em;
-    margin-top: 2em;
-    line-height: 40px;
+
   }
 
   .temporary-intro p {

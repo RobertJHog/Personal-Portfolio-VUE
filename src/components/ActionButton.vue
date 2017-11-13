@@ -91,17 +91,18 @@ $corner-radius: 5px;
 
 @media screen and (max-width:1280px) {
   .actionbutton {
-    right: -16em;
-    top: -4em;
+    right: -2em;
+    top: 1em;
     font-size: 16px;
   }
 }
 
 @media screen and (max-width:980px) {
   .actionbutton {
-    right: -14.5em;
-    top: -4em;
+    right: -1.5em;
+    top: 0em;
     font-size: 14px;
+    max-width: 30%; 
   }
 }
 

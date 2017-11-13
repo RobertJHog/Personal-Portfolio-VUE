@@ -49,7 +49,6 @@ export default {
 <style lang="scss" scoped>
 
 body {
-  min-height: 100%;
   background-color: #0E0B16;
 }
 #app {
@@ -92,9 +91,6 @@ body {
 
 
 @media screen and (max-width:1690px) {
-  body {
-    min-height: 100%;
-  }
   /*#app {
     width: 100%;
     height: 100%;
@@ -102,9 +98,6 @@ body {
 }
 
 @media screen and (max-width:1280px) {
-  body {
-    min-height: 100%;
-  }
   /*#app {
     width: 100%;
     height: 100%;
@@ -112,10 +105,6 @@ body {
 }
 
 @media screen and (max-width:980px) {
-  body {
-    min-height: 100%;
-    min-width: 111vw;
-  }
   #app {
     width: 100%;
     height: 100%;
@@ -123,9 +112,7 @@ body {
 }
 
 @media screen and (max-width:480px) {
-  body {
-    min-height: 100%;
-  }
+
 }
 
 @media screen and (min-width:321px) and (max-width:380px) {

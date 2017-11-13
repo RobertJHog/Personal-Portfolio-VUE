@@ -50,7 +50,10 @@ export default {
 
 
 @media screen and (max-width:980px) {
-
+  .powered-vue {
+    margin-left: 30em;
+    max-width: 40%;
+  }
 }
 
 @media screen and (max-width:736px) {

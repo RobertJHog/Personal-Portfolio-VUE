@@ -76,7 +76,9 @@ export default {
   width: 70em;
   margin-top: -10em;
   border-radius: 15px;
-  box-shadow: 7.5px 7.5px 3.5px #888888;
+  -webkit-box-shadow: 0 7px 4px #777;
+  -moz-box-shadow: 0 7px 4px #777;
+  box-shadow: 0 7px 4px #777;
   display: flex;
   flex-direction: row;
   background-image: -moz-linear-gradient(90deg, #697de3 5%, #EBDFDF);

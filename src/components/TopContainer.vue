@@ -66,6 +66,7 @@ export default {
   top: .6em;
 }
 
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;

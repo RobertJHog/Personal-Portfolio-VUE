@@ -115,13 +115,13 @@ export default {
     margin-top: 0em;
     display: block;
     width: 50em;
-    margin-left: -10em;
+    margin-left: 5% ;
     font-size: 125%;
   }
   .certificate-container {
-    margin-left: 45em;
+    margin-left: 24em;
     margin-top: 0em;
-    bottom: 37em;
+    bottom: 4em;
     height: 20em;
     max-width: 28em;
   }
@@ -152,7 +152,7 @@ export default {
   .dev-skills {
     display: block;
     width: 100%;
-    margin-left: 0em;
+    margin-left: -10em;
     margin-top: 0em;
   }
 }

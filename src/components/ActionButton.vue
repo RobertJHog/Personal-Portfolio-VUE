@@ -94,7 +94,7 @@ $corner-radius: 5px;
     right: -2em;
     top: 0em;
     font-size: 16px;
-    min-width: 20em;
+    min-width: 15em;
   }
 }
 

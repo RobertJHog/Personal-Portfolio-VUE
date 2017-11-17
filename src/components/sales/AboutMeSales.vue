@@ -42,6 +42,18 @@ export default {
   border: 3px solid #2c3e50
 }
 
+@media screen and (max-width:1680px) {
+  .aboutme {
+    display: block;
+    width: 30em;
+    margin-left: 15em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-size: 20px;
+    /*height: 63em;*/
+  }
+}
+
 
 @media screen and (min-width:320px) and (max-width:480px) {
   .aboutme {

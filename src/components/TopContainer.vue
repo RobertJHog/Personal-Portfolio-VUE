@@ -187,11 +187,16 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width:1280px) {
+  .top-container {
+    min-height: 7em;
+    /*height: 10vh;*/
+  }
   .switch-container {
-    top: 1.75em;
+    top: 1em;
+    margin-left: -2em;
   }
   .portfolio-name {
-    margin-top: 1em;
+    margin-top: 1.25em;
   }
 }
 
@@ -232,36 +237,71 @@ input:checked + .slider:before {
 
 @media screen and (max-width:480px) {
   .top-container {
-    min-height: 20vh;
-  }
-}
-
-@media screen and (min-width:321px) and (max-width:380px) {
-  #switch-dev, #switch-sales {
-    width:4em;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .top-container {
-    min-height: 20vh;
+    min-height: 10em;
   }
   .switch {
   }
   .portfolio-name {
     font-size: 25px;
+    left: 0em;
+    top:-2em;
   }
   .switch-container {
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    left: -1em;
+    top: 5em;
   }
   #switch-sales {
+    flex-basis: 25%;
     font-size: 22.5px;
   }
 
   #switch-dev {
+    flex-basis: 25%;
     font-size: 22.5px;
   }
 
   .switch {
+    flex-basis: 25%;
+    margin-left:auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .top-container {
+    min-height: 10em;
+  }
+  .switch {
+  }
+  .portfolio-name {
+    font-size: 25px;
+    left: 0em;
+    top:-2em;
+  }
+  .switch-container {
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    left: -4em;
+    top: 5em;
+  }
+  #switch-sales {
+    flex-basis: 25%;
+    font-size: 22.5px;
+  }
+
+  #switch-dev {
+    flex-basis: 25%;
+    font-size: 22.5px;
+  }
+
+  .switch {
+    flex-basis: 25%;
+    margin-left:auto;
+    margin-right: auto;
   }
 }
 

@@ -48,8 +48,9 @@ export default {
   display: flex;
   flex-direction: row;
   width: 100em;
-  margin-left: 25em;
-  margin-top: 14em;
+  margin-left: 2em;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 .job-description {

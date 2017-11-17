@@ -46,12 +46,15 @@ export default {
   border: 3px solid #2c3e50
 }
 
-@media screen and (max-width:1690px) {
-  .aboutme {
-    max-width: 100%;
-    height: 100%;
-  }
-
+@media screen and (max-width:1680px) {
+  /*.aboutme {
+    display: block;
+    width: 30em;
+    margin-left: 15em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-size: 20px;
+  }*/
 }
 
 @media screen and (max-width:1280px) {
@@ -59,25 +62,31 @@ export default {
     display: none;
   }
   .temporary-intro {
-    width: 30em;
+    width: 50%;
     height: 40em;
     font-size: 22px;
     flex-basis: 27.5%;
-    margin-left: 10em;
-    margin-top: 4em;
+    margin-left: 7.5%;
+    margin-top: 0em;
     line-height: 40px;
   }
 
   .temporary-intro p {
     width: 25em;
   }
+
   .aboutme {
-    margin-left: 0em;
+    display: block;
+    width: 30em;
+    margin-left: 10em;
     margin-top: 4em;
+    margin-bottom: 4em;
     font-size: 20px;
+    /*height: 63em;*/
+
   }
   .my-pic {
-    margin-left: 17em;
+    margin-left: 2em;
   }
 }
 
@@ -105,11 +114,12 @@ export default {
 
 @media screen and (max-width:480px) {
   .aboutme {
-    height: 140vh;
-    max-height: 180vh;
+    height: 45em;
+    max-height: 60em;
+    margin-top: 1em;
   }
   .temporary-intro {
-    width: 100vh;
+    width: 22em;
     height: 140vh;
     font-size: 16px;
     flex-basis: 27.5%;
@@ -119,7 +129,11 @@ export default {
   }
 
   .temporary-intro p {
-    width: 23em;
+    width: 20em;
+  }
+
+  .my-pic {
+    margin-left: -12em;
   }
 }
 
@@ -131,6 +145,10 @@ export default {
 
   .temporary-intro p {
     width: 20em;
+  }
+
+  .my-pic {
+    margin-left: -14em;
   }
 
 }

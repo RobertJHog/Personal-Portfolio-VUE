@@ -49,8 +49,8 @@ export default {
 <style scoped>
 
 .dev-skills-container {
-  height: 55vh;
-  max-height:70vh;
+  /*height: 55vh;
+  max-height:70vh;*/
 }
 
 .certificate-pic {
@@ -63,7 +63,7 @@ export default {
   display: inline-block;
   position: relative;
   margin-left: 98em;
-  margin-top: -6em;
+  margin-top: -18em;
   bottom: 34em;
   height: 30em;
   max-width: 40em;
@@ -84,7 +84,7 @@ export default {
 }
 
 .skill-type {
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 }
 
 .dev-skills {
@@ -108,6 +108,32 @@ export default {
   width: 3.8em;
   display: block;
   margin: 0em 1em;
+}
+
+@media screen and (max-width:1280px) {
+  .dev-skills {
+    margin-top: 0em;
+    display: block;
+    width: 50em;
+    margin-left: -10em;
+    font-size: 125%;
+  }
+  .certificate-container {
+    margin-left: 45em;
+    margin-top: 0em;
+    bottom: 37em;
+    height: 20em;
+    max-width: 28em;
+  }
+  .certificate-pic {
+    height: 20em;
+    max-width: 28em;
+    opacity: 1;
+  }
+  .front-logos {
+    width: 30em;
+    margin-left: 10em;
+  }
 }
 
 

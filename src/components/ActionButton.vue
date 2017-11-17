@@ -92,8 +92,9 @@ $corner-radius: 5px;
 @media screen and (max-width:1280px) {
   .actionbutton {
     right: -2em;
-    top: 1em;
+    top: 0em;
     font-size: 16px;
+    min-width: 20em;
   }
 }
 
@@ -102,7 +103,7 @@ $corner-radius: 5px;
     right: -1.5em;
     top: 0em;
     font-size: 14px;
-    max-width: 30%; 
+    max-width: 30%;
   }
 }
 
@@ -132,6 +133,9 @@ $corner-radius: 5px;
 
 @media screen and (max-width:480px) {
   .actionbutton {
+    top: -2em;
+    min-width: 8em;
+    right: 5em;
   }
 }
 
@@ -143,7 +147,9 @@ $corner-radius: 5px;
 
 @media screen and (max-width:320px) {
   .actionbutton {
-    top: -7.25em;
+    top: -2em;
+    min-width: 8em;
+    right: 10em;
   }
 }
 

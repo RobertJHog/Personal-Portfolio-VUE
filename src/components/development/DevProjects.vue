@@ -68,8 +68,6 @@ export default {
 }
 
 .dev-projects-container {
-  height: 67vh;
-  max-height:75vh;
   display: flex;
   flex-direction: row;
 }
@@ -162,13 +160,6 @@ button{
   outline:none;
   box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  /*
-  Above is shorthand for:
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  border-bottom-right-radius: 225px 15px;
-  border-bottom-left-radius:15px 255px;
-  */
 }
 
 button:hover{
@@ -189,9 +180,9 @@ button:hover{
 
 .grow:hover
 {
-  -webkit-transform: scale(1.45);
+  /*-webkit-transform: scale(1.45);
   -ms-transform: scale(1.45);
-  transform: scale(1.45);
+  transform: scale(1.45);*/
 }
 
 @media screen and (max-width:1680px) {

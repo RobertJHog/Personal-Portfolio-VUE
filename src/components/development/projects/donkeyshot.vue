@@ -1,8 +1,8 @@
 <template>
-  <div class="project-view">
-    <img class="project-view-pic" src="../../../assets/images/donkeyshot.jpg" alt="DonkeyShot website">
+  <div class="project-view donkeyshot">
+    <!-- <img class="project-view-pic" src="../../../assets/images/donkeyshot.jpg" alt="DonkeyShot website"> -->
     <div class="project-text">
-      <span> For a former sales client I have built a company website based on his preferences.
+      <span> For a former sales client I have built a company <a href="http://www.donkeyshot.nl" class="project-link">website</a> based on his preferences.
         I have used a HTML5up template as a starting point.
       </span>
       <ul>
@@ -16,6 +16,7 @@
 
 <script>
 
+import './project-styles.scss'
 export default {
   name: 'Donkeyshot'
 }
@@ -24,62 +25,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-.icon {
-  font-size: 30px;
-  margin-right: 2em;
-  color: #697de3;
+.donkeyshot {
+  top:70em !important;
+  height: 12.5em !important;
 }
 
-.project-view {
-  position: relative;
-  margin-left: 16em;
-  top:13em;
-  display: block;
-  flex: 1;
-  max-width: 40em;
-  max-height: 36em;
-  /*border: solid 2px #0E0B16;*/
-  border-radius: 15px;
-  /*background-color: #db8237;*/
-  -webkit-box-shadow: 0 7px 4px #777;
-  -moz-box-shadow: 0 7px 4px #777;
-  box-shadow: 0 7px 4px #777;
-  display: flex;
-  flex-direction: column;
-  /*opacity: .5;*/
-  background-color: #2c3e50;
-  /*background-image: -moz-linear-gradient(90deg, #0E0B16 5%, #2c3e50);
-  background-image: -webkit-linear-gradient(90deg, #0E0B16 5%, #2c3e50);
-  background-image: -ms-linear-gradient(90deg, #0E0B16 5%, #2c3e50);
-  background-image: linear-gradient(90deg, #0E0B16 5%, #2c3e50);*/
-}
-
-/*.project-view:hover {
-  opacity: 1;
-}*/
-
-.project-view-pic {
-  flex: 1;
-  display: block;
-  position: relative;
-  max-width: 40em;
-  left: 0em;
-  padding: 1em 1em;
-  border-radius: 15px;
-}
-
-.project-text {
-  top: 0em;
-  flex: 1;
-  position: relative;
-  max-width: 38em;
-  text-align: center;
-  width: 55em;
-  color: #bcbbbc;
-  font-size: 16px;
-  line-height: 45px;
-  padding: 1em;
-  letter-spacing: 1px;
+@media screen and (max-width:1280px) {
+  .project-view {
+    position: relative;
+    margin-left: 5em;
+    top: 5em;
+    display: block;
+    flex: 1;
+    max-width: 40em;
+    max-height: 20em;
+  }
+  .project-view-pic {
+    max-width: 38em;
+  }
 }
 
 @media screen and (max-width:1024px) {

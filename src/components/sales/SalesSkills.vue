@@ -29,11 +29,10 @@ export default {
 }
 
 .sales-skills {
-  margin-top: 10em;
+  margin-top: 4em;
   display: block;
   width: 50em;
-  margin-left: 30em;
-  margin-top: 12em;
+  margin-left: 5em;
   font-size: 130%;
   word-spacing: 1.5px;
   line-height: 35px;

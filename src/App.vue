@@ -40,13 +40,12 @@ export default {
       } else {
         this.checked = false
       }
-      console.log(value) // someValue
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 body {
   background-color: #0E0B16;
@@ -58,6 +57,7 @@ body {
   text-align: center;
   color: #2c3e50;
   background-color: #0E0B16;
+  box-sizing: border-box;
 }
 
 #main-container-dev {
@@ -88,8 +88,6 @@ body {
   background-color: #0E0B16;
 }
 
-
-
 @media screen and (max-width:1690px) {
   /*#app {
     width: 100%;
@@ -98,10 +96,7 @@ body {
 }
 
 @media screen and (max-width:1280px) {
-  /*#app {
-    width: 100%;
-    height: 100%;
-  }*/
+
 }
 
 @media screen and (max-width:980px) {

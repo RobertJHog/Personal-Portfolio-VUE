@@ -67,7 +67,17 @@ export default {
 
 @media screen and (max-width:1280px) {
   .dev-work {
-    margin-left: 15em;
+    display: flex;
+    flex-direction: row;
+    margin-left: 4em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+
+  .job-description {
+    width: 25em;
+    padding: 0em 6em;
+    opacity: 0.5;
   }
 }
 
@@ -126,11 +136,8 @@ export default {
     opacity: 1;
     flex: 1;
     padding: 0em;
+    margin-bottom: 6em;
   }
-
-  /*.job-description h2, .job-description h3,  {
-    width: 15em;
-  }*/
 
   .job-description:hover {
     opacity: 1;

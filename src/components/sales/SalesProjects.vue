@@ -117,6 +117,12 @@ export default {
   padding: 1em;
 }
 
+@media screen and (max-width:1680px) {
+  .project-view {
+    display: none;
+  }
+}
+
 
 @media screen and (min-width:768px) and (max-width:1024px) {
   .sales-container {

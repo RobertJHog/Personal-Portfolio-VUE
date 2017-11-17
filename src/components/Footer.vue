@@ -24,7 +24,7 @@ export default {
 .icon-container {
   position: relative;
   width: 40em;
-  top: 3em;
+  top: 1.5em;
   left: 1em;
 }
 
@@ -38,11 +38,17 @@ a {
   color: #2c3e50;
 }
 
-/*@media screen and (min-width:768px) and (max-width:1024px) {
-  .footer-container {
-    max-width: 100%;
+@media screen (max-width:1280px) {
+  .icon-container {
+    margin-bottom: 1em;
   }
-}*/
+}
+
+@media screen (max-width:980px) {
+  .icon-container {
+    top: 2em;
+  }
+}
 
 @media screen and (max-width:480px) {
   .footer-container {

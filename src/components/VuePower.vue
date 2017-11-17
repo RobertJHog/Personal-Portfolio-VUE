@@ -45,6 +45,7 @@ export default {
   .powered-vue {
     margin-left: 35em;
     max-width: 40%;
+    top: -1.5em;
   }
 }
 

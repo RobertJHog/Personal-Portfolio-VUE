@@ -1,16 +1,19 @@
 <template>
-  <div class="top-container">
-    <h1 class="portfolio-name"> R.J. Hogerbrugge </h1>
-    <div class="switch-container">
-      <h1 id="switch-dev"> WebDev </h1>
-      <label class="switch">
-        <input v-on:click="emit" type="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <h1 id="switch-sales"> Sales </h1>
+  <nav class="level">
+    <div class="level-left">
+      <h1 class="portfolio-name"> R.J. Hogerbrugge </h1>
     </div>
-    <ActionButton></Actionbutton>
-  </div>
+    <div class="level-right">
+      <div class="switch-container">
+        <h1 id="switch-dev"> WebDev </h1>
+        <label class="switch">
+          <input v-on:click="emit" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <h1 id="switch-sales"> Sales </h1>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -32,15 +35,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.top-container {
+/*.top-container {
   position: relative;
   display: flex;
   flex-direction: row;
   min-height: 10vh;
   top: 1em;
-}
+}*/
 
-.switch-container {
+/*.switch-container {
   flex-basis: 50%;
 }
 
@@ -50,7 +53,7 @@ export default {
   display: block;
   font-size: 40px;
   top: 0.25em;
-}
+}*/
 
 #switch-sales {
   position: relative;
@@ -133,106 +136,6 @@ input:checked + .slider:before {
 
 .fade-enter, .fade-leave-to {
   opacity: 0;
-}
-
-@media screen and (max-width:1690px) {
-  .top-container {
-    max-width: 100%;
-    height: 10vh;
-    top: 1em;
-    left: 0em;
-    margin-bottom: 5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: 2.5em;
-  }
-  .portfolio-name {
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    left: 1em;
-    top: -.5em;
-  }
-  .switch-container {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
-    max-height: 5vh;
-    left: 6em;
-  }
-  #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 4em;
-    top: -.5em;
-  }
-
-  #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 4em;
-    top: -.5em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: -.5em;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .top-container {
-    min-height: 7em;
-    /*height: 10vh;*/
-  }
-  .switch-container {
-    top: 1em;
-    margin-left: -2em;
-  }
-  .portfolio-name {
-    margin-top: 1.25em;
-  }
-}
-
-@media screen and (max-width:980px) {
-  .switch-container {
-    left: 2em;
-    top: .5em;
-  }
-}
-
-@media screen and (max-width:736px) {
-  .top-container {
-    min-height: 15vh;
-  }
-  .portfolio-name {
-    left: 20%;
-    top: .5em;
-  }
-  .switch-container {
-    max-height: 5vh;
-    margin-right: 0em;
-  }
-  #switch-sales {
-    top: 0em;
-  }
-
-  #switch-dev {
-    top: 0em;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    top: .5em;
-  }
 }
 
 @media screen and (max-width:480px) {

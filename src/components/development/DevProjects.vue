@@ -1,9 +1,52 @@
 <template>
+  <div class="projects-container level">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent is-11">
+        <article class="tile is-child notification is-info">
+          <p class="title">Director Portfolio</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="../../assets/images/rolfportfolio.jpg" alt="Project Movie Portfolio">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent is-11">
+        <article class="tile is-child notification is-info">
+          <p class="title">Company site</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="../../assets/images/donkeyshot.jpg">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <!-- <div class="tile is-ancestor">
+      <div class="tile is-parent is-11">
+        <article class="tile is-child notification is-info">
+          <p class="title">Portfolio site</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="../../assets/images/rjhportfolio.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent is-11">
+        <article class="tile is-child notification is-info">
+          <p class="title">Homerun</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="../../assets/images/homerun.jpg">
+          </figure>
+        </article>
+      </div>
+    </div> -->
+  </div>
+</template>
+
+
+<!-- <template>
   <div class="dev-projects-container">
     <div class="dev-projects">
-      <!-- <div class="project-intro">
-        <h1> Projects I have worked on. </h1>
-      </div> -->
       <div class="project-flex">
         <div class="dev-project">
           <button class="lined-thin" v-on:click="component = 'Homerun'"> Homerun </button>
@@ -24,12 +67,11 @@
       </div>
     </div>
     <keep-alive>
-      <!-- <transition name='moveIn'> -->
         <component class="grow" v-bind:is="component"></component>
       </transition>
     </keep-alive>
   </div>
-</template>
+</template> -->
 
 <script>
 
@@ -58,6 +100,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.tile {
+  margin: 1em;
+}
 
 .moveIn-enter-active {
   transition: opacity .2s ease-out;
@@ -83,7 +128,7 @@ export default {
 .dev-projects {
   display: block;
   width: 30%;
-  margin-left: 26em;
+  margin-left: 40em;
   margin-top: 10em;
   flex-basis: 35%;
 }

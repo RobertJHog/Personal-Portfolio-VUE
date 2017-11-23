@@ -15,7 +15,7 @@ export default {
   name: 'SiteSwitch',
   data () {
     return {
-      componentSales: false
+      componentDev: false
     }
   }
 }

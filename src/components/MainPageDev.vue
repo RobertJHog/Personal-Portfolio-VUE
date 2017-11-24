@@ -13,7 +13,6 @@
 <script>
 import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeDev from '@/components/development/AboutMeDev'
-import DevSkills from '@/components/development/DevSkills'
 import DevWork from '@/components/development/DevWork'
 import DevProjects from '@/components/development/DevProjects'
 import NavBar from '@/components/NavBar'
@@ -23,15 +22,19 @@ export default {
   components: {
     SiteSwitch,
     AboutMeDev,
-    DevSkills,
     DevProjects,
     DevWork,
     NavBar
   },
   data () {
     return {
-      // component: 'AboutMeDev'
-      component: 'DevProjects'
+      component: 'DevWork'
+    }
+  },
+  computed: {
+    componentSwitch (value) {
+      this.component = value
+      console.log('SWITCH!')
     }
   },
   transition: 'fadeOpacity'

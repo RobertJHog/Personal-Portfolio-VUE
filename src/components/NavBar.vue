@@ -8,13 +8,13 @@
               Menu
             </a>
             <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" v-on:click="component = 'AboutMeDev'">
+              <a class="navbar-item" v-model="component" value="AboutMeDev" v-on:click="emit">
                 About me
               </a>
-              <a class="navbar-item" v-on:click="component = 'DevProjects'">
+              <a class="navbar-item" v-model="component" value="DevProjects" v-on:click="emit">
                 My projects
               </a>
-              <a class="navbar-item" v-on:click="component = 'DevWork'">
+              <a class="navbar-item" v-model="component" value="DevWork" v-on:click="emit">
                 My jobs
               </a>
             </div>
@@ -71,11 +71,18 @@ export default {
   name: 'NavBar',
   data () {
     return {
-      msg: 'R.J. Hogerbrugge'
+      msg: 'R.J. Hogerbrugge',
+      component: 'AboutMeDev'
     }
   },
   components: {
     SiteSwitch
+  },
+  methods: {
+    emit (value) {
+      this.$emit('componentSwitch', value)
+      console.log('emit?')
+    }
   }
 }
 </script>

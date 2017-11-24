@@ -1,37 +1,23 @@
 <template>
-  <div class="tile is-ancestor">
-    <div class="tile is parent">
-      <p class="title"> Homerun 2017 - 2017 </p>
+  <div class="columns">
+    <div class="column">
+      <p class="title">Homerun 2017 - 2017</p>
       <p class="subtitle"> Junior developer </p>
+      <p class="job-text"> During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned me the ropes on
+        HTML, CSS, Javascript and mysql within a large web application.
+        <br><br>
+        The main focus was transforming the main framework (Angular 1.X) into Vue.js. It was refactoring a lot of excisting code into the new framework.
+      </p>
+    </div>
+    <div class="column">
+      <p class="title">Your company?</p>
+      <p class="subtitle"> Junior developer </p>
+      <p class="job-text"> Always open to new opportunities in webdevelopment with HTML5, CSS3 (Sass, Less), Javascript, Ruby and libraries/frameworks such as
+        React, Vue, Angular, Rails. Very willing to learn new languages and frameworks.
+        </p>
     </div>
   </div>
 </template>
-
-<!--
-<template>
-  <div class="work-container">
-    <div class="level job">
-      <div class="level-left">
-        <p class="title"> Homerun 2017 - 2017 </p>
-        <p class="subtitle"> Junior developer </p>
-        <p class="job-text"> During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned me the ropes on
-          HTML, CSS, Javascript and mysql within a large web application.
-          <br><br>
-          The main focus was transforming the main framework (Angular 1.X) into Vue.js. It was refactoring a lot of excisting code into the new framework.
-        </p>
-      </div>
-    </div>
-    <div class="level job">
-      <div class="level-left">
-        <p class="title"> Your company? </p>
-        <p class="subtitle"> Developer </p>
-      </div>
-      <div class="level-right">
-        <p class="job-text"> Be smart. Take a shot. ;-) </p>
-      </div>
-    </div>
-  </div>
-</template> -->
 
 <script>
 export default {
@@ -42,8 +28,23 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.tile {
-  margin: 3em;
+.title {
+  margin-bottom: 1em;
+}
+
+.columns {
+  margin: 2em auto;
+}
+
+.column {
+  margin: 2em;
+  width: 20em;
+  height: 60vh;
+  opacity: .5;
+}
+
+.column:hover {
+  opacity: 1;
 }
 
 </style>

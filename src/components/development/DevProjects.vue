@@ -1,11 +1,12 @@
 <template>
   <div class="projects-container">
+    <Modal v-if="showModal" @close="showModal = false">
+    </Modal>
+
     <div class="tile is-ancestor">
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="showModal = true">Director Portfolio</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/rolfportfolio.jpg" alt="Project Movie Portfolio">
           </figure>
@@ -14,8 +15,6 @@
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="showModal = true">Homerun</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/homerun.jpg">
           </figure>
@@ -24,8 +23,6 @@
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="showModal = true">DonkeyShot</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/donkeyshot.jpg">
           </figure>
@@ -37,8 +34,6 @@
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="showModal = true">My Portfolio</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/rjhportfolio.jpg">
           </figure>
@@ -46,16 +41,12 @@
       </div>
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">Company Site (coming soon)</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
+          <button id="show-modal" @click="showModal = true">Company Site(coming soon)</button>
         </article>
       </div>
       <div class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="showModal = true">Future Project</button>
-            <Modal v-if="showModal" @close="showModal = false">
-            </Modal>
         </article>
       </div>
     </div>
@@ -70,6 +61,7 @@ import Donkeyshot from '@/components/development/projects/donkeyshot'
 import Rolfportfolio from '@/components/development/projects/rolfportfolio'
 import Rjportfolio from '@/components/development/projects/rjportfolio'
 import Modal from '@/components/Modal'
+// import ProjectsJson from '@/assets/projects.json';
 
 export default {
   name: 'DevProjects',
@@ -92,6 +84,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.projects-container {
+  margin-bottom: 2em;
+}
 
 #show-modal {
   margin-bottom: 1em;

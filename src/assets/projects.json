@@ -1,0 +1,39 @@
+{
+    "projects":
+        {"Homerun": [
+            {"title":"Homerun"},
+            {"description":"During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned
+               me the ropes on HTML5, CSS3, Javascript, mysql and javascript libraries within a large web application. The main focus was transforming the main framework (Angular 1.X) into  the newest version of Vue.js.
+               It was refactoring a lot of excisting code into the new framework."},
+            {"image":"../../assets/images/homerun.jpg"}
+          ]},
+        "DirectorPortfolio":
+            {"title":"Director Portfolio"},
+            {"description":"For a friend I have built a portfolio website to showcase his movies. I have used a HTML5up template as starting point."},
+            {"image":"../../assets/images/rolfportfolio.jpg"}
+        },
+        "MyPortfolio":
+            {"title":"My Portfolio"},
+            {"description":"Using the Vue.js framework I have built my own portfolio site from the ground up.
+              Going in my idea was to make a responsive single page application that feels like a menu.
+              Unless on mobile there is no scrolling required."},
+            {"image":"../../assets/images/rjhportfolio.jpg"}
+        },
+        "DonkeyShot":
+            {"title":"Company Website"},
+            {"description":"For a former sales client I have built a company website based on his preferences.
+              I have used a HTML5up template as a starting point."},
+            {"image":"../../assets/images/donkeyshot.jpg"}
+        },
+        "CVTCommodities":
+            {"title":"Company Website"},
+            {"description":"In progress"},
+            {"image":"../../assets/images/cvt.jpg"}
+        },
+        "FutureProject":
+            {"title":"Future project"},
+            {"description":"Coming soon"},
+            {"image":"../../assets/images/cvt.jpg"}
+        }
+    ]
+}

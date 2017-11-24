@@ -6,15 +6,13 @@
 
           <div class="modal-header">
             <slot name="header">
-              <h1> Homerun </h1>
+              <h1> {{ projectTitle }} </h1>
             </slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              <span> During 4 months I have worked as a junior developer on the platform of <a href="https://www.homerun.co" class="project-link"> Homerun </a>. Under supervision they learned
-                 me the ropes on HTML5, CSS3, Javascript, mysql and javascript libraries within a large web application. The main focus was transforming the main framework (Angular 1.X) into  the newest version of Vue.js.
-                 It was refactoring a lot of excisting code into the new framework.
+              <span> {{ projectDescription }}
               </span>
             </slot>
           </div>
@@ -22,10 +20,10 @@
           <div class="modal-footer">
             <slot name="footer">
               <figure class="image is-4by3">
-                <img src="../assets/images/homerun.jpg">
+                <img src="">
               </figure>
               <button class="modal-default-button" @click="$emit('close')">
-                OK
+                Close
               </button>
             </slot>
           </div>
@@ -38,7 +36,8 @@
 <script>
 
 export default {
-  name: 'modal'
+  name: 'modal',
+  props: ['projectImage', 'projectDescription', 'projectTitle']
 }
 </script>
 
@@ -52,7 +51,7 @@ export default {
   left: 0;
   min-width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .75);
   display: table;
   transition: opacity .3s ease;
 }
@@ -71,19 +70,28 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  border: #d0772b solid 2px;
 }
 
 .modal-header h3 {
   margin-top: 0;
   color: #42b983;
+  padding: 2em;
 }
 
 .modal-body {
   margin: 20px 0;
+  padding: 2em;
+}
+
+.modal-footer {
+  padding: 2em;
 }
 
 .modal-default-button {
-  float: right;
+  font-size: 16px;
+  margin-top: 2em;
+  border-radius: 5px;
 }
 
 /*

@@ -86,6 +86,8 @@ export default {
 .navbar {
   margin: 0 2em;
   min-height: 10vh;
+  background-color: #0E0B16;
+  font-size: 20px;
 }
 
 </style>

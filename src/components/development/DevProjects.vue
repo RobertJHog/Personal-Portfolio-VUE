@@ -1,77 +1,67 @@
 <template>
-  <div class="projects-container level">
+  <div class="projects-container">
     <div class="tile is-ancestor">
-      <div class="tile is-parent is-11">
-        <article class="tile is-child notification is-info">
-          <p class="title">Director Portfolio</p>
-          <p class="subtitle">With an image</p>
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">Director Portfolio</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/rolfportfolio.jpg" alt="Project Movie Portfolio">
           </figure>
         </article>
       </div>
-      <div class="tile is-parent is-11">
-        <article class="tile is-child notification is-info">
-          <p class="title">Company site</p>
-          <p class="subtitle">With an image</p>
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">Homerun</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
+          <figure class="image is-4by3">
+            <img src="../../assets/images/homerun.jpg">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">DonkeyShot</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/donkeyshot.jpg">
           </figure>
         </article>
       </div>
     </div>
-    <!-- <div class="tile is-ancestor">
-      <div class="tile is-parent is-11">
-        <article class="tile is-child notification is-info">
-          <p class="title">Portfolio site</p>
-          <p class="subtitle">With an image</p>
+
+    <div class="tile is-ancestor">
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">My Portfolio</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
           <figure class="image is-4by3">
             <img src="../../assets/images/rjhportfolio.jpg">
           </figure>
         </article>
       </div>
-      <div class="tile is-parent is-11">
-        <article class="tile is-child notification is-info">
-          <p class="title">Homerun</p>
-          <p class="subtitle">With an image</p>
-          <figure class="image is-4by3">
-            <img src="../../assets/images/homerun.jpg">
-          </figure>
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">Company Site (coming soon)</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
         </article>
       </div>
-    </div> -->
-  </div>
-</template>
-
-
-<!-- <template>
-  <div class="dev-projects-container">
-    <div class="dev-projects">
-      <div class="project-flex">
-        <div class="dev-project">
-          <button class="lined-thin" v-on:click="component = 'Homerun'"> Homerun </button>
-          <img class="project-pic" src="../../assets/images/homerun.jpg" alt="Project Homerun">
-        </div>
-        <div class="dev-project">
-          <button class="lined-thin" v-on:click="component = 'Rjportfolio'"> Personal Portfolio </button>
-          <img class="project-pic" src="../../assets/images/rjhportfolio.jpg" alt="Project Portfolio">
-        </div>
-        <div class="dev-project">
-          <button class="lined-thin" v-on:click="component = 'Rolfportfolio'"> Director Portfolio </button>
-          <img class="project-pic" src="../../assets/images/rolfportfolio.jpg" alt="Project Movie Portfolio">
-        </div>
-        <div class="dev-project">
-          <button class="lined-thin" v-on:click="component = 'Donkeyshot'"> DonkeyShot </button>
-          <img class="project-pic" src="../../assets/images/donkeyshot.jpg" alt="Project DonkeyShot">
-        </div>
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child box border-solid">
+          <button id="show-modal" @click="showModal = true">Future Project</button>
+            <Modal v-if="showModal" @close="showModal = false">
+            </Modal>
+        </article>
       </div>
     </div>
-    <keep-alive>
-        <component class="grow" v-bind:is="component"></component>
-      </transition>
-    </keep-alive>
-  </div>
-</template> -->
+</div>
+
+</template>
 
 <script>
 
@@ -79,6 +69,7 @@ import Homerun from '@/components/development/projects/homerun'
 import Donkeyshot from '@/components/development/projects/donkeyshot'
 import Rolfportfolio from '@/components/development/projects/rolfportfolio'
 import Rjportfolio from '@/components/development/projects/rjportfolio'
+import Modal from '@/components/Modal'
 
 export default {
   name: 'DevProjects',
@@ -86,11 +77,13 @@ export default {
     Homerun,
     Rolfportfolio,
     Donkeyshot,
-    Rjportfolio
+    Rjportfolio,
+    Modal
   },
   data () {
     return {
-      component: ''
+      component: '',
+      showModal: false
     }
   },
   transition: 'moveIn'
@@ -100,393 +93,43 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+#show-modal {
+  margin-bottom: 1em;
+  color: #4a4a4a;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  background: none;
+  border: none;
+}
+
+#show-modal:hover {
+  color: #3273dc;
+}
+
+/*#show-modal button {
+  color: #3273dc;
+  cursor: pointer;
+  text-decoration: none;
+}*/
+
+.border-solid {
+  border: #d0772b solid 2px;
+  -webkit-box-shadow: 0px 7px 4px #777;
+  -moz-box-shadow: 0px 7px 4px #777;
+  box-shadow: 0px 7px 4px #777;
+}
+
+.projects-container {
+}
+
 .tile {
   margin: 1em;
 }
 
-.moveIn-enter-active {
-  transition: opacity .2s ease-out;
-}
-
-.moveIn-enter, .moveIn-leave-active {
-  opacity: 0;
-}
-
-.dev-projects-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-intro {
-  margin-bottom: 3.5em;
-}
-
-.project-intro h1 {
-  /*color: #2196F3;*/
-}
-
-.dev-projects {
-  display: block;
-  width: 30%;
-  margin-left: 40em;
-  margin-top: 10em;
-  flex-basis: 35%;
-}
-
-.project-flex {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: row;
-  flex-wrap: wrap;
-}
-
-.dev-project {
-  flex-basis: 35%;
-  padding: .2em;
-  /*background-color: #d0772b;*/
-}
-
-.project-pic {
-  /*max-width: 15em;*/
-  max-height: 12em;
-  border: 2px solid #2c3e50;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 7px 4px #777;
-  -moz-box-shadow: 0 7px 4px #777;
-  box-shadow: 0 7px 4px #777;
-}
-
-.project-pic img {
-  border-radius: 15px;
-}
-
-/*Button*/
-
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-
-button:hover,
-button.hover {
-  box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
-}
-
-button:active,
-button.active {
-  box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
-}
-
-button{
-  align-self:center;
-  background:transparent;
-  padding:1rem 1rem;
-  margin:1rem 1rem;
-  transition:all .5s ease;
-  color:#41403E;
-  font-size:1em;
-  letter-spacing:1px;
-  outline:none;
-  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-}
-
-button:hover{
-  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
-}
-
-.lined-thick{
-  border:solid 7px #41403E;
-  flex: 1;
-}
-
- .lined-thin{
- /*border:solid 2px #d0772b;*/
- flex: 1;
- font-family: monospace;
- font-size: 110%;
-}
-
-.grow:hover
-{
-  /*-webkit-transform: scale(1.45);
-  -ms-transform: scale(1.45);
-  transform: scale(1.45);*/
-}
-
-@media screen and (max-width:1680px) {
-  .dev-container {
-    max-width: 100%;
-    height: 70em;
-  }
-
-  .project-flex {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
-
-  .project-intro {
-    width: 100%;
-  }
-
-  .project-intro h1 & p {
-    width: 100%
-  }
-
-  .dev-projects {
-    display: block;
-    /*max-width: 100vh;
-    max-height: 40vh;*/
-    width: 100%;
-    margin-left: 0em;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .dev-project {
-    flex: 1;
-    width: 100%;
-    height: 20%;
-    margin-bottom: 9em;
-    /*background-color: #d0772b;*/
-  }
-
-  .project-view {
-    display: block;
-  }
-
-  .project-pic {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:1280px) {
-  .dev-container {
-    max-width: 100%;
-    height: 70em;
-  }
-
-  .project-flex {
-    position: relative;
-    display: block;
-  }
-
-  .project-intro {
-    width: 100%;
-  }
-
-  .project-intro h1 & p {
-    width: 100%
-  }
-
-  .dev-projects {
-    display: block;
-    /*max-width: 100vh;
-    max-height: 40vh;*/
-    width: 100%;
-    margin-left: 3em;
-    margin-top: 4em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .dev-project {
-    flex: 1;
-    width: 100%;
-    height: 20%;
-    margin-bottom: 3em;
-    /*background-color: #d0772b;*/
-  }
-
-  .project-view {
-    display: block;
-  }
-
-  .project-pic {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:980px) {
-  .dev-container {
-    max-width: 100%;
-    height: 70em;
-  }
-
-  .project-flex {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
-
-  .project-intro {
-    width: 100%;
-  }
-
-  .project-intro h1 & p {
-    width: 100%
-  }
-
-  .dev-projects {
-    display: block;
-    /*max-width: 100vh;
-    max-height: 40vh;*/
-    width: 100%;
-    margin-left: 0em;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .dev-project {
-    flex: 1;
-    width: 100%;
-    height: 20%;
-    margin-bottom: 9em;
-    /*background-color: #d0772b;*/
-  }
-
-  .project-view {
-    display: block;
-  }
-
-  .project-pic {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width:736px) {
-  .dev-container {
-    max-width: 100%;
-    height: 70em;
-  }
-
-  .project-flex {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
-
-  .project-intro {
-    width: 100%;
-  }
-
-  .project-intro h1 & p {
-    width: 100%
-  }
-
-  .dev-projects {
-    display: block;
-    /*max-width: 100vh;
-    max-height: 40vh;*/
-    width: 100%;
-    margin-left: 0em;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .dev-project {
-    flex: 1;
-    width: 100%;
-    height: 20%;
-    margin-bottom: 9em;
-    /*background-color: #d0772b;*/
-  }
-
-  .project-view {
-    display: none;
-  }
-
-  .project-pic {
-    width: 100%;
-  }
-
-  .lined-thin {
-    display: none;
-  }
-}
-
-@media screen and (max-width:480px) {
-  .dev-projects-container {
-    height: 150vh;
-    max-height:150vh;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .project-intro {
-    width: 100vw;
-    margin-bottom: 0em;
-  }
-
-  .dev-container {
-    max-width: 100%;
-    min-height: 70em;
-  }
-
-  .dev-projects {
-    margin-top: 10em;
-    display: block;
-    width: 100%;
-    max-width: 90vh;
-    max-height: 40vh;
-    margin-left: 0em;
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .dev-project {
-    flex: 1;
-    width: 100vw;
-    margin-bottom: 0em;
-    /*background-color: #d0772b;*/
-  }
-
-  .project-view {
-    display: none;
-  }
-
-  .project-pic {
-    width: 90vw;
-  }
-}
-
-@media screen and (max-width:320px) {
-
+.project-tile {
+  margin: 1em;
 }
 
 </style>

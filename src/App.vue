@@ -26,12 +26,12 @@ export default {
   },
   data () {
     return {
-      checked: false
+      salesComponent: false
     }
   },
   computed: {
     activeComponent () {
-      return this.checked ? 'MainPageSales' : 'MainPageDev'
+      return this.salesComponent ? 'MainPageSales' : 'MainPageDev'
     }
   },
   methods: {
@@ -62,7 +62,6 @@ export default {
   background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
   background-image: linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  /*background-color: #5C5857;*/
 }
 
 #main-container-sales {

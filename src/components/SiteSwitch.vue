@@ -15,7 +15,7 @@ export default {
   name: 'SiteSwitch',
   data () {
     return {
-      componentSales: false
+      componentDev: false
     }
   }
 }
@@ -26,6 +26,7 @@ export default {
 
 .switch-container {
   position: relative;
+  font-size: 26px;
 }
 
 #switch-sales {
@@ -77,11 +78,11 @@ export default {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #3273dc;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #3273dc;
 }
 
 input:checked + .slider:before {

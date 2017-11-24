@@ -1,38 +1,40 @@
 <template>
-  <transition name="fadeOpacity">
-    <div id="main-container-dev">
-        <div class="nav-bar">
-          <button class="lined-thick" v-on:click="component = 'AboutMeDev'"> About </button>
-          <button class="dashed-thick" v-on:click="component = 'DevSkills'"> Skills </button>
-          <button class="lined-thin" v-on:click="component = 'DevProjects'"> Projects </button>
-          <button class="dotted-thin" v-on:click="component = 'DevWork'"> Work </button>
-        </div>
+  <div class="dev-container">
+    <transition name="fadeOpacity">
+      <div class="level" id="main-container-dev">
         <keep-alive>
           <component v-bind:is="component"></component>
         </keep-alive>
-    </div>
-  </transition>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>
 import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeDev from '@/components/development/AboutMeDev'
-import DevSkills from '@/components/development/DevSkills'
 import DevWork from '@/components/development/DevWork'
 import DevProjects from '@/components/development/DevProjects'
+import NavBar from '@/components/NavBar'
 
 export default {
   name: 'MainPageDev',
   components: {
     SiteSwitch,
     AboutMeDev,
-    DevSkills,
     DevProjects,
-    DevWork
+    DevWork,
+    NavBar
   },
   data () {
     return {
-      component: 'AboutMeDev'
+      component: 'DevWork'
+    }
+  },
+  computed: {
+    componentSwitch (value) {
+      this.component = value
+      console.log('SWITCH!')
     }
   },
   transition: 'fadeOpacity'
@@ -41,6 +43,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.dev-container {
+  margin: 0 2em;
+}
 
 .fadeOpacity-enter-active {
   transition: opacity .35s ease-out;
@@ -68,6 +74,10 @@ a {
   color: #42b983;
 }
 
+// NavBar
+
+
+
 button:hover,
 button.hover {
   box-shadow: inset 0 0 0 1px #27496d,0 5px 15px #193047;
@@ -79,12 +89,12 @@ button.active {
 }
 
 .nav-bar {
-  position: absolute;
-  left: 8em;
-  margin-top: 17em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+ position: absolute;
+ left: 8em;
+ margin-top: 17em;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
 button{
@@ -140,104 +150,6 @@ flex: 1;
 .dashed-thin{
   border:dashed 2px #41403E;
   flex: 1;
-}
-
-// @media (max-width:620px){
-//   body{
-//     h1{
-//       margin-top:2rem;
-//     }
-//     & section{
-//       display:flex;
-//       flex-direction:column;
-//       justify-content:center;
-//       margin-bottom:1rem;
-//       & button{
-//         align-self:center;
-//         margin-bottom:2rem;
-//       }
-//     }
-//   }
-// }
-
-
-@media screen and (max-width:1690px) {
-  #main-container-dev {
-    max-width: 100%;
-    min-height: 100%;
-  }
-  .nav-bar {
-    position: absolute;
-    left: 50%;
-    margin-top: -6em;
-    left: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-  }
-  button {
-    font-size: 1.25em;
-    color: white;
-    padding: .76em;
-  }
-  .lined-thick{
-    border:solid 5px white;
-    flex: 1;
-  }
-
-  .dotted-thick{
-   border:dotted 3px white;
-   flex: 1;
-  }
-
-  .dashed-thick{
-  border:dashed 3px white;
-  flex: 1;
-  }
-
-   .lined-thin{
-   border:solid 2px white;
-   flex: 1;
-  }
-
-  .dotted-thin{
-   border:dotted 2px white;
-   flex: 1;
-  }
-
-  .dashed-thin{
-    border:dashed 2px white;
-    flex: 1;
-  }
-}
-
-@media screen and (max-width:1280px) {
-}
-
-@media screen and (max-width:980px) {
-}
-
-@media screen and (max-width:736px) {
-  #main-container-dev {
-    max-width: 100%;
-    // min-height: 185vh;
-  }
-  .nav-bar {
-    position: absolute;
-    margin-left: -6em;
-    margin-top: -4.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 90%;
-  }
-
-  button {
-    font-size: .7em;
-    color: white;
-    padding: .5em;
-  }
 }
 
 @media screen and (max-width:480px) {

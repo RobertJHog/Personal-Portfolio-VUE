@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      component: 'DevWork'
+      component: 'AboutMeDev'
     }
   },
   computed: {

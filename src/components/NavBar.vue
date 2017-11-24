@@ -27,11 +27,11 @@
         <div class="navbar-brand">
           <div id="navbar-logo">
             <SiteSwitch></SiteSwitch>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+            <!-- <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -49,7 +49,7 @@
                 </a>
               </p>
               <p class="control">
-                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/">
+                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
                   <span class="icon">
                     <i class="fa fa-linkedin"></i>
                   </span>

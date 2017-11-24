@@ -1,6 +1,6 @@
 <template>
 
-  <div id="container">
+  <div id="loading-container">
     <div class="stick"></div>
     <div class="stick"></div>
     <div class="stick"></div>

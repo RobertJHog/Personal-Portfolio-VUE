@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
     <NavBar></NavBar>
     <!-- <TopContainer @checked="onClickChild"></TopContainer> -->
       <keep-alive>
@@ -26,8 +27,12 @@ export default {
   },
   data () {
     return {
-      salesComponent: false
+      salesComponent: false,
+      isLoading: false
     }
+  },
+  created: function () {
+    this.openLoading()
   },
   computed: {
     activeComponent () {
@@ -41,6 +46,13 @@ export default {
       } else {
         this.checked = false
       }
+    },
+    openLoading () {
+      const vm = this
+      vm.isLoading = true
+      setTimeout(() => {
+        vm.isLoading = false
+      }, 2 * 1000)
     }
   }
 }
@@ -70,6 +82,10 @@ export default {
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
   background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
   /*background-color: #5C5857;*/
+}
+
+.loading-overlay .loading-background {
+  background: #0E0B16;
 }
 
 </style>

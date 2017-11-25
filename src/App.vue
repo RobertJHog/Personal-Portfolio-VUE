@@ -4,7 +4,7 @@
     <NavBar></NavBar>
     <!-- <TopContainer @checked="onClickChild"></TopContainer> -->
       <keep-alive>
-        <component v-bind:is="activeComponent"></component>
+        <component v-bind:is="activeContainer"></component>
       </keep-alive>
       <VFooter></VFooter>
       <router-view/>
@@ -35,8 +35,8 @@ export default {
     this.openLoading()
   },
   computed: {
-    activeComponent () {
-      return this.salesComponent ? 'MainPageSales' : 'MainPageDev'
+    activeContainer () {
+      return this.$store.state.contentEnvironment[0].sales ? 'MainPageSales' : 'MainPageDev'
     }
   },
   methods: {
@@ -52,7 +52,7 @@ export default {
       vm.isLoading = true
       setTimeout(() => {
         vm.isLoading = false
-      }, 2 * 1000)
+      }, 0.25 * 1000)
     }
   }
 }

@@ -75,22 +75,30 @@ export default {
   },
   methods: {
     switchAboutMe () {
-      this.$store.dispatch('changeComponent', 'AboutMeDev')
-      console.log('component CHANGE AboutMeDev')
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'AboutMeSales')
+      } else {
+        this.$store.dispatch('changeComponent', 'AboutMeDev')
+      }
     },
     switchMyProjects () {
-      this.$store.dispatch('changeComponent', 'DevProjects')
-      console.log('component CHANGE dev Projects')
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'SalesProjects')
+      } else {
+        this.$store.dispatch('changeComponent', 'DevProjects')
+      }
     },
     switchMyJobs () {
-      this.$store.dispatch('changeComponent', 'DevWork')
-      console.log('component CHANGE dev Work')
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'SalesWork')
+      } else {
+        this.$store.dispatch('changeComponent', 'DevWork')
+      }
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 .navbar {

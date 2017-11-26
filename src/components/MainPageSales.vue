@@ -15,6 +15,7 @@ import AboutMeSales from '@/components/sales/AboutMeSales'
 import SalesSkills from '@/components/sales/SalesSkills'
 import SalesWork from '@/components/sales/SalesWork'
 import SalesProjects from '@/components/sales/SalesProjects'
+
 export default {
   name: 'MainPageSales',
   components: {
@@ -33,7 +34,7 @@ export default {
     this.openLoading()
   },
   mounted:
-    function switchAboutMe () {
+    function () {
       this.$store.dispatch('changeComponent', 'AboutMeSales')
       console.log('component CHANGE AboutMeSales')
     },
@@ -41,9 +42,6 @@ export default {
     activeComponent () {
       return this.$store.getters.currentComponent
     }
-    // currentEnvironment () {
-    //   return this.$store.getters.currentEnvironment
-    // }
   },
   methods: {
     openLoading () {

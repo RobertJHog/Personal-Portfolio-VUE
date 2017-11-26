@@ -45,29 +45,43 @@ export default new Vuex.Store({
         description: 'Coming soon',
         image: '../../assets/images/cvt.jpg'}
     ],
-    components: [
-      {id: 1, name: 'AboutMeDev'},
-      {id: 2, name: ' DevProjects'},
-      {id: 3, name: ' DevWork'},
-      {id: 4, name: ' AboutMeSales'},
-      {id: 5, name: ' SalesProjects'},
-      {id: 6, name: ' SalesWork'}
+    activeComponent: [
+      {id: 1, name: 'AboutMeDev'}
     ],
-    contentEnvironment: [
+    activeEnvironment: [
       {id: 1, sales: false}
     ]
   },
   mutations: {
     changeEnvironment (state, value) {
-      if (state.contentEnvironment[0].sales === false) {
-        state.contentEnvironment[0].sales = true
-      } else (state.contentEnvironment[0].sales = false)
-      console.log('Store CHANGE')
+      if (state.activeEnvironment[0].sales === false) {
+        state.activeEnvironment[0].sales = true
+      } else (state.activeEnvironment[0].sales = false)
+      console.log('Store environment CHANGE')
+    },
+    changeComponent (state, value) {
+      state.activeComponent[0].name = value
+      console.log('Store component CHANGE')
+    }
+  },
+  actions: {
+    changeEnvironment ({commit}, payload) {
+      setTimeout(() => {
+        commit('changeEnvironment', payload)
+      }, 500)
+    },
+    changeComponent ({commit}, payload) {
+      setTimeout(() => {
+        commit('changeComponent', payload)
+      }, 500)
     }
   },
   getters: {
     currentEnvironment (state) {
-      return state.contentEnvironment[0].sales
+      return state.activeEnvironment[0].sales
+    },
+    currentComponent (state) {
+      return state.activeComponent[0].name
     }
   }
 })

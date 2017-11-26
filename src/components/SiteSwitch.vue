@@ -18,7 +18,13 @@ export default {
   },
   methods: {
     switchEnvironment (value) {
-      this.$store.commit('changeEnvironment', value)
+      console.log(this.salesEnvironment)
+      if (this.salesEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'AboutMeSales')
+      } else {
+        this.$store.dispatch('changeComponent', 'AboutMeDev')
+      }
+      this.$store.dispatch('changeEnvironment', value)
       console.log('component CHANGE')
     }
   },

@@ -5,8 +5,15 @@
         <p class="title">Latest Project</p> <br>
         <p class="subtitle"> DonkeyShot </p>
         <span> For a former sales client I have built a company <a href="http://www.donkeyshot.nl" class="project-link">website</a> based on his preferences.
-       I have used a HTML5up template as a starting point.
-     </span>
+          I have used a HTML5up template as a starting point.
+        </span>
+        <div class="language-icons">
+          <ul>
+            <i class="devicon-javascript-plain icon"></i>
+            <i class="devicon-html5-plain icon"></i>
+            <i class="devicon-sass-plain icon"></i>
+          </ul>
+        </div>
       </div>
       <div class="tile is-child box border-solid">
         <figure class="image is-16by9 project-pic">
@@ -65,6 +72,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.language-icons {
+  margin: 1em auto;
+}
 
 .tile {
   padding: 1em;

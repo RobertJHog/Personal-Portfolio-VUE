@@ -2,9 +2,7 @@
   <div class="dev-container">
     <transition name="fadeOpacity">
       <div class="level" id="main-container-dev">
-        <keep-alive>
-          <component v-bind:is="component"></component>
-        </keep-alive>
+          <component v-bind:is="activeComponent"></component>
       </div>
     </transition>
   </div>
@@ -15,7 +13,6 @@ import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeDev from '@/components/development/AboutMeDev'
 import DevWork from '@/components/development/DevWork'
 import DevProjects from '@/components/development/DevProjects'
-import NavBar from '@/components/NavBar'
 
 export default {
   name: 'MainPageDev',
@@ -23,18 +20,33 @@ export default {
     SiteSwitch,
     AboutMeDev,
     DevProjects,
-    DevWork,
-    NavBar
+    DevWork
   },
   data () {
     return {
       component: 'AboutMeDev'
     }
   },
+  created:
+    function () {
+      this.openLoading()
+    },
+  mounted:
+    function () {
+      this.$store.dispatch('changeComponent', 'AboutMeDev')
+    },
   computed: {
-    componentSwitch (value) {
-      this.component = value
-      console.log('SWITCH!')
+    activeComponent () {
+      return this.$store.getters.currentComponent
+    }
+  },
+  methods: {
+    openLoading () {
+      const vm = this
+      vm.isLoading = true
+      setTimeout(() => {
+        vm.isLoading = false
+      }, 0.5 * 1000)
     }
   },
   transition: 'fadeOpacity'

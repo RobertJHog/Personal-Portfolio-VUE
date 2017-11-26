@@ -2,10 +2,7 @@
   <div id="app">
     <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
     <NavBar></NavBar>
-    <!-- <TopContainer @checked="onClickChild"></TopContainer> -->
-      <keep-alive>
         <component v-bind:is="activeContainer"></component>
-      </keep-alive>
       <VFooter></VFooter>
       <router-view/>
   </div>
@@ -36,23 +33,16 @@ export default {
   },
   computed: {
     activeContainer () {
-      return this.$store.state.contentEnvironment[0].sales ? 'MainPageSales' : 'MainPageDev'
+      return this.$store.state.activeEnvironment[0].sales ? 'MainPageSales' : 'MainPageDev'
     }
   },
   methods: {
-    onClickChild (value) {
-      if (this.checked === false) {
-        this.checked = true
-      } else {
-        this.checked = false
-      }
-    },
     openLoading () {
       const vm = this
       vm.isLoading = true
       setTimeout(() => {
         vm.isLoading = false
-      }, 0.25 * 1000)
+      }, 0.5 * 1000)
     }
   }
 }

@@ -8,18 +8,18 @@
               Menu
             </a>
             <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" v-model="component" value="AboutMeDev" v-on:click="emit">
+              <a class="navbar-item" @click="switchAboutMe">
                 About me
               </a>
-              <a class="navbar-item" v-model="component" value="DevProjects" v-on:click="emit">
+              <a class="navbar-item" @click="switchMyProjects">
                 My projects
               </a>
-              <a class="navbar-item" v-model="component" value="DevWork" v-on:click="emit">
+              <a class="navbar-item" @click="switchMyJobs">
                 My jobs
               </a>
             </div>
           </div>
-          <a class="navbar-item" v-on:click="component = 'ContentContainer'">
+          <a class="navbar-item">
             Portfolio R.J. Hogerbrugge
           </a>
         </div>
@@ -27,11 +27,6 @@
         <div class="navbar-brand">
           <div id="navbar-logo">
             <SiteSwitch></SiteSwitch>
-            <!-- <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div> -->
           </div>
         </div>
 
@@ -79,9 +74,17 @@ export default {
     SiteSwitch
   },
   methods: {
-    emit (value) {
-      this.$emit('componentSwitch', value)
-      console.log('emit?')
+    switchAboutMe () {
+      this.$store.dispatch('changeComponent', 'AboutMeDev')
+      console.log('component CHANGE AboutMeDev')
+    },
+    switchMyProjects () {
+      this.$store.dispatch('changeComponent', 'DevProjects')
+      console.log('component CHANGE dev Projects')
+    },
+    switchMyJobs () {
+      this.$store.dispatch('changeComponent', 'DevWork')
+      console.log('component CHANGE dev Work')
     }
   }
 }

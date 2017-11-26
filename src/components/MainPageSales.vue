@@ -1,17 +1,12 @@
 <template>
-  <transition name="fadeOpacity">
-    <div id="main-container-sales">
-      <div class="nav-bar">
-        <button class="dashed-thin" v-on:click="component = 'AboutMeSales'"> About </button>
-        <button class="lined-thin" v-on:click="component = 'SalesSkills'"> Skills </button>
-        <button class="dotted-thick" v-on:click="component = 'SalesProjects'"> Projects </button>
-        <button class="lined-thick" v-on:click="component = 'SalesWork'"> Work </button>
-      </div>
-      <keep-alive>
-        <component v-bind:is="component"></component>
-      </keep-alive>
+  <div class="sales-container">
+    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
+      <transition name="fadeOpacity">
+        <div id="main-container-sales">
+            <component v-bind:is="activeComponent"></component>
+        </div>
+      </transition>
     </div>
-  </transition>
 </template>
 
 <script>
@@ -32,6 +27,31 @@ export default {
   data () {
     return {
       component: 'AboutMeSales'
+    }
+  },
+  created: function () {
+    this.openLoading()
+  },
+  mounted:
+    function switchAboutMe () {
+      this.$store.dispatch('changeComponent', 'AboutMeSales')
+      console.log('component CHANGE AboutMeSales')
+    },
+  computed: {
+    activeComponent () {
+      return this.$store.getters.currentComponent
+    }
+    // currentEnvironment () {
+    //   return this.$store.getters.currentEnvironment
+    // }
+  },
+  methods: {
+    openLoading () {
+      const vm = this
+      vm.isLoading = true
+      setTimeout(() => {
+        vm.isLoading = false
+      }, 0.5 * 1000)
     }
   },
   transition: 'fadeOpacity'

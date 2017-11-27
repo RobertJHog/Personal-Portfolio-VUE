@@ -1,10 +1,12 @@
 <template>
-  <div class="home">
     <nav class="navbar is-transparent">
-      <div id="navbar-container" class="navbar-menu">
+      <div id="navbar-container" class="navbar-menu is-active">
         <div class="navbar-start">
+          <a class="navbar-item portfolio">
+            Portfolio R.J. Hogerbrugge
+          </a>
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="">
+            <a class="navbar-link menu" href="">
               Menu
             </a>
             <div class="navbar-dropdown is-boxed">
@@ -19,9 +21,6 @@
               </a>
             </div>
           </div>
-          <a class="navbar-item">
-            Portfolio R.J. Hogerbrugge
-          </a>
         </div>
 
         <div class="navbar-brand">
@@ -56,7 +55,6 @@
         </div>
       </div>
     </nav>
-  </div>
 </template>
 
 <script>
@@ -115,6 +113,92 @@ export default {
 
 .navbar-item {
   margin-right: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  #navbar-container {
+    background-color: #0E0B16;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    margin: 0 0;
+    min-height: 30vh;
+  }
+
+  .navbar-start {
+    margin: 0 auto;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    flex: 1;
+  }
+
+  .navbar-item {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 26px;
+  }
+
+  .field.is-grouped {
+    margin-left: 4em;
+  }
+}
+
+@media screen and (max-width:480px) {
+  #navbar-container {
+    background-color: #0E0B16;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    margin: 0 0;
+    min-height: 30vh;
+  }
+
+  .navbar-start {
+    margin: 0 auto;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    flex: 1;
+  }
+
+  .navbar-item {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 26px;
+  }
+
+  .field.is-grouped {
+    margin-left: 4em;
+  }
 }
 
 </style>

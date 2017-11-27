@@ -42,13 +42,17 @@ export default {
       vm.isLoading = true
       setTimeout(() => {
         vm.isLoading = false
-      }, 0.5 * 1000)
+      }, 1.5 * 1000)
     }
   }
 }
 </script>
 
 <style lang="scss">
+
+body {
+  background-color: #0E0B16;
+}
 
 #app {
   font-family: 'Fjalla One', sans-serif;
@@ -57,6 +61,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   background-color: #0E0B16;
+  overflow: hidden;
 }
 
 #main-container-dev {

@@ -118,4 +118,34 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@media screen and (max-width:480px) {
+  .switch-container {
+    font-size: 24px;
+    margin-top: 0em;
+    left: 4em;
+  }
+
+  #switch-sales {
+    position: relative;
+    display: inline-block;
+    width: 3em;
+  }
+
+  #switch-dev {
+    display: inline-block;
+    position: relative;
+    width: 3em;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: .25em;
+  }
+
+}
+
 </style>

@@ -2,7 +2,8 @@
   <div class="saleswork-container">
     <div class="columns">
       <div class="column">
-        <p class="title">Iron Mountain 2010 - 2016</p>
+        <p class="title">Iron Mountain</p>
+        <p class="title">2010 - 2016</p>
         <p class="subtitle"> Business Development Executive / Manager </p>
         <p class="job-text"> As Business Development Manager I was responsible for managing the corporate accounts of
           Iron Mountain Benelux and generating new revenue from existing and new accounts. This includes the commercial
@@ -14,7 +15,8 @@
         </p>
       </div>
       <div class="column">
-        <p class="title">De Breed & Partners 2007 - 2010</p>
+        <p class="title">De Breed & Partners</p>
+        <p class="title">2007 - 2010</p>
         <p class="subtitle"> Consultant & Project Manager </p>
         <p class="job-text">  During my time at the De Breed & Partners I helped technology innovative companies (B2B) reaching their market and increase their revenue.
           In collaboration with our customers I thought out telemarketing strategies, advised customers on their proposition and trained telemarketers & junior consultants.
@@ -58,6 +60,16 @@ export default {
 
 .column:hover {
   opacity: 1;
+}
+
+@media screen and (max-width:480px) {
+  .saleswork-container {
+    top: 5em;
+  }
+  .column {
+    margin-bottom: 6em;
+    width: 86vw;
+  }
 }
 
 </style>

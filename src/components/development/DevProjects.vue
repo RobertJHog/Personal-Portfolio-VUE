@@ -114,4 +114,10 @@ img {
   margin: 1em;
 }
 
+@media screen and (max-width:480px) {
+  .projects-container {
+    width: 100%;
+  }
+}
+
 </style>

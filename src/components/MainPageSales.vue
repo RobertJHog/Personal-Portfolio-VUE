@@ -100,4 +100,10 @@ button.active {
   box-shadow: inset 0 0 0 1px #27496d,inset 0 5px 30px #193047;
 }
 
+@media screen and (max-width:480px) {
+  .dev-container {
+    min-height: 350vh;
+  }
+}
+
 </style>

@@ -90,4 +90,10 @@ a {
   color: #42b983;
 }
 
+@media screen and (max-width:480px) {
+  .dev-container {
+    height: 300vh;
+  }
+}
+
 </style>

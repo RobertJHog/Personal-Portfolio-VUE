@@ -3,7 +3,7 @@
     <div class="switch-container">
       <h1 id="switch-dev"> WebDev </h1>
       <label class="switch">
-        <input type="checkbox" v-model="componentDev">
+        <input type="checkbox" @click="switchEnvironment" :value="salesEnvironment">
         <span class="slider round"></span>
       </label>
       <h1 id="switch-sales"> Sales </h1>
@@ -14,8 +14,23 @@
 export default {
   name: 'SiteSwitch',
   data () {
-    return {
-      componentDev: false
+    return {}
+  },
+  methods: {
+    switchEnvironment (value) {
+      console.log(this.salesEnvironment)
+      if (this.salesEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'AboutMeSales')
+      } else {
+        this.$store.dispatch('changeComponent', 'AboutMeDev')
+      }
+      this.$store.dispatch('changeEnvironment', value)
+      console.log('component CHANGE')
+    }
+  },
+  computed: {
+    salesEnvironment () {
+      return this.$store.getters.currentEnvironment
     }
   }
 }
@@ -27,6 +42,8 @@ export default {
 .switch-container {
   position: relative;
   font-size: 26px;
+  margin-top: 1em;
+  right: 1.5em;
 }
 
 #switch-sales {
@@ -47,6 +64,7 @@ export default {
   display: inline-block;
   width: 60px;
   height: 34px;
+  top: .25em;
 }
 
 /* Hide default HTML checkbox */
@@ -98,6 +116,36 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width:480px) {
+  .switch-container {
+    font-size: 24px;
+    margin-top: 0em;
+    left: 4em;
+  }
+
+  #switch-sales {
+    position: relative;
+    display: inline-block;
+    width: 3em;
+  }
+
+  #switch-dev {
+    display: inline-block;
+    position: relative;
+    width: 3em;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: .25em;
+  }
+
 }
 
 </style>

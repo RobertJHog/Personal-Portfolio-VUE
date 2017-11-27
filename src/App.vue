@@ -1,10 +1,8 @@
 <template>
   <div id="app">
+    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
     <NavBar></NavBar>
-    <!-- <TopContainer @checked="onClickChild"></TopContainer> -->
-      <keep-alive>
-        <component v-bind:is="activeComponent"></component>
-      </keep-alive>
+        <component v-bind:is="activeContainer"></component>
       <VFooter></VFooter>
       <router-view/>
   </div>
@@ -26,27 +24,35 @@ export default {
   },
   data () {
     return {
-      salesComponent: false
+      salesComponent: false,
+      isLoading: false
     }
   },
+  created: function () {
+    this.openLoading()
+  },
   computed: {
-    activeComponent () {
-      return this.salesComponent ? 'MainPageSales' : 'MainPageDev'
+    activeContainer () {
+      return this.$store.state.activeEnvironment[0].sales ? 'MainPageSales' : 'MainPageDev'
     }
   },
   methods: {
-    onClickChild (value) {
-      if (this.checked === false) {
-        this.checked = true
-      } else {
-        this.checked = false
-      }
+    openLoading () {
+      const vm = this
+      vm.isLoading = true
+      setTimeout(() => {
+        vm.isLoading = false
+      }, 1.5 * 1000)
     }
   }
 }
 </script>
 
 <style lang="scss">
+
+body {
+  background-color: #0E0B16;
+}
 
 #app {
   font-family: 'Fjalla One', sans-serif;
@@ -55,6 +61,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   background-color: #0E0B16;
+  overflow: hidden;
 }
 
 #main-container-dev {
@@ -70,6 +77,10 @@ export default {
   background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
   background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
   /*background-color: #5C5857;*/
+}
+
+.loading-overlay .loading-background {
+  background: #0E0B16;
 }
 
 </style>

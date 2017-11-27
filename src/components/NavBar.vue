@@ -1,37 +1,31 @@
 <template>
-  <div class="home">
     <nav class="navbar is-transparent">
-      <div id="navbar-container" class="navbar-menu">
+      <div id="navbar-container" class="navbar-menu is-active">
         <div class="navbar-start">
+          <a class="navbar-item portfolio">
+            Portfolio R.J. Hogerbrugge
+          </a>
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="">
+            <a class="navbar-link menu" href="">
               Menu
             </a>
             <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" v-model="component" value="AboutMeDev" v-on:click="emit">
+              <a class="navbar-item" @click="switchAboutMe">
                 About me
               </a>
-              <a class="navbar-item" v-model="component" value="DevProjects" v-on:click="emit">
+              <a class="navbar-item" @click="switchMyProjects">
                 My projects
               </a>
-              <a class="navbar-item" v-model="component" value="DevWork" v-on:click="emit">
+              <a class="navbar-item" @click="switchMyJobs">
                 My jobs
               </a>
             </div>
           </div>
-          <a class="navbar-item" v-on:click="component = 'ContentContainer'">
-            Portfolio R.J. Hogerbrugge
-          </a>
         </div>
 
         <div class="navbar-brand">
           <div id="navbar-logo">
             <SiteSwitch></SiteSwitch>
-            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </div>
         </div>
 
@@ -49,7 +43,7 @@
                 </a>
               </p>
               <p class="control">
-                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/">
+                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
                   <span class="icon">
                     <i class="fa fa-linkedin"></i>
                   </span>
@@ -61,7 +55,6 @@
         </div>
       </div>
     </nav>
-  </div>
 </template>
 
 <script>
@@ -79,22 +72,133 @@ export default {
     SiteSwitch
   },
   methods: {
-    emit (value) {
-      this.$emit('componentSwitch', value)
-      console.log('emit?')
+    switchAboutMe () {
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'AboutMeSales')
+      } else {
+        this.$store.dispatch('changeComponent', 'AboutMeDev')
+      }
+    },
+    switchMyProjects () {
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'SalesProjects')
+      } else {
+        this.$store.dispatch('changeComponent', 'DevProjects')
+      }
+    },
+    switchMyJobs () {
+      if (this.$store.getters.currentEnvironment === true) {
+        this.$store.dispatch('changeComponent', 'SalesWork')
+      } else {
+        this.$store.dispatch('changeComponent', 'DevWork')
+      }
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 .navbar {
-  margin: 0 2em;
-  min-height: 10vh;
+  margin: 0 1em;
+  min-height: 5em;
+  max-height: 5em;
   background-color: #0E0B16;
   font-size: 20px;
+}
+
+.navbar-link {
+  margin-left: 1em;
+}
+
+.navbar-item {
+  margin-right: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  #navbar-container {
+    background-color: #0E0B16;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    margin: 0 0;
+    min-height: 30vh;
+  }
+
+  .navbar-start {
+    margin: 0 auto;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    flex: 1;
+  }
+
+  .navbar-item {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 26px;
+  }
+
+  .field.is-grouped {
+    margin-left: 4em;
+  }
+}
+
+@media screen and (max-width:480px) {
+  #navbar-container {
+    background-color: #0E0B16;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    margin: 0 0;
+    min-height: 30vh;
+  }
+
+  .navbar-start {
+    margin: 0 auto;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    flex: 1;
+  }
+
+  .navbar-item {
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .portfolio {
+    font-size: 26px;
+  }
+
+  .field.is-grouped {
+    margin-left: 4em;
+  }
 }
 
 </style>

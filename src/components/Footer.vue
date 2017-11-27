@@ -25,7 +25,6 @@ export default {
 <style scoped>
 
 .footer {
-  margin: 0 2em;
   background-color: #0E0B16;
   max-height: 5vh;
 }

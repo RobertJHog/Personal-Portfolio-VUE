@@ -1,10 +1,11 @@
 <template>
   <div class="dev-container">
-    <transition name="fadeOpacity">
+    <b-loading :active.sync="isLoading" :canCancel="true">  </b-loading>
       <div class="level" id="main-container-dev">
-          <component v-bind:is="activeComponent"></component>
+        <transition name="fadeOpacity">
+            <component v-bind:is="activeComponent"></component>
+        </transition>
       </div>
-    </transition>
   </div>
 </template>
 
@@ -13,18 +14,21 @@ import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeDev from '@/components/development/AboutMeDev'
 import DevWork from '@/components/development/DevWork'
 import DevProjects from '@/components/development/DevProjects'
+import AboutMeSales from '@/components/sales/AboutMeSales'
 
 export default {
   name: 'MainPageDev',
   components: {
     SiteSwitch,
     AboutMeDev,
+    AboutMeSales,
     DevProjects,
     DevWork
   },
   data () {
     return {
-      component: 'AboutMeDev'
+      component: 'AboutMeDev',
+      isLoading: false
     }
   },
   created:
@@ -57,7 +61,7 @@ export default {
 <style lang="scss" scoped>
 
 .dev-container {
-  margin: 0 2em;
+  // margin: 0 2em;
 }
 
 .fadeOpacity-enter-active {

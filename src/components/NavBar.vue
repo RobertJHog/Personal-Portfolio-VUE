@@ -102,10 +102,19 @@ export default {
 <style scoped>
 
 .navbar {
-  margin: 0 2em;
-  min-height: 10vh;
+  margin: 0 1em;
+  min-height: 5em;
+  max-height: 5em;
   background-color: #0E0B16;
   font-size: 20px;
+}
+
+.navbar-link {
+  margin-left: 1em;
+}
+
+.navbar-item {
+  margin-right: 1em;
 }
 
 </style>

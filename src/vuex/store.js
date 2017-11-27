@@ -35,7 +35,7 @@ export default new Vuex.Store({
       {id: 4,
         title: 'My Portfolio',
         description: 'Using the Vue.js framework I have built my own portfolio site from the ground up. Going in my idea was to make a responsive single page application that feels like a menu. Unless on mobile there is no scrolling required.',
-        image: '../../assets/images/rjhportfolio.jpg'},
+        image: '../../assets/images/rjhportfolio.png'},
       {id: 5,
         title: 'CVT Commodities',
         description: 'Work in progress',
@@ -82,6 +82,9 @@ export default new Vuex.Store({
     },
     currentComponent (state) {
       return state.activeComponent[0].name
+    },
+    devProjects (state) {
+      return state.projects
     }
   }
 })

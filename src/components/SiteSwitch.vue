@@ -42,6 +42,8 @@ export default {
 .switch-container {
   position: relative;
   font-size: 26px;
+  margin-top: 1em;
+  right: 1.5em;
 }
 
 #switch-sales {
@@ -62,6 +64,7 @@ export default {
   display: inline-block;
   width: 60px;
   height: 34px;
+  top: .25em;
 }
 
 /* Hide default HTML checkbox */

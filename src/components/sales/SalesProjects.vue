@@ -1,6 +1,7 @@
 <template>
   <div class="projects-container">
-    <Modal v-if="showModal" @close="showModal = false">
+    <p class="title"> Coming soon </p>
+    <!-- <Modal v-if="showModal" @close="showModal = false">
     </Modal>
 
     <div class="tile is-ancestor">
@@ -49,7 +50,7 @@
           <button id="show-modal" @click="showModal = true">Future Project</button>
         </article>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -85,6 +86,11 @@ export default {
 
 .projects-container {
   margin-bottom: 2em;
+  min-height: 65vh;
+}
+
+.title {
+  padding-top: 6em;
 }
 
 #show-modal {

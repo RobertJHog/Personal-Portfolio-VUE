@@ -2,19 +2,33 @@
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <div class="tile is-child box border-solid">
+        <p class="title">Honors & Awards</p>
+        <br>
+        <figure class="image is-1by2 im-logo">
+          <img src="../../assets/images/ironmountain.png" alt="My pic">
+        </figure>
+        <p class="subtitle awards"> Sales Quota Award - 2011 </p>
+        <p class="subtitle awards"> Global Chairman's Club - 2012 </p>
+        <p class="subtitle awards"> Global Chairman's club - 2015 </p>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box border-solid">
         <figure class="image is-1by2">
           <img class="my-pic" src="../../assets/images/RJHogerbruggeSales.jpg" alt="My pic">
         </figure>
         <p class="title">About me</p>
+        <br>
         <p class="aboutme">Starting out as a sales trainee for a management consultancy firm l quickly learned the ropes of
           cold-acquisition and lead-generation. As an external telemarketer I have spent over a thousand hours tele
           prospecting for multiple customers offering high end solutions in both hardware & software. Within two years
-          promoted to Senior Consultant leading a team of over 10 sales trainees & junior consultants.</p>
-        <br>
-        <p class="aboutme"> At Iron Mountain my main focus was managing customers and selling complex solutions for records management, document management & tape management
+          promoted to Senior Consultant leading a team of over 10 sales trainees & junior consultants.
+        <br><br>
+          At Iron Mountain my main focus was managing customers and selling complex solutions for records management, document management & tape management
           in the Benelux. These roles require consultative based selling involving six figure deals and prospecting on both tactical and
           strategic level. My experience within the company has greatly improved my skills in negotiation, managing demanding internal/external
-          customers and achieving demanding targets.</p>
+          customers and achieving demanding targets.
+        </p>
       </div>
     </div>
     <div class="tile is-4 is-vertical is-parent">
@@ -48,16 +62,26 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.im-logo {
+  bottom: 4em;
+}
+
+.awards {
+  font-size: 24px;
+}
+
 .language-icons {
   margin: 1em auto;
 }
 
 .aboutme {
   font-size: 20px;
+  padding-top: 2em;
 }
 
 .tile {
   padding: 1em;
+  margin-top: 0em;
 }
 
 .subtitle {
@@ -66,6 +90,7 @@ export default {
 
 .title {
   margin-bottom: 2em;
+  margin-top: .75em;
 }
 
 .border-solid {

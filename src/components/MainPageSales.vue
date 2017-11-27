@@ -1,33 +1,34 @@
 <template>
   <div class="sales-container">
     <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
-      <transition name="fadeOpacity">
-        <div id="main-container-sales">
-            <component v-bind:is="activeComponent"></component>
-        </div>
-      </transition>
-    </div>
+      <div id="main-container-sales">
+        <transition name="fadeOpacity">
+          <component v-bind:is="activeComponent"></component>
+        </transition>
+      </div>
+  </div>
 </template>
 
 <script>
 import SiteSwitch from '@/components/SiteSwitch'
 import AboutMeSales from '@/components/sales/AboutMeSales'
-import SalesSkills from '@/components/sales/SalesSkills'
 import SalesWork from '@/components/sales/SalesWork'
 import SalesProjects from '@/components/sales/SalesProjects'
+import AboutMeDev from '@/components/development/AboutMeDev'
 
 export default {
   name: 'MainPageSales',
   components: {
     SiteSwitch,
     AboutMeSales,
-    SalesSkills,
     SalesProjects,
-    SalesWork
+    SalesWork,
+    AboutMeDev
   },
   data () {
     return {
-      component: 'AboutMeSales'
+      component: 'AboutMeSales',
+      isLoading: false
     }
   },
   created: function () {
@@ -60,7 +61,7 @@ export default {
 <style scoped>
 
 .sales-container {
-  margin: 0 2em;
+  /*margin: 0 2em;*/
 }
 
 .fadeOpacity-enter-active {

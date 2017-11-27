@@ -4,49 +4,23 @@
     </Modal>
 
     <div class="tile is-ancestor">
-      <div class="tile is-5 is-parent">
+      <div v-for="project in projectsRowOne" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">Director Portfolio</button>
+          <button id="show-modal" @click="showModal = true">{{project.title}}</button>
           <figure class="image is-4by3">
-            <img src="../../assets/images/rolfportfolio.jpg" alt="Project Movie Portfolio">
-          </figure>
-        </article>
-      </div>
-      <div class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">Homerun</button>
-          <figure class="image is-4by3">
-            <img src="../../assets/images/homerun.jpg">
-          </figure>
-        </article>
-      </div>
-      <div class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">DonkeyShot</button>
-          <figure class="image is-4by3">
-            <img src="../../assets/images/donkeyshot.jpg">
+            <img :src="project.image" alt="Project Image">
           </figure>
         </article>
       </div>
     </div>
 
     <div class="tile is-ancestor">
-      <div class="tile is-5 is-parent">
+      <div v-for="project in projectsRowTwo" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">My Portfolio</button>
+          <button id="show-modal" @click="showModal = true">{{project.title}}</button>
           <figure class="image is-4by3">
-            <img src="../../assets/images/rjhportfolio.jpg">
+            <img :src="project.image" alt="Project Image">
           </figure>
-        </article>
-      </div>
-      <div class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">Company Site(coming soon)</button>
-        </article>
-      </div>
-      <div class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">Future Project</button>
         </article>
       </div>
     </div>
@@ -77,6 +51,14 @@ export default {
       showModal: false
     }
   },
+  computed: {
+    projectsRowOne () {
+      return this.$store.getters.devProjects.slice(0, 3)
+    },
+    projectsRowTwo () {
+      return this.$store.getters.devProjects.slice(3, 6)
+    }
+  },
   transition: 'moveIn'
 }
 </script>
@@ -84,8 +66,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+img {
+  border-radius: 10px;
+}
+
 .projects-container {
   margin-bottom: 2em;
+  width: 75%;
 }
 
 #show-modal {

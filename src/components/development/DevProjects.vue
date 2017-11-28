@@ -7,9 +7,12 @@
       <div v-for="project in projectsRowOne" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
-          <figure class="image is-4by3">
+          <figure class="image is-16by9">
             <img :src="project.image" alt="Project Image">
           </figure>
+          <ul class="language-icons">
+            <i v-for="logo in project.devlogos" :class="logo"></i>
+          </ul>
         </article>
       </div>
     </div>
@@ -18,9 +21,12 @@
       <div v-for="project in projectsRowTwo" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
           <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
-          <figure class="image is-4by3">
+          <figure class="image is-16by9">
             <img :src="project.image" alt="Project Image">
           </figure>
+          <ul class="language-icons">
+            <i v-for="logo in project.devlogos" :class="logo"></i>
+          </ul>
         </article>
       </div>
     </div>
@@ -75,6 +81,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.language-icons {
+  margin: 1.5em auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.language-icons .icon {
+  margin: 0em .75em;
+}
 
 figure.image {
   border: 2px solid white;

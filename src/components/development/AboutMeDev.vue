@@ -3,22 +3,19 @@
       <div class="tile is-ancestor">
         <div class="tile is-4 is-vertical is-parent">
           <div class="tile is-child box border-solid">
-            <p class="title">Latest Project</p> <br>
-            <p class="subtitle"> DonkeyShot </p>
-            <span> For a former sales client I have built a company <a href="http://www.donkeyshot.nl" class="project-link">website</a> based on his preferences.
-              I have used a HTML5up template as a starting point.
+            <p class="title latest">Latest Project</p> <br>
+            <a class="project-link" :href="latestProject.siteurl" target="_blank"> <p class="subtitle project-link"> {{ latestProject.title }}</p></a>
+            <span> {{ latestProject.description }}
             </span>
-            <div class="language-icons">
-              <ul>
-                <i class="devicon-javascript-plain icon"></i>
-                <i class="devicon-html5-plain icon"></i>
-                <i class="devicon-sass-plain icon"></i>
+            <div>
+              <ul class="language-icons">
+                <i v-for="logo in latestLogos" :class="logo"></i>
               </ul>
             </div>
           </div>
           <div class="tile is-child box border-solid">
             <figure class="image is-16by9 project-pic">
-              <img src="../../assets/images/donkeyshot.jpg">
+              <img :src="latestProject.image">
             </figure>
           </div>
         </div>
@@ -72,7 +69,16 @@
 <script>
 
 export default {
-  name: 'AboutMeDev'
+  name: 'AboutMeDev',
+  computed: {
+    latestProject () {
+      return this.$store.getters.latestProject
+    },
+    latestLogos () {
+      let project = this.$store.getters.latestProject
+      return project.devlogos
+    }
+  }
 }
 </script>
 
@@ -80,7 +86,14 @@ export default {
 <style scoped>
 
 .language-icons {
-  margin: 1em auto;
+  margin: 1.5em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.language-icons .icon {
+  margin: 0em .75em;
 }
 
 .tile {
@@ -94,6 +107,14 @@ export default {
 .title {
   margin-bottom: 1em;
   margin-top: .75em;
+}
+
+.project-link {
+  margin-bottom: 1em;
+}
+
+.title.latest {
+  margin-bottom: 0em;
 }
 
 .border-solid {

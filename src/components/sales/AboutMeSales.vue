@@ -64,6 +64,8 @@ export default {
 
 .im-logo {
   bottom: 4em;
+  width: 16em;
+  margin: 0 auto;
 }
 
 .awards {
@@ -76,7 +78,7 @@ export default {
 
 .aboutme {
   font-size: 20px;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 .tile {

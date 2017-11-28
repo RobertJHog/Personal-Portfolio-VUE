@@ -2,7 +2,7 @@
     <nav class="navbar is-transparent">
       <div id="navbar-container" class="navbar-menu is-active">
         <div class="navbar-start">
-          <a class="navbar-item portfolio">
+          <a class="navbar-item portfolio" @click="switchAboutMe">
             Portfolio R.J. Hogerbrugge
           </a>
           <div class="navbar-item has-dropdown is-hoverable">

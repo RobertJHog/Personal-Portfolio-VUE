@@ -24,23 +24,26 @@ export default new Vuex.Store({
         title: 'Homerun',
         description: 'During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned me the ropes on HTML5, CSS3, Javascript, mysql and javascript libraries within a large web application. The main focus was transforming the main framework (Angular 1.X) into  the newest version of Vue.js. It was refactoring a lot of excisting code into the new framework',
         image: './static/images/homerun.jpg',
-        siteurl: 'https://admin.homerun.co/login'},
-        // devlogos: ['vue', 'laravel', 'javascript', ]
+        siteurl: 'https://admin.homerun.co/login',
+        devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon', 'vue: devicon-vuejs-plain icon', 'laravel: devicon-laravel-plain icon'] },
       {id: 2,
         title: 'DonkeyShot',
         description: 'For a former sales client I have built a company website based on his preferences. I have used a HTML5up template as a starting point.',
         image: './static/images/donkeyshot.jpg',
-        siteurl: 'http://www.donkeyshot.nl'},
+        siteurl: 'http://www.donkeyshot.nl',
+        devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon'] },
       {id: 3,
         title: 'Director Portfolio',
         description: 'For a friend I have built a portfolio website to showcase his movies. I have used a HTML5up template as starting point.',
         image: './static/images/rolfportfolio.jpg',
-        siteurl: 'http://www.rolfvaneijk.com'},
+        siteurl: 'http://www.rolfvaneijk.com',
+        devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon'] },
       {id: 4,
         title: 'My Portfolio',
         description: 'Using the Vue.js framework I have built my own portfolio site from the ground up. Going in my idea was to make a responsive single page application that feels like a menu. Unless on mobile there is no scrolling required.',
         image: './static/images/rjhportfolio.png',
-        siteurl: 'rjhogerbrugge.herokuapp.com'},
+        siteurl: 'rjhogerbrugge.herokuapp.com',
+        devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon', 'vue: devicon-vuejs-plain icon'] },
       {id: 5,
         title: 'CVT Commodities',
         description: 'Work in progress',
@@ -92,6 +95,9 @@ export default new Vuex.Store({
     },
     devProjects (state) {
       return state.projects
+    },
+    latestProject (state) {
+      return state.projects[0]
     }
   }
 })

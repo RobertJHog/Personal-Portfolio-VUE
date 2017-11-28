@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
+    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
     <NavBar></NavBar>
         <component v-bind:is="activeContainer"></component>
       <VFooter></VFooter>

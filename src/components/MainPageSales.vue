@@ -1,6 +1,6 @@
 <template>
   <div class="sales-container">
-    <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
+    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
       <div id="main-container-sales">
         <transition name="fadeOpacity">
           <component :is="activeComponent"></component>

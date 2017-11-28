@@ -1,6 +1,6 @@
 <template>
   <div class="dev-container">
-    <b-loading :active.sync="isLoading" :canCancel="true">  </b-loading>
+    <b-loading :active.sync="isLoading" :canCancel="false">  </b-loading>
       <div class="level" id="main-container-dev">
         <transition name="fadeOpacity">
             <component v-bind:is="activeComponent"></component>

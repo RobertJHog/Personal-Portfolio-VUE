@@ -50,6 +50,14 @@ export default {
 
 <style lang="scss">
 
+// Loadder
+// .loading-overlay .loading-icon:after {
+//   border: 2px solid #d0772b;
+// }
+
+// .loading-overlay .loading-background {
+// }
+
 body {
   background-color: #0E0B16;
 }

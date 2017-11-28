@@ -66,8 +66,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-img {
-  border-radius: 10px;
+figure.image {
+  border: 2px solid #697de3;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .projects-container {
@@ -81,7 +83,7 @@ img {
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   background: none;
   border: none;
 }
@@ -90,17 +92,12 @@ img {
   color: #3273dc;
 }
 
-/*#show-modal button {
-  color: #3273dc;
-  cursor: pointer;
-  text-decoration: none;
-}*/
-
 .border-solid {
-  border: #d0772b solid 2px;
+  border: #d0772b solid 4px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
+  border-radius: 40px;
 }
 
 .projects-container {

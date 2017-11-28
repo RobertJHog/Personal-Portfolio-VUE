@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="tile is-child box border-solid">
-            <figure class="image is-16by9 project-pic">
+            <figure class="image is-1by2 project-pic">
               <img :src="latestProject.image">
             </figure>
           </div>
@@ -27,11 +27,13 @@
               <p class="title">About me</p>
               <br>
               <p class="aboutme">After ten awesome years in sales and business development I felt it was time for a change in my career.
-                 In a four month sabbatical I overthought my career and tried to figure out what gives me joy in life and how
-                 I would like to spend the next ten years of my life.
+                 <!-- In a four month sabbatical I overthought my career and tried to figure out what gives me joy in life and how
+                 I would like to spend the next ten years of my life. -->
+                <!-- <br><br> -->
+                <!-- For a month I have learned the basics of programming
+                languages such as HTML, CSS, Python and Ruby. -->
                 <br><br>
-                For a month I have learned the basics of programming
-                languages such as HTML, CSS, Python and Ruby. The process gave me so much joy that I applied for a traineeship
+                I then applied for a traineeship
                 with Codaisseur to become a junior developer. From January until March 2017 I have spent over 500 hours at Codaisseur
                 to develop my skillset as a programmer.
               </p>
@@ -122,7 +124,7 @@ export default {
 }
 
 .border-solid {
-  border: #d0772b solid 4px;
+  border: #d0772b solid 1px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
@@ -135,8 +137,7 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: 2px solid #697de3;
-  /*border: solid 2px white;*/
+  border: 1px solid #697de3;
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;
@@ -157,8 +158,9 @@ export default {
 }
 
 .aboutme {
-  font-size: 20px;
-  padding-top: 2em;
+  font-size: 18px;
+  padding-top: 3em;
+  line-height: 50px;
 }
 
 .front-logos {

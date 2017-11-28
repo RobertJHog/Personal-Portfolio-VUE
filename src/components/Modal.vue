@@ -77,7 +77,7 @@ export default {
 
 /*Button*/
 .buttonHolder{
-  margin:40px auto;
+  margin:5em auto;
   width:400px;
 }
 
@@ -162,7 +162,7 @@ figure.image {
 
 .modal-container {
   width: 35em;
-  max-height: 80vh;
+  max-height: 75vh;
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;

@@ -20,14 +20,15 @@
         <p class="title">About me</p>
         <br>
         <p class="aboutme">Starting out as a sales trainee for a management consultancy firm l quickly learned the ropes of
-          cold-acquisition and lead-generation. As an external telemarketer I have spent over a thousand hours tele
-          prospecting for multiple customers offering high end solutions in both hardware & software. Within two years
-          promoted to Senior Consultant leading a team of over 10 sales trainees & junior consultants.
-        <br><br>
+          cold-acquisition and lead-generation. <br><br> As an external telemarketer I have spent over a thousand hours tele
+          prospecting for multiple customers offering high end solutions in both hardware & software.
+          <br><br>
+          Within two years promoted to Senior Consultant leading a team of over 10 sales trainees & junior consultants.
+        <!-- <br><br>
           At Iron Mountain my main focus was managing customers and selling complex solutions for records management, document management & tape management
           in the Benelux. These roles require consultative based selling involving six figure deals and prospecting on both tactical and
           strategic level. My experience within the company has greatly improved my skills in negotiation, managing demanding internal/external
-          customers and achieving demanding targets.
+          customers and achieving demanding targets. -->
         </p>
       </div>
     </div>
@@ -66,6 +67,9 @@ export default {
   bottom: 4em;
   width: 16em;
   margin: 0 auto;
+  border: 1px solid #d0772b;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .awards {
@@ -77,8 +81,9 @@ export default {
 }
 
 .aboutme {
-  font-size: 20px;
-  padding-top: 1em;
+  font-size: 18px;
+  padding-top: 3em;
+  line-height: 50px;
 }
 
 .tile {
@@ -100,7 +105,7 @@ export default {
 }
 
 .border-solid {
-  border: #697de3 solid 4px;
+  border: #697de3 solid 1px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
@@ -113,7 +118,7 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: 2px solid #d0772b;
+  border: 1px solid #d0772b;
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;

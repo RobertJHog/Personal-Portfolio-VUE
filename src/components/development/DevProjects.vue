@@ -1,12 +1,12 @@
 <template>
   <div class="projects-container">
-    <Modal v-if="showModal" @close="showModal = false">
+    <Modal v-if="showModal" :project="selectedProject" @close="deselectProject">
     </Modal>
 
     <div class="tile is-ancestor">
       <div v-for="project in projectsRowOne" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">{{project.title}}</button>
+          <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
           <figure class="image is-4by3">
             <img :src="project.image" alt="Project Image">
           </figure>
@@ -17,7 +17,7 @@
     <div class="tile is-ancestor">
       <div v-for="project in projectsRowTwo" class="tile is-5 is-parent">
         <article class="tile is-child box border-solid">
-          <button id="show-modal" @click="showModal = true">{{project.title}}</button>
+          <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
           <figure class="image is-4by3">
             <img :src="project.image" alt="Project Image">
           </figure>
@@ -34,7 +34,6 @@ import Donkeyshot from '@/components/development/projects/donkeyshot'
 import Rolfportfolio from '@/components/development/projects/rolfportfolio'
 import Rjportfolio from '@/components/development/projects/rjportfolio'
 import Modal from '@/components/Modal'
-// import ProjectsJson from '@/assets/projects.json';
 
 export default {
   name: 'DevProjects',
@@ -48,7 +47,8 @@ export default {
   data () {
     return {
       component: '',
-      showModal: false
+      showModal: false,
+      selectedProject: undefined
     }
   },
   computed: {
@@ -59,6 +59,16 @@ export default {
       return this.$store.getters.devProjects.slice(3, 6)
     }
   },
+  methods: {
+    selectProject (project) {
+      this.selectedProject = project
+      this.showModal = true
+    },
+    deselectProject () {
+      this.selectedProject = undefined
+      this.showModal = false
+    }
+  },
   transition: 'moveIn'
 }
 </script>
@@ -67,7 +77,7 @@ export default {
 <style scoped>
 
 figure.image {
-  border: 2px solid #697de3;
+  border: 2px solid white;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -93,7 +103,8 @@ figure.image {
 }
 
 .border-solid {
-  border: #d0772b solid 4px;
+  border: #697de3 solid 4px;
+  /*border: #d0772b solid 4px;*/
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;

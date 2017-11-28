@@ -18,7 +18,8 @@
           <p class="subtitle"> Junior developer </p>
           <p class="job-text"> Always open to new opportunities in webdevelopment with HTML5, CSS3 (Sass, Less), Javascript, Ruby and libraries/frameworks such as
             React, Vue, Angular, Rails. Very willing to learn new languages and frameworks.
-            </p>
+          <br><br>
+          send me a message! </p>
         </article>
       </div>
     </div>
@@ -28,11 +29,23 @@
 <script>
 export default {
   name: 'DevWork'
+  // transition: 'slide'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/*Transitions*/
+/*.enter { transform: translateX(100%) }
+.enter-to { transform: translateX(0) }
+.slide-enter-active { position: absolute }
+
+.leave { transform: translateX(0) }
+.leave-to { transform: translateX(-100%) }
+
+.slide-enter-active,
+.slide-leave-active { transition: all 750ms ease-in-out }*/
 
 .devwork-container {
   padding: 2em auto;
@@ -44,6 +57,7 @@ export default {
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
+  border-radius: 20px;
 }
 
 .title {

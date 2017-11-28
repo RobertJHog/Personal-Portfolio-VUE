@@ -6,23 +6,27 @@
 
           <div class="modal-header">
             <slot name="header">
-              <h1> {{ name }} </h1>
+              <a :href="project.siteurl" class="project-title" target="_blank"> {{ project.title }} </a>
             </slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              <span> {{ description }}
-              </span>
-              <span> {{ siteurl }}
-              </span>
+              <div class="description"> {{ project.description }} </div>
             </slot>
+            <div class="front-logos">
+              <img class="logo" src="../assets/images/logos/html5.png" alt="html logo">
+              <img class="logo" src="../assets/images/logos/css3.png" alt="Css3 logo">
+              <img class="logo" src="../assets/images/logos/javascript.png" alt="JS logo">
+              <img class="logo" src="../assets/images/logos/vue.png" alt="Vue logo">
+              <img class="logo" src="../assets/images/logos/react.png" alt="React logo">
+            </div>
           </div>
 
           <div class="modal-footer">
             <slot name="footer">
-              <figure class="image is-4by3">
-                <img :src="image">
+              <figure class="image is-16by9">
+                <img :src="project.image">
               </figure>
               <button class="modal-default-button" @click="$emit('close')">
                 Close
@@ -39,12 +43,46 @@
 
 export default {
   name: 'modal',
-  props: ['name', 'image', 'siteurl', 'description']
+  props: ['project']
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.description {
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.front-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em auto;
+}
+
+.logo {
+  height: 1.75em;
+  width: 2em;
+  display: block;
+  margin: 0em 1em;
+}
+
+figure.image {
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 32em;
+  border: #697de3 solid 2px;
+  -webkit-box-shadow: 0px 7px 4px #777;
+  -moz-box-shadow: 0px 7px 4px #777;
+  box-shadow: 0px 7px 4px #777;
+}
 
 .modal-mask {
   position: fixed;
@@ -64,15 +102,15 @@ export default {
 }
 
 .modal-container {
-  width: 500px;
+  width: 35em;
   margin: 0px auto;
-  padding: 20px 30px;
+  padding: 10px 20px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  border: #d0772b solid 2px;
+  border: #d0772b solid 4px;
 }
 
 .modal-header h3 {
@@ -83,11 +121,11 @@ export default {
 
 .modal-body {
   margin: 20px 0;
-  padding: 2em;
+  padding: 0em;
 }
 
 .modal-footer {
-  padding: 2em;
+  padding: 0em 0em;
 }
 
 .modal-default-button {

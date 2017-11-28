@@ -106,7 +106,7 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: solid 2px white;
+  border: 2px solid #d0772b;
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;

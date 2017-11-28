@@ -100,6 +100,10 @@ export default {
   padding: 1em;
 }
 
+.tile.is-child {
+  background-color: #ececec;
+}
+
 .subtitle {
   padding: 0em;
 }
@@ -122,6 +126,7 @@ export default {
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
+  border-radius: 20px;
 }
 
 .image .my-pic {
@@ -143,7 +148,7 @@ export default {
 
 .project-pic img {
   border-radius: 10px;
-  border: 2px solid #697de3;
+  /*border: 2px solid #697de3;*/
 }
 
 .image.is-16by9 {

@@ -55,6 +55,10 @@ export default new Vuex.Store({
         image: '',
         siteurl: 'not available yet'}
     ],
+    devJobs: [ {id: 1, company: 'Homerun', job: 'Junior Developer', duration: 'July 2017 -  November 2017', description1: 'During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned me the ropes on HTML, CSS, Javascript and mysql within a large web application.', description2: 'The main focus was transforming the main framework (Angular 1.X) into Vue.js. It was refactoring a lot of excisting code into the new framework.'},
+               {id: 2, company: 'Future Company', job: 'Developer', duration: 'Asap', description1: 'Always open to new opportunities in webdevelopment with HTML5, CSS3 (Sass, Less), Javascript, Ruby and libraries/frameworks such as React, Vue, Angular, Rails. Very willing to learn new languages and frameworks.', description2: 'send me a message!'}],
+    salesJobs: [ {id: 1, company: 'De Breed & Partners', job: 'Junior Developer', duration: 'July 2017 -  November 2017', description1: 'During 4 months I have worked as a junior developer on the platform of Homerun. Under supervision they learned me the ropes on HTML, CSS, Javascript and mysql within a large web application.', description2: 'The main focus was transforming the main framework (Angular 1.X) into Vue.js. It was refactoring a lot of excisting code into the new framework.'},
+               {id: 2, company: 'Iron Mountain', job: 'Developer', duration: 'Asap', description1: 'Always open to new opportunities in webdevelopment with HTML5, CSS3 (Sass, Less), Javascript, Ruby and libraries/frameworks such as React, Vue, Angular, Rails. Very willing to learn new languages and frameworks.', description2: 'send me a message!'}],
     activeComponent: [
       {id: 1, name: 'AboutMeDev'}
     ],
@@ -98,6 +102,9 @@ export default new Vuex.Store({
     },
     latestProject (state) {
       return state.projects[0]
+    },
+    devJobs (state) {
+      return state.devJobs
     }
   }
 })

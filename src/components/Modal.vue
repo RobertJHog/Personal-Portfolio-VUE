@@ -77,7 +77,7 @@ export default {
 
 /*Button*/
 .buttonHolder{
-  margin:70px auto;
+  margin:40px auto;
   width:400px;
 }
 
@@ -135,11 +135,9 @@ export default {
 }
 
 figure.image {
-  border: 2px solid white;
+  // border: 2px solid white;
   border-radius: 20px;
   overflow: hidden;
-  width: 32em;
-  border: #697de3 solid 2px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
@@ -164,7 +162,7 @@ figure.image {
 
 .modal-container {
   width: 35em;
-  max-height: 32em;
+  max-height: 80vh;
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;
@@ -218,6 +216,14 @@ figure.image {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+@media screen and (max-width:480px) {
+  figure.image {
+    display: none;
+  }
+  .modal-container {
+    max-width: 90%;
+  }
 }
 
 </style>

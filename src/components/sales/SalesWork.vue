@@ -75,6 +75,10 @@ export default {
   opacity: .5;
 }
 
+.tile.is-child {
+  background-color: #ececec;
+}
+
 .tile:hover {
   opacity: 1;
 }

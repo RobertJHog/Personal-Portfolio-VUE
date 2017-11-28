@@ -86,6 +86,10 @@ export default {
   margin-top: 0em;
 }
 
+.tile.is-child {
+  background-color: #ececec;
+}
+
 .subtitle {
   padding: .25em;
 }
@@ -100,6 +104,7 @@ export default {
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
+  border-radius: 20px;
 }
 
 .image .my-pic {

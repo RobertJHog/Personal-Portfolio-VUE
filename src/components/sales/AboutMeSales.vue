@@ -94,7 +94,7 @@ export default {
 }
 
 .border-solid {
-  border: #697de3 solid 2px;
+  border: #697de3 solid 4px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;

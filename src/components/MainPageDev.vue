@@ -50,7 +50,7 @@ export default {
       vm.isLoading = true
       setTimeout(() => {
         vm.isLoading = false
-      }, 0.5 * 1000)
+      }, 1.5 * 1000)
     }
   },
   transition: 'fadeOpacity'
@@ -65,7 +65,7 @@ export default {
 }
 
 .fadeOpacity-enter-active {
-  transition: opacity .35s ease-out;
+  transition: opacity 1s ease-out;
 }
 
 .fadeOpacity-enter, .fadeOpacity-leave-active {

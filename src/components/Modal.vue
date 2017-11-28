@@ -6,13 +6,15 @@
 
           <div class="modal-header">
             <slot name="header">
-              <h1> {{ projectTitle }} </h1>
+              <h1> {{ name }} </h1>
             </slot>
           </div>
 
           <div class="modal-body">
             <slot name="body">
-              <span> {{ projectDescription }}
+              <span> {{ description }}
+              </span>
+              <span> {{ siteurl }}
               </span>
             </slot>
           </div>
@@ -20,7 +22,7 @@
           <div class="modal-footer">
             <slot name="footer">
               <figure class="image is-4by3">
-                <img src="">
+                <img :src="image">
               </figure>
               <button class="modal-default-button" @click="$emit('close')">
                 Close
@@ -37,7 +39,7 @@
 
 export default {
   name: 'modal',
-  props: ['projectImage', 'projectDescription', 'projectTitle']
+  props: ['name', 'image', 'siteurl', 'description']
 }
 </script>
 

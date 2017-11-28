@@ -97,7 +97,7 @@ export default {
 }
 
 .border-solid {
-  border: #d0772b solid 2px;
+  border: #d0772b solid 4px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
@@ -109,7 +109,8 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: solid 2px white;
+  border: 2px solid #697de3;
+  /*border: solid 2px white;*/
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;
@@ -121,6 +122,7 @@ export default {
 
 .project-pic img {
   border-radius: 10px;
+  border: 2px solid #697de3;
 }
 
 .image.is-16by9 {

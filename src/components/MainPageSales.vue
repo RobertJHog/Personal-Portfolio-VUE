@@ -3,8 +3,11 @@
     <b-loading :active.sync="isLoading" :canCancel="true"></b-loading>
       <div id="main-container-sales">
         <transition name="fadeOpacity">
-          <component v-bind:is="activeComponent"></component>
+          <component :is="activeComponent"></component>
         </transition>
+        <!-- <transition name="slide">
+          <component :is="activeComponent"></component>
+        </transition> -->
       </div>
   </div>
 </template>
@@ -50,27 +53,30 @@ export default {
       vm.isLoading = true
       setTimeout(() => {
         vm.isLoading = false
-      }, 0.5 * 1000)
+      }, 1.5 * 1000)
     }
   },
-  transition: 'fadeOpacity'
+  transition: 'slide'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 
-.sales-container {
-  /*margin: 0 2em;*/
-}
+/*Transitions*/
 
-.fadeOpacity-enter-active {
-  transition: opacity .35s ease-out;
-}
+.enter { transform: translateX(100%) }
+.enter-to { transform: translateX(0) }
+.slide-enter-active { position: absolute }
 
-.fadeOpacity-enter, .fadeOpacity-leave-active {
-  opacity: 0;
-}
+.leave { transform: translateX(0) }
+.leave-to { transform: translateX(-100%) }
+
+.slide-enter-active,
+.slide-leave-active { transition: all 750ms ease-in-out }
+
+.fadeOpacity-enter-active { transition: opacity 1s ease-out;}
+.fadeOpacity-enter, .fadeOpacity-leave-active {opacity: 0;}
 
 h1, h2 {
   font-weight: normal;

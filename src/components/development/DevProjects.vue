@@ -5,7 +5,7 @@
 
     <div class="tile is-ancestor">
       <div v-for="project in projectsRowOne" class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
+        <article class="tile is-child">
           <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
           <figure class="image is-16by9">
             <img :src="project.image" alt="Project Image">
@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <div class="tile is-ancestor">
+    <!-- <div class="tile is-ancestor">
       <div v-for="project in projectsRowTwo" class="tile is-5 is-parent">
-        <article class="tile is-child box border-solid">
+        <article class="tile is-child">
           <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
           <figure class="image is-16by9">
             <img :src="project.image" alt="Project Image">
@@ -29,7 +29,7 @@
           </ul>
         </article>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -102,11 +102,14 @@ figure.image {
 .projects-container {
   margin-bottom: 2em;
   width: 75%;
+  min-height: 30em;
+  top: 5em;
 }
 
 #show-modal {
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 1em;
-  color: #4a4a4a;
+  color: white;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
@@ -128,15 +131,19 @@ figure.image {
   border-radius: 40px;
 }
 
-.projects-container {
+.title, .subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+  font-weight: bolder;
 }
 
 .tile {
   margin: 1em;
 }
 
-.tile.is-child {
-  background-color: #ececec;
+.tile .is-ancestor {
+  margin-top: 5em;
 }
 
 .project-tile {

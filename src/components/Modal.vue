@@ -51,12 +51,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
-.description {
+.project-title, .description {
+  font-family: 'Raleway', sans-serif;
 }
 
 .project-title {
   font-size: 20px;
   font-weight: bolder;
+  text-align: center;
+  display: block;
 }
 
 .front-logos {
@@ -92,6 +95,10 @@ export default {
 	width: 70px;
 	-webkit-transition: all .1s linear;
 	transition: all .1s linear;
+}
+
+.button.cross {
+    margin: 0 10em;
 }
 
 .button:after{
@@ -162,7 +169,7 @@ figure.image {
 
 .modal-container {
   width: 35em;
-  max-height: 75vh;
+  max-height: 32.5em;
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;
@@ -170,7 +177,7 @@ figure.image {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  border: #d0772b solid 4px;
+  border: black solid 1px;
 }
 
 .modal-header h3 {

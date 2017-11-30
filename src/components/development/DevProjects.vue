@@ -2,6 +2,26 @@
   <div class="projects-container">
     <Modal v-if="showModal" :project="selectedProject" @close="deselectProject">
     </Modal>
+    <div class="flickity-container">
+      <flickity ref="flickity" :options="flickityOptions">
+        <div v-for="project in allProjects" class="carousel-cell">
+            <button id="show-modal" @click="selectProject(project)">{{project.title}}</button>
+            <figure class="image is-16by9">
+              <img :src="project.image" alt="Project Image">
+            </figure>
+            <ul class="language-icons">
+              <i v-for="logo in project.devlogos" :class="logo"></i>
+            </ul>
+        </div>
+      </flickity>
+      <div class="flick-buttons">
+        <button @click="previous()">Custom Previous Button</button>
+        <button @click="next()">Custom Next Button</button>
+      </div>
+    </div>
+
+    <!-- <Modal v-if="showModal" :project="selectedProject" @close="deselectProject">
+    </Modal>
 
     <div class="tile is-ancestor">
       <div v-for="project in projectsRowOne" class="tile is-5 is-parent">
@@ -29,12 +49,13 @@
           </ul>
         </article>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 
+import Flickity from 'vue-flickity'
 import Homerun from '@/components/development/projects/homerun'
 import Donkeyshot from '@/components/development/projects/donkeyshot'
 import Rolfportfolio from '@/components/development/projects/rolfportfolio'
@@ -48,13 +69,22 @@ export default {
     Rolfportfolio,
     Donkeyshot,
     Rjportfolio,
-    Modal
+    Modal,
+    Flickity
   },
   data () {
     return {
       component: '',
       showModal: false,
-      selectedProject: undefined
+      selectedProject: undefined,
+      flickityOptions: {
+        initialIndex: 3,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true
+
+        // any options from Flickity can be used
+      }
     }
   },
   computed: {
@@ -63,6 +93,9 @@ export default {
     },
     projectsRowTwo () {
       return this.$store.getters.devProjects.slice(3, 6)
+    },
+    allProjects () {
+      return this.$store.getters.devProjects
     }
   },
   methods: {
@@ -73,6 +106,12 @@ export default {
     deselectProject () {
       this.selectedProject = undefined
       this.showModal = false
+    },
+    next () {
+      this.$refs.flickity.next()
+    },
+    previous () {
+      this.$refs.flickity.previous()
     }
   },
   transition: 'moveIn'
@@ -81,6 +120,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.projects-container {
+  margin-top: 3em;
+}
 
 .language-icons {
   margin: 1.5em auto;
@@ -101,7 +144,22 @@ figure.image {
 
 .projects-container {
   margin-bottom: 2em;
-  width: 75%;
+  width: 100%;
+  /*min-height: 75%;*/
+}
+
+.carousel-cel {
+  height: 50em;
+  margin: 2em 5em;
+  padding: 5em;
+}
+
+.carousel-cel.is-selected {
+  /*width: 50vw;*/
+}
+
+.flick-buttons {
+  margin: 4em 35em;
 }
 
 #show-modal {

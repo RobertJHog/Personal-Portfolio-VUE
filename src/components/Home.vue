@@ -60,21 +60,6 @@ body {
   background-color: #0E0B16;
 }
 
-#main-container-dev {
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-}
-
-#main-container-sales {
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  /*background-color: #5C5857;*/
-}
-
 .loading-overlay .loading-background {
   background: #0E0B16;
 }

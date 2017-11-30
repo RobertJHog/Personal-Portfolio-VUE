@@ -2,12 +2,14 @@
   <div class="devwork-container">
     <div class="tile is-ancestor">
       <div v-for="job in devJobs" class="tile is-parent">
-        <article class="tile is-child is-2 box border-solid">
+        <article class="tile is-child is-2">
           <p class="title">{{ job.company }}</p>
           <p class="subtitle"> {{ job.job }} </p>
-          <p class="job-text"> {{ job.description1 }} </p>
-            <br><br>
-          <p class="job-text"> {{ job.description2 }} </p>
+          <div class="job-description">
+            <p class="job-text"> {{ job.description1 }} </p>
+              <br>
+            <p class="job-text"> {{ job.description2 }} </p>
+          </div>
         </article>
       </div>
     </div>
@@ -30,34 +32,42 @@ export default {
 
 .devwork-container {
   padding: 2em auto;
-  margin: 0em 7em 4em 7em;
-}
-
-.border-solid {
-  border: #d0772b solid 1px;
-  -webkit-box-shadow: 0px 7px 4px #777;
-  -moz-box-shadow: 0px 7px 4px #777;
-  box-shadow: 0px 7px 4px #777;
-  border-radius: 20px;
+  /*margin: 0em 7em 4em 7em;*/
 }
 
 .title {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  font-size: 24px;
+}
+
+.subtitle {
+  padding: 0em;
+  font-size: 20px;
+}
+
+.title, .subtitle {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+  font-weight: bolder;
 }
 
 .tile {
   margin: 2em;
   width: 20em;
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.job-description {
   opacity: .5;
-  font-size: 20px
 }
 
-.tile.is-child {
-  background-color: #ececec;
-}
-
-.tile:hover {
+.job-description:hover {
   opacity: 1;
 }
+
 
 </style>

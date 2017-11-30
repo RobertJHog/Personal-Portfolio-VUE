@@ -60,6 +60,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+#main-container-dev {
+  background-color: black;
+  // background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
+  // background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
+  // background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
+  // background-image: linear-gradient(90deg, #EBDFDF 5%, #062F4F);
+}
+
 .dev-container {
   // margin: 0 2em;
 }

@@ -49,7 +49,7 @@ export default {
   position: relative;
   font-size: 26px;
   margin-top: 1em;
-  right: 1.5em;
+  right: 5em;
 }
 
 #switch-sales {

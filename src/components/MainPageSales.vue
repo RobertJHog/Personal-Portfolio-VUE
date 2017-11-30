@@ -63,6 +63,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+#main-container-sales {
+  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
+  /*background-color: #5C5857;*/
+}
+
 /*Transitions*/
 
 .fadeOpacity-enter-active { transition: opacity 1s ease-out;}

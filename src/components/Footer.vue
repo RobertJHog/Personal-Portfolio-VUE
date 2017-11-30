@@ -3,8 +3,7 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          <strong>Vue.js app</strong> by <a href="">RJ Hogerbrugge</a>
-          <!-- <VuePower></VuePower> -->
+          <strong>Vue.js app</strong> by <a href="/intro">RJ Hogerbrugge</a>
         </p>
       </div>
     </div>

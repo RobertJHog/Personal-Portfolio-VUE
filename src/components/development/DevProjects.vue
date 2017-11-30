@@ -100,10 +100,9 @@ figure.image {
 }
 
 .projects-container {
-  margin-bottom: 2em;
   width: 75%;
   min-height: 30em;
-  top: 5em;
+  margin-top: 5em;
 }
 
 #show-modal {

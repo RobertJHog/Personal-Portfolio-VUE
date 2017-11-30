@@ -25,9 +25,9 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              <figure class="image is-16by9">
+              <!-- <figure class="image is-16by9">
                 <img :src="project.image">
-              </figure>
+              </figure> -->
               <div class="buttonHolder">
                 <button class="button cross" @click="$emit('close')">
                 </button>
@@ -169,7 +169,7 @@ figure.image {
 
 .modal-container {
   width: 35em;
-  max-height: 32.5em;
+  max-height: 12.5em;
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;

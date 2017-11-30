@@ -4,7 +4,7 @@
       <div v-for="job in devJobs" class="tile is-parent">
         <article class="tile is-child is-2">
           <p class="title">{{ job.company }}</p>
-          <p class="subtitle"> {{ job.job }} </p>
+          <p class="subtitle"> {{ job.job }} ({{job.duration }}) </p>
           <div class="job-description">
             <p class="job-text"> {{ job.description1 }} </p>
               <br>
@@ -32,7 +32,7 @@ export default {
 
 .devwork-container {
   padding: 2em auto;
-  /*margin: 0em 7em 4em 7em;*/
+  margin-bottom: 2em;
 }
 
 .title {

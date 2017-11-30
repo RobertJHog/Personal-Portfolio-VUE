@@ -1,5 +1,37 @@
 <template>
-  <div class="tile is-ancestor">
+  <div class="aboutsales-container">
+    <div class="tile is-ancestor">
+      <div class="tile is-5 is-parent">
+        <article class="tile is-child">
+          <p class="title myskills">My Skills</p>
+          <p class="subtitle skills"> Business Development </p>
+          <p class="aboutme"> Solution Selling, B2B, Tenders, Sales Management & Coaching, Telesales, Advanced Negotiations </p>
+          <p class="subtitle skills"> Account Management</p>
+          <p class="aboutme"> Corporate & Mid-market, Strategic Account Planning, Customer Service, Project Management </p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child">
+          <p class="title myname">Hello. I am Robert Jan,</p>
+            <p class="aboutme">Starting out as a sales trainee for a management consultancy firm l quickly learned the ropes of
+              cold-acquisition and lead-generation. <br><br> As an external telemarketer I have spent over a thousand hours tele
+              prospecting for multiple customers offering high end solutions in both hardware & software.
+            </p>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-ancestor">
+      <div class="tile is-11 is-parent">
+        <article class="tile is-child box">
+        </article>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="tile is-ancestor">
     <div class="tile is-parent">
       <div class="tile is-child box border-solid">
         <p class="title">Honors & Awards</p>
@@ -24,11 +56,6 @@
           prospecting for multiple customers offering high end solutions in both hardware & software.
           <br><br>
           Within two years promoted to Senior Consultant leading a team of over 10 sales trainees & junior consultants.
-        <!-- <br><br>
-          At Iron Mountain my main focus was managing customers and selling complex solutions for records management, document management & tape management
-          in the Benelux. These roles require consultative based selling involving six figure deals and prospecting on both tactical and
-          strategic level. My experience within the company has greatly improved my skills in negotiation, managing demanding internal/external
-          customers and achieving demanding targets. -->
         </p>
       </div>
     </div>
@@ -51,7 +78,7 @@
           <p class="subtitle">Risk Management</p>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -63,53 +90,80 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.im-logo {
-  bottom: 4em;
-  width: 16em;
-  margin: 0 auto;
-  border: 1px solid #d0772b;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.awards {
-  font-size: 24px;
+.aboutsales-container {
+  width: 100%;
 }
 
 .language-icons {
-  margin: 1em auto;
+  margin: 1.5em 0em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.aboutme {
-  font-size: 18px;
-  padding-top: 3em;
-  line-height: 50px;
+.language-icons .icon {
+  margin: 0em .75em;
 }
 
 .tile {
   padding: 1em;
-  margin-top: 0em;
+  text-align: center;
 }
 
-.tile.is-child {
-  background-color: #ececec;
+.tile .is-parent {
+  margin: 0 4em;
+}
+
+.transparent {
+  opacity: 0.0;
+}
+
+.box {
+  background-color: inherit;
 }
 
 .subtitle {
-  padding: .25em;
+  padding: 0em;
 }
 
 .title {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin-top: .75em;
 }
 
-.border-solid {
-  border: #697de3 solid 2px;
-  -webkit-box-shadow: 0px 7px 4px #777;
-  -moz-box-shadow: 0px 7px 4px #777;
-  box-shadow: 0px 7px 4px #777;
-  border-radius: 20px;
+.myskills {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.skills {
+  text-align: left;
+  color: white;
+}
+
+.skills-text {
+  font-size: 24px;
+  color:
+}
+
+.myname {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-align: left;
+}
+
+.aboutme {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.project-link {
+  margin-bottom: 1em;
+}
+
+.title.latest {
+  margin-bottom: 0em;
 }
 
 .image .my-pic {
@@ -118,7 +172,7 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: 1px solid #d0772b;
+  border: 1px solid #813772;
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;
@@ -130,6 +184,7 @@ export default {
 
 .project-pic img {
   border-radius: 10px;
+  /*border: 2px solid #697de3;*/
 }
 
 .image.is-16by9 {
@@ -137,25 +192,34 @@ export default {
   height: 100%;
 }
 
+p.aboutme {
+  font-size: 24px;
+  color: #8e8d8d;
+}
+
 .front-logos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*width: 20em;*/
   justify-content: center;
   margin: 2em auto;
 }
 
 .logo {
   height: 3.5em;
-  width: 3em;
+  width: 3.75em;
   display: block;
   margin: 1em 1em;
 }
 
 @media screen and (max-width:480px) {
+  .aboutsales-container {
+    height: 350vh;
+  }
+
   .logo {
-    width: 2.4em;
+    width: 3.5em;
   }
 }
+
 </style>

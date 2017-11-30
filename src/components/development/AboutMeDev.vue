@@ -36,15 +36,7 @@
 
 export default {
   name: 'AboutMeDev',
-  computed: {
-    latestProject () {
-      return this.$store.getters.latestProject
-    },
-    latestLogos () {
-      let project = this.$store.getters.latestProject
-      return project.devlogos
-    }
-  }
+  computed: {}
 }
 </script>
 

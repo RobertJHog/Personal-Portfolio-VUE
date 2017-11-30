@@ -1,32 +1,50 @@
 <template>
-    <div class="wrapper">
-      <div class="portfolio-title">
-        <h1 class="intro-name">R.J. Hogerbrugge</h1>
-      </div>
-      <div class="message">
-        <div class="level">
-          <div class="level-left">
-            <p class="control">
-              <a class="bd-tw-button button dev">
-                <span class="icon">
-                  <i class="fa fa-laptop"></i>
-                </span>
-                  <router-link class="dev-button" :to="{ path: 'Home' }" @click="goHomeDev">Web Development</router-link>
-              </a>
-            </p>
-          </div>
-          <div class="level-center">
-            <p> Welcome and make your choice. </p>
-          </div>
-          <div class="level-right">
-            <p class="control">
-              <a class="bd-tw-button button sales">
-                <span class="icon">
-                  <i class="fa fa-handshake-o"></i>
-                </span>
-                <router-link class="sales-button" :to="{ path: 'Home' }"> <span @click="goHomeSales"> Business Development </span></router-link>
-              </a>
-            </p>
+  <div class="intro-container">
+    <vue-particles
+      class="particles"
+      color="#dedede"
+      :particleOpacity="0.7"
+      :particlesNumber="80"
+      shapeType="circle"
+      :particleSize="4"
+      linesColor="#dedede"
+      :linesWidth="1"
+      :lineLinked="true"
+      :lineOpacity="0.4"
+      :linesDistance="150"
+      :moveSpeed="3"
+      :hoverEffect="true"
+      hoverMode="grab"
+      :clickEffect="true"
+      clickMode="push"
+    ></vue-particles>
+      <div class="wrapper">
+        <div class="message">
+          <div class="level">
+            <div class="level-left">
+              <p class="control">
+                <a class="bd-tw-button button dev">
+                  <span class="icon">
+                    <i class="fa fa-laptop"></i>
+                  </span>
+                    <router-link class="dev-button" :to="{ path: 'Home' }" @click="goHomeDev">Web Development</router-link>
+                </a>
+              </p>
+            </div>
+            <div class="level-center">
+              <h1 class="intro-name">R.J. Hogerbrugge</h1>
+              <p> Welcome and make your choice. </p>
+            </div>
+            <div class="level-right">
+              <p class="control">
+                <a class="bd-tw-button button sales">
+                  <span class="icon">
+                    <i class="fa fa-handshake-o"></i>
+                  </span>
+                  <router-link class="sales-button" :to="{ path: 'Home' }"> <span @click="goHomeSales"> Business Development </span></router-link>
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -83,6 +101,10 @@ div, body{
   font-family: exo, sans-serif;
 }
 
+.particles {
+  z-index: -99;
+}
+
 .wrapper {
   height: 100%;
   width: 100%;
@@ -92,14 +114,9 @@ div, body{
   margin-left: 25%;
 }
 
-.portfolio-title {
+.intro-name {
   font-family: 'Raleway', sans-serif;
-  display: relative;
-  float: left;
-  padding: 1.5em;
-  font-size: 50px;
-  color: white;
-  // font-weight: bolder;
+  font-size: 30px;
   color: #c6e3ef;
 }
 

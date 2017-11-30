@@ -3,7 +3,7 @@
     <div class="switch-container">
       <h1 id="switch-dev"> WebDev </h1>
       <label class="switch">
-        <input type="checkbox" @click="switchEnvironment" :value="salesEnvironment">
+        <input type="checkbox" data-item="checked" @change="switchEnvironment" :value="salesEnvironment">
         <span class="slider round"></span>
       </label>
       <h1 id="switch-sales"> Sales </h1>
@@ -14,15 +14,18 @@
 export default {
   name: 'SiteSwitch',
   data () {
-    return {}
+    return {
+    }
   },
   methods: {
     switchEnvironment (value) {
       console.log(this.salesEnvironment)
       if (this.salesEnvironment === true) {
         this.$store.dispatch('changeComponent', 'AboutMeSales')
+        this.$store.dispatch('setChecked', true)
       } else {
         this.$store.dispatch('changeComponent', 'AboutMeDev')
+        this.$store.dispatch('setChecked', false)
       }
       this.$store.dispatch('changeEnvironment', value)
       console.log('component CHANGE')
@@ -31,6 +34,9 @@ export default {
   computed: {
     salesEnvironment () {
       return this.$store.getters.currentEnvironment
+    },
+    checked () {
+      return this.$store.getters.checked
     }
   }
 }
@@ -78,7 +84,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: orange;
+  background-color: #813772;
   -webkit-transition: .4s;
   transition: .4s;
 }

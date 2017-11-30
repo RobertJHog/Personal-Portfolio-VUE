@@ -22,7 +22,7 @@ export default new Vuex.Store({
     projects: [
       {id: 1,
         title: 'Homerun',
-        description: 'During 4 months I have worked as a junior developer on the platform of Homerun. The main focus was transforming the main framework (Angular 1.X) into  the newest version of Vue.js. It was refactoring a lot of excisting code into the new framework',
+        description: 'During 4 months I have worked as a junior developer on the platform of Homerun. The main focus was transforming the excisting code (Angular 1.X) into  the newest version of Vue.js.',
         image: './static/images/homerun.jpg',
         siteurl: 'https://admin.homerun.co/login',
         devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon', 'vue: devicon-vuejs-plain icon', 'laravel: devicon-laravel-plain icon'] },
@@ -64,6 +64,12 @@ export default new Vuex.Store({
     ],
     activeEnvironment: [
       {id: 1, sales: false}
+    ],
+    startComponent: [
+      {id: 1, active: 'Intro'}
+    ],
+    isChecked: [
+      {id: 1, checked: false}
     ]
   },
   mutations: {
@@ -76,6 +82,19 @@ export default new Vuex.Store({
     changeComponent (state, value) {
       state.activeComponent[0].name = value
       console.log('Store component CHANGE')
+    },
+    changeStartComponent (state, value) {
+      state.startComponent[0].active = value
+      console.log('Store component CHANGE')
+    },
+    goHomeSales (state) {
+      this.dispatch('changeComponent', 'AboutMeSales')
+      this.dispatch('changeEnvironment', true)
+      this.dispatch('changeStartComponent', 'Home')
+    },
+    setChecked (state, value) {
+      state.isChecked[0].checked = value
+      console.log('Store switch checked CHANGE')
     }
   },
   actions: {
@@ -88,6 +107,22 @@ export default new Vuex.Store({
       setTimeout(() => {
         commit('changeComponent', payload)
       }, 500)
+    },
+    changeStartComponent ({commit}, payload) {
+      setTimeout(() => {
+        commit('changeStartComponent', payload)
+      }, 500)
+    },
+    goHomeSales ({commit}, payload) {
+      setTimeout(() => {
+        commit('goHomeSales', payload)
+      }, 500)
+    },
+    setChecked ({commit}, payload) {
+      setTimeout(() => {
+        commit('setChecked', payload)
+      }, 500)
+      console.log('action checked')
     }
   },
   getters: {
@@ -105,6 +140,9 @@ export default new Vuex.Store({
     },
     devJobs (state) {
       return state.devJobs
+    },
+    checked (state) {
+      return state.isChecked[0].checked
     }
   }
 })

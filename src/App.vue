@@ -1,94 +1,47 @@
 <template>
   <div id="app">
-    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
-    <NavBar></NavBar>
-        <component v-bind:is="activeContainer"></component>
-      <VFooter></VFooter>
-      <router-view/>
+    <router-view>
+      <transition name="fadeOpacity">
+        <component v-bind:is="startComponent"></component>
+      </transition>
+    </router-view>
   </div>
 </template>
 
 <script>
-import MainPageDev from '@/components/MainPageDev'
-import MainPageSales from '@/components/MainPageSales'
-import NavBar from '@/components/NavBar'
-import VFooter from '@/components/Footer'
+
+import Intro from '@/components/Intro'
+import Home from '@/components/Home'
 
 export default {
   name: 'app',
-  components: {
-    'MainPageDev': MainPageDev,
-    'MainPageSales': MainPageSales,
-    'NavBar': NavBar,
-    'VFooter': VFooter
-  },
+  components: {Intro, Home},
   data () {
     return {
-      salesComponent: false,
-      isLoading: false
+      startComponent: 'Intro'
     }
   },
-  created: function () {
-    this.openLoading()
-  },
-  computed: {
-    activeContainer () {
-      return this.$store.state.activeEnvironment[0].sales ? 'MainPageSales' : 'MainPageDev'
-    }
-  },
-  methods: {
-    openLoading () {
-      const vm = this
-      vm.isLoading = true
-      setTimeout(() => {
-        vm.isLoading = false
-      }, 1.5 * 1000)
-    }
-  }
+  methods: {},
+  transition: 'fadeOpacity'
 }
 </script>
 
 <style lang="scss">
 
-// Loadder
-// .loading-overlay .loading-icon:after {
-//   border: 2px solid #d0772b;
-// }
-
-// .loading-overlay .loading-background {
-// }
-
-body {
-  background-color: #0E0B16;
-}
-
 #app {
   font-family: 'Fjalla One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #0E0B16;
-  overflow: hidden;
 }
 
-#main-container-dev {
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #d0772b);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #d0772b);
+// Transitions
+
+.fadeOpacity-enter-active {
+  transition: opacity .35s ease-out;
 }
 
-#main-container-sales {
-  background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  background-image: linear-gradient(90deg, #EBDFDF 5%, #697de3);
-  /*background-color: #5C5857;*/
-}
-
-.loading-overlay .loading-background {
-  background: #0E0B16;
+.fadeOpacity-enter, .fadeOpacity-leave-active {
+  opacity: 0;
 }
 
 </style>

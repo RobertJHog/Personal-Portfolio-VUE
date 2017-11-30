@@ -31,8 +31,11 @@
           I lead successful projects for:
           </p>
           <p class="subtitle"> Document- & workflow management solutions </p>
+          <br>
           <p class="subtitle"> WBSO, ESF, Innovatiebox grants </p>
+          <br>
           <p class="subtitle"> Contract & Service Level Agreement managing tools </p>
+          <br>
         </article>
       </div>
     </div>
@@ -59,6 +62,7 @@ export default {
 
 .job-text {
   padding-bottom: 2em;
+  line-height: 40px;
 }
 
 .border-solid {

@@ -14,7 +14,7 @@
             </div>
           </div>
           <div class="tile is-child box border-solid">
-            <figure class="image is-1by2 project-pic">
+            <figure class="image is-16by9 project-pic">
               <img :src="latestProject.image">
             </figure>
           </div>
@@ -102,8 +102,13 @@ export default {
   padding: 1em;
 }
 
+.transparent {
+  opacity: 0.0;
+}
+
 .tile.is-child {
-  background-color: #ececec;
+  /*background-color: rgba(0,0,255,.35);*/
+  /*background-color: #EFEFEF;*/
 }
 
 .subtitle {
@@ -123,13 +128,13 @@ export default {
   margin-bottom: 0em;
 }
 
-.border-solid {
-  border: #d0772b solid 1px;
+/*.border-solid {
+  border: #B82601 solid 1px;
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
   border-radius: 20px;
-}
+}*/
 
 .image .my-pic {
   border-radius: 10px;
@@ -137,7 +142,7 @@ export default {
   width: 8em;
   float: left;
   margin: 0 auto;
-  border: 1px solid #697de3;
+  border: 1px solid #813772;
   -webkit-box-shadow: 2px 7px 4px #777;
   -moz-box-shadow: 2px 7px 4px #777;
   box-shadow: 2px 7px 4px #777;

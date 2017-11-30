@@ -2,7 +2,7 @@
     <nav class="navbar is-transparent">
       <div id="navbar-container" class="navbar-menu is-active">
         <div class="navbar-start">
-          <a class="navbar-item portfolio" @click="switchAboutMe">
+          <a class="navbar-item portfolio" @click="backHome">
             Portfolio R.J. Hogerbrugge
           </a>
           <div class="navbar-item has-dropdown is-hoverable">
@@ -92,6 +92,9 @@ export default {
       } else {
         this.$store.dispatch('changeComponent', 'DevWork')
       }
+    },
+    backHome () {
+      this.$store.dispatch('changeStartComponent', 'Home')
     }
   }
 }
@@ -100,7 +103,7 @@ export default {
 <style scoped>
 
 .navbar {
-  margin: 0 1em;
+  margin: 0 0;
   min-height: 5em;
   max-height: 5em;
   background-color: #0E0B16;

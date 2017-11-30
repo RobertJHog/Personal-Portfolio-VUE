@@ -1,21 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MainPageDev from '@/components/MainPageDev'
-import MainPageSales from '@/components/MainPageSales'
+import Home from '@/components/Home'
+import Intro from '@/components/Intro'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/dev',
-      name: 'MainPageDev',
-      component: MainPageDev
+      path: '/',
+      name: 'Intro',
+      component: Intro
     },
     {
-      path: '/sales',
-      name: 'MainPageSales',
-      component: MainPageSales
+      path: '/home',
+      name: 'Home',
+      component: Home
     }
   ]
 })

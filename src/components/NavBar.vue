@@ -2,14 +2,11 @@
     <nav class="navbar is-transparent">
       <div id="navbar-container" class="navbar-menu is-active">
         <div class="navbar-start">
-          <a class="navbar-item portfolio" @click="backHome">
-            Portfolio R.J. Hogerbrugge
-          </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link menu" href="">
+          <!-- <div class="navbar-item is-hoverable"> -->
+            <!-- <a class="navbar-link menu" href="">
               Menu
-            </a>
-            <div class="navbar-dropdown is-boxed">
+            </a> -->
+            <!-- <div class="navbar-dropdown is-boxed"> -->
               <a class="navbar-item" @click="switchAboutMe">
                 About me
               </a>
@@ -19,7 +16,7 @@
               <a class="navbar-item" @click="switchMyJobs">
                 My jobs
               </a>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
 
@@ -106,7 +103,7 @@ export default {
   margin: 0 0;
   min-height: 5em;
   max-height: 5em;
-  background-color: #0E0B16;
+  /*background-color: #0E0B16;*/
   font-size: 20px;
 }
 

@@ -87,9 +87,14 @@ export default new Vuex.Store({
       this.dispatch('changeEnvironment', true)
       this.dispatch('changeStartComponent', 'Home')
     },
+    goHomeDev (state) {
+      this.dispatch('changeComponent', 'AboutMeDev')
+      this.dispatch('changeEnvironment', false)
+      this.dispatch('changeStartComponent', 'Home')
+    },
     setChecked (state, value) {
-      state.isChecked[0].checked = value
-      console.log('Store switch checked CHANGE')
+      this.state.isChecked[0].checked = value
+      console.log('Store SET CHECKED!')
     }
   },
   actions: {

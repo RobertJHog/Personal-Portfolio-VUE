@@ -3,7 +3,7 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          <strong>Vue.js app</strong> by <a href="/intro">RJ Hogerbrugge</a>
+          <strong>Vue.js app</strong> by <a href="/">RJ Hogerbrugge</a>
         </p>
       </div>
     </div>
@@ -11,13 +11,9 @@
 </template>
 
 <script>
-import VuePower from '@/components/VuePower'
-
 export default {
   name: 'VFooter',
-  components: {
-    VuePower
-  }
+  components: {}
 }
 </script>
 

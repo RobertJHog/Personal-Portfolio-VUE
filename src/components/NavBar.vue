@@ -1,57 +1,49 @@
 <template>
     <nav class="navbar is-transparent">
-      <div id="navbar-container" class="navbar-menu is-active">
+      <div id="container" class="navbar-menu is-active">
         <div class="navbar-start">
-          <!-- <div class="navbar-item is-hoverable"> -->
-            <!-- <a class="navbar-link menu" href="">
-              Menu
-            </a> -->
-            <!-- <div class="navbar-dropdown is-boxed"> -->
-              <a class="navbar-item" @click="switchAboutMe">
-                About me
-              </a>
-              <a class="navbar-item" @click="switchMyProjects">
-                My projects
-              </a>
-              <a class="navbar-item" @click="switchMyJobs">
-                My jobs
-              </a>
-            <!-- </div> -->
-          </div>
+          <a class="navbar-item" @click="switchAboutMe">
+            About me
+          </a>
+          <a class="navbar-item" @click="switchMyProjects">
+            My projects
+          </a>
+          <a class="navbar-item" @click="switchMyJobs">
+            My jobs
+          </a>
         </div>
-
-        <div class="navbar-brand">
-          <div id="navbar-logo">
-            <SiteSwitch></SiteSwitch>
-          </div>
+      </div>
+      <div class="navbar-brand">
+        <div id="navbar-logo">
+          <SiteSwitch></SiteSwitch>
         </div>
-
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control">
-                <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
-                  <span class="icon">
-                    <i class="fa fa-github"></i>
-                  </span>
-                  <span>
-                    GitHub
-                  </span>
-                </a>
-              </p>
-              <p class="control">
-                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
-                  <span class="icon">
-                    <i class="fa fa-linkedin"></i>
-                  </span>
-                  <span>Contact Me</span>
-                </a>
-              </p>
-            </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span>
+                  GitHub
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-linkedin"></i>
+                </span>
+                <span>Contact Me</span>
+              </a>
+            </p>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -116,7 +108,7 @@ export default {
 }
 
 @media screen and (max-width:1023px) {
-  #navbar-container {
+  #container {
     background-color: #0E0B16;
     margin-bottom: 2em;
   }
@@ -171,11 +163,14 @@ export default {
 
   .navbar-start {
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
   }
 
   .navbar-dropdown {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   .navbar-link {
@@ -183,9 +178,12 @@ export default {
   }
 
   .navbar-item {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
+    flex: 1;
+    margin-right: 0em;
+    max-width: .25em;
   }
 
   a.navbar-link.menu {

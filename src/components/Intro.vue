@@ -27,7 +27,7 @@
                   <span class="icon">
                     <i class="fa fa-laptop"></i>
                   </span>
-                    <router-link class="dev-button" :to="{ path: 'Home' }" @click="goHomeDev">Web Development</router-link>
+                    <router-link class="dev-button" :to="{ path: 'Home' }" @click="goHomeDev">Proceed to portfolio</router-link>
                 </a>
               </p>
             </div>
@@ -36,14 +36,26 @@
               <p> Welcome and make your choice. </p>
             </div>
             <div class="level-right">
-              <p class="control">
-                <a class="bd-tw-button button sales">
-                  <span class="icon">
-                    <i class="fa fa-handshake-o"></i>
-                  </span>
-                  <router-link class="sales-button" :to="{ path: 'Home' }"> <span @click="goHomeSales"> Business Development </span></router-link>
-                </a>
-              </p>
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
+                    <span class="icon">
+                      <i class="fa fa-github"></i>
+                    </span>
+                    <span>
+                      GitHub
+                    </span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
+                    <span class="icon">
+                      <i class="fa fa-linkedin"></i>
+                    </span>
+                    <span>Contact Me</span>
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -63,14 +75,9 @@ export default {
   },
   methods: {
     goHomeDev () {
-      this.$store.dispatch('changeComponent', 'AboutMeDev')
-      this.$store.dispatch('changeEnvironment', false)
-      this.$store.dispatch('changeStartComponent', 'Home')
-    },
-    goHomeSales () {
-      this.$store.dispatch('goHomeSales')
-      this.$store.dispatch('setChecked', true)
-      console.log('go Home Sales Button!')
+      this.$store.dispatch('goHomeDev')
+      this.$store.dispatch('setChecked', false)
+      console.log('go Home Dev Button!')
     }
   }
 }
@@ -118,6 +125,10 @@ div, body{
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   color: #c6e3ef;
+}
+
+.level-center {
+  margin-right: 5em;
 }
 
 .message {
@@ -222,6 +233,13 @@ $corner-radius: 5px;
     background: white;
     box-shadow: 0 0 15px 3px white;
     transform: (skewX(-20deg));
+  }
+}
+
+@media screen and (max-width:480px) {
+  a.dev.button, a.sales.button {
+    font-size: 22px;
+    margin: 0 auto;
   }
 }
 

@@ -41,14 +41,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 
 .switch-container {
   position: relative;
   font-size: 26px;
   margin-top: 4vh;
-  right: 15vw;
+  right: 12vw;
 }
 
 #switch-sales {
@@ -123,23 +122,35 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@media screen and (max-width:1023px) {
+  .field .is-grouped {
+    margin-right: 8vw;
+  }
+}
+
 @media screen and (max-width:480px) {
+
+ .field .is-grouped {
+    margin-right: 8vw;
+  }
+
   .switch-container {
     font-size: 24px;
     margin-top: 0em;
-    left: 4em;
+    left: 10vw;
   }
 
   #switch-sales {
     position: relative;
     display: inline-block;
-    width: 3em;
+    width: 30vw;
+    text-align: center;
   }
 
   #switch-dev {
     display: inline-block;
     position: relative;
-    width: 3em;
+    width: 30vw;
   }
 
   /* The switch - the box around the slider */

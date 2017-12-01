@@ -100,7 +100,7 @@ a {
 
 @media screen and (max-width:480px) {
   .dev-container {
-    height: 300vh;
+    height: 180vh;
   }
 }
 

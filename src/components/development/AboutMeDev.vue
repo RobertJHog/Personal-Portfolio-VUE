@@ -54,7 +54,7 @@ export default {
 }
 
 .tile .is-parent {
-  margin: 0 4em;
+  margin: 0 5vw;
 }
 
 .transparent {
@@ -140,13 +140,14 @@ p.aboutme {
 }
 
 @media screen and (max-width:480px) {
-  .aboutdev-container {
-    height: 350vh;
+  .tile {
+    width: 95vw;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: left;
   }
 
-  .logo {
-    width: 3.5em;
-  }
 }
 
 </style>

@@ -138,7 +138,7 @@ figure.image {
 }
 
 .tile {
-  margin: 1em;
+  padding: 2vh 1vw;
 }
 
 .tile .is-ancestor {
@@ -152,6 +152,7 @@ figure.image {
 @media screen and (max-width:480px) {
   .projects-container {
     width: 100%;
+    margin-top: 0;
   }
 }
 

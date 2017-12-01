@@ -88,4 +88,10 @@ export default {
   margin: 1vw;
 }
 
+@media screen and (max-width:480px) {
+  .projects-container {
+    height: 220vh;
+  }
+}
+
 </style>

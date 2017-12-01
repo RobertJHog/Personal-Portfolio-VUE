@@ -102,8 +102,8 @@ button.active {
 }
 
 @media screen and (max-width:480px) {
-  .dev-container {
-    min-height: 350vh;
+  .sales-container {
+    height: 220vh;
   }
 }
 

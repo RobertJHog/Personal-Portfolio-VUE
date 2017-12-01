@@ -94,8 +94,6 @@ export default {
 .navbar {
   margin: 0 0;
   min-height: 15vh;
-  /*max-height: 5em;*/
-  /*background-color: #0E0B16;*/
   font-size: 20px;
 }
 
@@ -109,7 +107,6 @@ export default {
 
 @media screen and (max-width:1023px) {
   #container {
-    background-color: #0E0B16;
     margin-bottom: 2em;
   }
 
@@ -152,7 +149,7 @@ export default {
 
 @media screen and (max-width:480px) {
   #navbar-container {
-    background-color: #0E0B16;
+    background-color: white;
     margin-bottom: 2em;
   }
 
@@ -183,7 +180,6 @@ export default {
     border-radius: 10px;
     flex: 1;
     margin-right: 0em;
-    max-width: .25em;
   }
 
   a.navbar-link.menu {

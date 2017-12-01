@@ -229,7 +229,8 @@ figure.image {
     display: none;
   }
   .modal-container {
-    max-width: 90%;
+    width: 100vw;
+    height: 120vh;
   }
 }
 

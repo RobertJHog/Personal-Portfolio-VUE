@@ -70,5 +70,13 @@ export default {
   opacity: 1;
 }
 
+@media screen and (max-width:480px) {
+  .tile {
+    margin: 0;
+    padding: 5vw;
+    width: 90vw;
+  }
+}
+
 
 </style>

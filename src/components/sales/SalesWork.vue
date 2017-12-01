@@ -56,9 +56,9 @@ export default {
 }
 
 .tile {
-  margin: 0 2em;
+  margin: 0 1em;
   padding: 1em 0;
-  width: 20em;
+  width: 40vw;
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
   color: white;
@@ -75,11 +75,22 @@ export default {
 
 @media screen and (max-width:480px) {
   .saleswork-container {
-    top: 5em;
+    padding: 0;
+    height: 220vh;
   }
   .column {
     margin-bottom: 6em;
     width: 86vw;
+  }
+
+  .tile {
+    margin: 0 5vw;
+    padding: 1em 0;
+    width: 85vw;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: left;
   }
 }
 

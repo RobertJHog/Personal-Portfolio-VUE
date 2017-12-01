@@ -62,10 +62,11 @@ export default {
 
 #main-container-dev {
   background-color: black;
+  min-height: 100vh;
 }
 
 .dev-container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .fadeOpacity-enter-active {

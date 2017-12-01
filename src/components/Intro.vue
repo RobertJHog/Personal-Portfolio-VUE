@@ -33,7 +33,7 @@
             </div>
             <div class="level-center">
               <h1 class="intro-name">R.J. Hogerbrugge</h1>
-              <p> Welcome and make your choice. </p>
+              <p> Welcome and mind the switch.</p>
             </div>
             <div class="level-right">
               <div class="field is-grouped">

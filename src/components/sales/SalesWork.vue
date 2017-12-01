@@ -35,7 +35,7 @@ export default {
 
 .saleswork-container {
   padding: 5vh 5vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .title {

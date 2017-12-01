@@ -95,7 +95,7 @@ export default {
 
 figure.image {
   /*border: 2px solid white;*/
-  border-radius: 20px;
+  border-radius: 5px;
   overflow: hidden;
 }
 

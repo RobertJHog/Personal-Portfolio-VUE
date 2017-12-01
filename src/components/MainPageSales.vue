@@ -62,10 +62,11 @@ export default {
 
 #main-container-sales {
   background-color: #062F4F;
+  min-height: 100vh;
 }
 
 .sales-container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*Transitions*/

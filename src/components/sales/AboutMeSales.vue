@@ -20,12 +20,6 @@
         </article>
       </div>
     </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-11 is-parent">
-        <article class="tile is-child box">
-        </article>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -40,7 +34,7 @@ export default {
 
 .aboutsales-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .language-icons {

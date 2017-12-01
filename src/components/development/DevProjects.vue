@@ -153,6 +153,7 @@ figure.image {
   .projects-container {
     width: 100%;
     margin-top: 0;
+    min-height: 200vh;
   }
 }
 

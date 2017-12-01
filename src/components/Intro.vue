@@ -241,6 +241,14 @@ $corner-radius: 5px;
     font-size: 22px;
     margin: 0 auto;
   }
+
+  .level-center {
+    margin-right: 0;
+  }
+
+  .field.is-grouped {
+    margin-left: 10vw;
+  }
 }
 
 </style>

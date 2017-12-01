@@ -90,7 +90,7 @@ export default {
 
 @media screen and (max-width:480px) {
   .projects-container {
-    height: 220vh;
+    min-height: 220vh;
   }
 }
 

@@ -76,7 +76,7 @@ export default {
 @media screen and (max-width:480px) {
   .saleswork-container {
     padding: 0;
-    height: 220vh;
+    min-height: 220vh;
   }
   .column {
     margin-bottom: 6em;

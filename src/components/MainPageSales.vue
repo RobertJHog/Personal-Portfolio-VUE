@@ -103,7 +103,7 @@ button.active {
 
 @media screen and (max-width:480px) {
   .sales-container {
-    height: 220vh;
+    min-height: 220vh;
   }
 }
 

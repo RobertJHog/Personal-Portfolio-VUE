@@ -62,10 +62,6 @@ export default {
 
 #main-container-dev {
   background-color: black;
-  // background-image: -moz-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  // background-image: -webkit-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  // background-image: -ms-linear-gradient(90deg, #EBDFDF 5%, #062F4F);
-  // background-image: linear-gradient(90deg, #EBDFDF 5%, #062F4F);
 }
 
 .dev-container {
@@ -100,7 +96,7 @@ a {
 
 @media screen and (max-width:480px) {
   .dev-container {
-    height: 180vh;
+    min-height: 180vh;
   }
 }
 

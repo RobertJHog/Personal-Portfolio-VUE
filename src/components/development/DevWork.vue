@@ -76,6 +76,10 @@ export default {
     padding: 5vw;
     width: 90vw;
   }
+
+  .devwork-container {
+    min-height: 200vh;
+  }
 }
 
 

@@ -163,7 +163,7 @@ p.aboutme {
 
 @media screen and (max-width:480px) {
   .aboutsales-container {
-    height: 220vh;
+    min-height: 220vh;
   }
 
   .logo {

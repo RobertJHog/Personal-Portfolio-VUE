@@ -148,6 +148,10 @@ p.aboutme {
     text-align: left;
   }
 
+  .aboutdev-container {
+    min-height: 200vh;
+  }
+
 }
 
 </style>

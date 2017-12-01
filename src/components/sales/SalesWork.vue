@@ -34,8 +34,8 @@ export default {
 <style scoped>
 
 .saleswork-container {
-  padding: 2em auto;
-  min-height: 35em;
+  padding: 5vh 5vw;
+  height: 100vh;
 }
 
 .title {

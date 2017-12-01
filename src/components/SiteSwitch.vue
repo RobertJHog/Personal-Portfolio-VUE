@@ -14,7 +14,9 @@
 export default {
   name: 'SiteSwitch',
   data () {
-    return {}
+    return {
+      checked: 'webdev'
+    }
   },
   mounted: function () {
     this.setChecked()
@@ -45,8 +47,8 @@ export default {
 .switch-container {
   position: relative;
   font-size: 26px;
-  margin-top: .8em;
-  right: 2em;
+  margin-top: 4vh;
+  right: 15vw;
 }
 
 #switch-sales {

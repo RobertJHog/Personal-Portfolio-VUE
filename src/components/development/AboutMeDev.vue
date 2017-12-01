@@ -45,21 +45,11 @@ export default {
 
 .aboutdev-container {
   width: 100%;
-}
-
-.language-icons {
-  margin: 1.5em 0em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.language-icons .icon {
-  margin: 0em .75em;
+  height: 100vh;
 }
 
 .tile {
-  padding: 1em;
+  padding: 2vw;
   text-align: center;
 }
 
@@ -147,21 +137,6 @@ export default {
 p.aboutme {
   font-size: 24px;
   color: #8e8d8d;
-}
-
-.front-logos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2em auto;
-}
-
-.logo {
-  height: 3.5em;
-  width: 3.75em;
-  display: block;
-  margin: 1em 1em;
 }
 
 @media screen and (max-width:480px) {

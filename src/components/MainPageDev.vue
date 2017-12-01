@@ -69,7 +69,7 @@ export default {
 }
 
 .dev-container {
-  // margin: 0 2em;
+  height: 100vh;
 }
 
 .fadeOpacity-enter-active {

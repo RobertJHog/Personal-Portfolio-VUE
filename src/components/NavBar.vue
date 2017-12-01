@@ -93,8 +93,8 @@ export default {
 
 .navbar {
   margin: 0 0;
-  min-height: 5em;
-  max-height: 5em;
+  min-height: 15vh;
+  /*max-height: 5em;*/
   /*background-color: #0E0B16;*/
   font-size: 20px;
 }

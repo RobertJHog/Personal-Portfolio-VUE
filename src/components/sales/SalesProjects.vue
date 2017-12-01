@@ -35,11 +35,11 @@ export default {
 <style scoped>
 
 .projects-container {
-  min-height: 35em;
+  height: 100vh;
 }
 
 .title {
-  padding-top: 6em;
+  padding-top: 25vh;
   color: white;
   text-align: center;
 }
@@ -81,11 +81,11 @@ export default {
 }
 
 .tile {
-  margin: 1em;
+  margin: 1vw;
 }
 
 .project-tile {
-  margin: 1em;
+  margin: 1vw;
 }
 
 </style>

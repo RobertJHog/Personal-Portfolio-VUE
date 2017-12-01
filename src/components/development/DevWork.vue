@@ -31,8 +31,9 @@ export default {
 <style scoped>
 
 .devwork-container {
-  padding: 2em auto;
-  margin-bottom: 2em;
+  height: 100vh;
+  padding: 2vw auto;
+  margin-bottom: 2vh;
 }
 
 .title {
@@ -53,8 +54,8 @@ export default {
 }
 
 .tile {
-  margin: 2em;
-  width: 20em;
+  margin: 5vh;
+  width: 40vw;
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
   color: white;

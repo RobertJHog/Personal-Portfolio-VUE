@@ -64,6 +64,10 @@ export default {
   background-color: #062F4F;
 }
 
+.sales-container {
+  height: 100vh;
+}
+
 /*Transitions*/
 
 .fadeOpacity-enter-active { transition: opacity 1s ease-out;}

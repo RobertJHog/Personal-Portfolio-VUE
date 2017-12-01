@@ -21,7 +21,7 @@ export default {
 
 .footer {
   background-color: white;
-  max-height: 5vh;
+  max-height: 10vh;
 }
 
 </style>

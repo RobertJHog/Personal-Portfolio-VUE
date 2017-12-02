@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <router-view>
-      <component v-bind:is="startComponent"></component>
+      <transition name="fadeOpacity">
+        <component v-bind:is="startComponent"></component>
+      </transition>
     </router-view>
   </div>
 </template>

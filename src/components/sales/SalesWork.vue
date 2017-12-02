@@ -56,7 +56,7 @@ export default {
 }
 
 .tile {
-  margin: 5vh 1vw;
+  padding: 5vh 3vw;
   width: 35vw;
   /*font-size: 1.5em;*/
   font-family: 'Raleway', sans-serif;

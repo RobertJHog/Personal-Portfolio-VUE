@@ -18,6 +18,7 @@
       :clickEffect="true"
       clickMode="push"
     ></vue-particles>
+    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
       <div class="wrapper">
         <div class="message">
           <div class="level">
@@ -71,13 +72,25 @@ export default {
   name: 'Intro',
   components: { Home },
   data () {
-    return {}
+    return {
+      isLoading: false
+    }
+  },
+  created: function () {
+    this.openLoading()
   },
   methods: {
     goHomeDev () {
       this.$store.dispatch('goHomeDev')
       this.$store.dispatch('setChecked', false)
       console.log('go Home Dev Button!')
+    },
+    openLoading () {
+      const vm = this
+      vm.isLoading = true
+      setTimeout(() => {
+        vm.isLoading = false
+      }, 1.5 * 1000)
     }
   }
 }
@@ -105,7 +118,10 @@ body {
 div, body{
   margin: 0;
   padding: 0;
-  font-family: exo, sans-serif;
+}
+
+.loading-overlay .loading-background {
+  background: #0E0B16;
 }
 
 .particles {
@@ -113,7 +129,7 @@ div, body{
 }
 
 .wrapper {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 

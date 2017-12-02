@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar is-transparent">
-      <div id="container" class="navbar-menu is-active">
+      <div class="navbar-menu is-active">
         <div class="navbar-start">
           <a class="navbar-item" @click="switchAboutMe">
             About me
@@ -13,12 +13,10 @@
           </a>
         </div>
       </div>
-      <div class="navbar-brand">
-        <div id="navbar-logo">
-          <SiteSwitch></SiteSwitch>
-        </div>
-      </div>
       <div class="navbar-end">
+          <div id="navbar-logo">
+            <SiteSwitch></SiteSwitch>
+          </div>
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
@@ -94,34 +92,38 @@ export default {
 .navbar {
   margin: 0 0;
   min-height: 15vh;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .navbar-link {
-  margin-left: 1em;
+  margin-left: 1vw;
 }
 
 .navbar-item {
-  margin-right: 1em;
+  margin-right: 1vw;
 }
 
-@media screen and (max-width:1023px) {
-  #container {
+@media screen and (min-width: 480.1px) (max-width:1023px) {
+  #navbar-container {
+    background-color: white;
     margin-bottom: 2em;
   }
 
   .navbar {
     margin: 0 0;
-    min-height: 30vh;
   }
 
   .navbar-start {
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
   }
 
   .navbar-dropdown {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
 
   .navbar-link {
@@ -129,21 +131,19 @@ export default {
   }
 
   .navbar-item {
-    font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
+    flex: 1;
+    margin-right: 0em;
   }
 
   a.navbar-link.menu {
     display: none;
   }
 
-  .portfolio {
-    font-size: 26px;
-  }
-
   .field.is-grouped {
-    margin-left: 4em;
+    margin-left: 55vw;
+    margin-top: -4vh;
   }
 }
 
@@ -175,7 +175,7 @@ export default {
   }
 
   .navbar-item {
-    font-size: 16px;
+    /*font-size: 16px;*/
     font-weight: bold;
     border-radius: 10px;
     flex: 1;
@@ -187,11 +187,11 @@ export default {
   }
 
   .portfolio {
-    font-size: 26px;
+    /*font-size: 26px;*/
   }
 
   .field.is-grouped {
-    margin-left: 4em;
+    margin: 0 auto;
   }
 }
 

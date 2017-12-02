@@ -45,7 +45,7 @@ export default {
 
 .switch-container {
   position: relative;
-  font-size: 26px;
+  /*font-size: 26px;*/
   margin-top: 4vh;
   right: 12vw;
 }
@@ -122,9 +122,28 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media screen and (max-width:1023px) {
-  .field .is-grouped {
-    margin-right: 8vw;
+@media screen and (min-width:480.1) and (max-width:1023px) {
+  .switch-container {
+    margin-top: 2.5vh;
+    margin-left: 10vw;
+    right: 0;
+  }
+
+  #switch-sales {
+    position: relative;
+    display: inline-block;
+    width: 10vw;
+    text-align: center;
+  }
+
+  #switch-dev {
+    display: inline-block;
+    position: relative;
+    width: 10vw;
+  }
+
+  .switch {
+    top: 1vh;
   }
 }
 
@@ -135,9 +154,9 @@ input:checked + .slider:before {
   }
 
   .switch-container {
-    font-size: 24px;
-    margin-top: 0em;
-    left: 10vw;
+    /*font-size: 24px;*/
+    margin-top: 1em;
+    left: 4em;
   }
 
   #switch-sales {
@@ -161,7 +180,6 @@ input:checked + .slider:before {
     height: 34px;
     top: .25em;
   }
-
 }
 
 </style>

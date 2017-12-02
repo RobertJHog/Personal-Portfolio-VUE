@@ -1,5 +1,5 @@
 <template>
-  <div class="devwork-container">
+  <div class="devwork-container container">
     <div class="tile is-ancestor">
       <div v-for="job in devJobs" class="tile is-parent">
         <article class="tile is-child is-2">
@@ -32,18 +32,17 @@ export default {
 
 .devwork-container {
   height: 100vh;
-  padding: 2vw auto;
-  margin-bottom: 2vh;
+  margin: 0 auto;
 }
 
 .title {
   margin-bottom: 1.5em;
-  font-size: 24px;
+  /*font-size: 1.25em;*/
 }
 
 .subtitle {
   padding: 0em;
-  font-size: 20px;
+  /*font-size: 1.25em;*/
 }
 
 .title, .subtitle {
@@ -55,8 +54,8 @@ export default {
 
 .tile {
   margin: 5vh;
-  width: 40vw;
-  font-size: 24px;
+  width: 35vw;
+  /*font-size: 1.5em;*/
   font-family: 'Raleway', sans-serif;
   color: white;
   text-align: left;

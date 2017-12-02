@@ -79,7 +79,7 @@ export default {
 }
 
 .skills-text {
-  font-size: 24px;
+  /*font-size: 1.5em;*/
   color:
 }
 
@@ -129,14 +129,14 @@ export default {
 }
 
 p.aboutme {
-  font-size: 24px;
+  /*font-size: 1.5em;*/
   color: #8e8d8d;
 }
 
 @media screen and (max-width:480px) {
   .tile {
     width: 95vw;
-    font-size: 24px;
+    /*font-size: 1.5em;*/
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: left;

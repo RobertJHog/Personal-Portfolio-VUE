@@ -1,5 +1,5 @@
 <template>
-  <div class="saleswork-container">
+  <div class="saleswork-container container">
     <div class="tile is-ancestor">
       <div v-for="job in salesJobs" class="tile is-parent">
         <article class="tile is-child is-2">
@@ -40,12 +40,12 @@ export default {
 
 .title {
   margin-bottom: 1.5em;
-  font-size: 24px;
+  /*font-size: 1.5em;*/
 }
 
 .subtitle {
   padding: 0em;
-  font-size: 20px;
+  /*font-size: 1.25em;*/
 }
 
 .title, .subtitle {
@@ -56,10 +56,9 @@ export default {
 }
 
 .tile {
-  margin: 0 1em;
-  padding: 1em 0;
-  width: 40vw;
-  font-size: 24px;
+  margin: 5vh 1vw;
+  width: 35vw;
+  /*font-size: 1.5em;*/
   font-family: 'Raleway', sans-serif;
   color: white;
   text-align: left;
@@ -87,7 +86,7 @@ export default {
     margin: 0 5vw;
     padding: 1em 0;
     width: 85vw;
-    font-size: 24px;
+    /*font-size: 1.5em;*/
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: left;

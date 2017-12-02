@@ -86,7 +86,7 @@ export default {
 }
 
 .skills-text {
-  font-size: 24px;
+  /*font-size: 1.5em;*/
   color:
 }
 
@@ -136,7 +136,7 @@ export default {
 }
 
 p.aboutme {
-  font-size: 24px;
+  /*font-size: 1.5em;*/
   color: #8e8d8d;
 }
 

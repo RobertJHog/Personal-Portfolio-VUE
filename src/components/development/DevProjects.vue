@@ -100,7 +100,7 @@ figure.image {
 }
 
 .projects-container {
-  width: 75%;
+  /*width: 75%;*/
   height: 100vh;
   margin-top: 15vh;
 }
@@ -112,7 +112,7 @@ figure.image {
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1em;
   background: none;
   border: none;
 }
@@ -123,7 +123,6 @@ figure.image {
 
 .border-solid {
   border: #d0772b solid 1px;
-  /*border: #d0772b solid 4px;*/
   -webkit-box-shadow: 0px 7px 4px #777;
   -moz-box-shadow: 0px 7px 4px #777;
   box-shadow: 0px 7px 4px #777;
@@ -139,6 +138,7 @@ figure.image {
 
 .tile {
   padding: 2vh 1vw;
+  width: 32.5vw;
 }
 
 .tile .is-ancestor {

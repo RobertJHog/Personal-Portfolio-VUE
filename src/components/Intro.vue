@@ -123,7 +123,7 @@ div, body{
 
 .intro-name {
   font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  font-size: 1.875em;
   color: #c6e3ef;
 }
 
@@ -148,13 +148,13 @@ div, body{
 a.sales.button {
   background-color: #697de3;
   color: white;
-  font-size: 25px;
+  font-size: 1.563em;
 }
 
 a.dev.button {
   background-color: #062F4F;
   color: white;
-  font-size: 25px;
+  font-size: 1.563em;
 }
 
 .fa.fa-handshake-o, .fa.fa-laptop{
@@ -168,13 +168,13 @@ a.dev.button {
 .level-left, .level-right {
   font-family: 'Raleway', sans-serif;
   color: red;
-  font-size: 30px;
+  font-size: 1.75em;
   margin: 1em;
 }
 
 .level-center {
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 1.25;
   text-align: center;
 }
 
@@ -238,7 +238,7 @@ $corner-radius: 5px;
 
 @media screen and (max-width:480px) {
   a.dev.button, a.sales.button {
-    font-size: 22px;
+    font-size: 1.375;
     margin: 0 auto;
   }
 

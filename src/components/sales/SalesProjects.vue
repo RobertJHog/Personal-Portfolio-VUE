@@ -54,7 +54,7 @@ export default {
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  /*font-size: 0.875em;*/
   background: none;
   border: none;
 }

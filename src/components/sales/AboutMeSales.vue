@@ -14,8 +14,13 @@
         <article class="tile is-child">
           <p class="title myname">Hello. I am Robert Jan,</p>
             <p class="aboutme">Starting out as a sales trainee for a management consultancy firm l quickly learned the ropes of
-              cold-acquisition and lead-generation. <br><br> As an external telemarketer I have spent over a thousand hours tele
-              prospecting for multiple customers offering high end solutions in both hardware & software.
+              cold-acquisition and lead-generation. <br><br> After 4 years of deskwork I went into the fields as a business developer in information management.
+                For 6 years I closed six figure deals nationally and internationally with the biggest corporate companies in the world.
+            </p>
+            <br>
+            <p class="aboutme">
+              During that period I won a seat for the chairman's club of Iron Mountain for the top global performmers two times. Now I
+              have taken a different direction as a web developer, but I will always take my experience and sales skills with me.
             </p>
         </article>
       </div>
@@ -50,6 +55,7 @@ export default {
 
 .tile {
   padding: 2vw;
+  width: 40vw;
   text-align: center;
 }
 
@@ -99,6 +105,7 @@ export default {
 .aboutme {
   text-align: left;
   margin-bottom: 1em;
+  line-height: 35px;
 }
 
 .project-link {

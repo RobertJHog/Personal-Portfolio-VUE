@@ -14,13 +14,6 @@
             <slot name="body">
               <div class="description"> {{ project.description }} </div>
             </slot>
-            <div class="front-logos">
-              <img class="logo" src="../assets/images/logos/html5.png" alt="html logo">
-              <img class="logo" src="../assets/images/logos/css3.png" alt="Css3 logo">
-              <img class="logo" src="../assets/images/logos/javascript.png" alt="JS logo">
-              <img class="logo" src="../assets/images/logos/vue.png" alt="Vue logo">
-              <img class="logo" src="../assets/images/logos/react.png" alt="React logo">
-            </div>
           </div>
 
           <div class="modal-footer">
@@ -80,7 +73,7 @@ export default {
 
 /*Button*/
 .buttonHolder{
-  margin:5em auto;
+  margin:8em auto;
   width:400px;
 }
 
@@ -169,7 +162,7 @@ figure.image {
 
 .modal-container {
   width: 35em;
-  max-height: 12.5em;
+  height: 12.5em;
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;

@@ -37,7 +37,7 @@
               <p> Welcome and mind the switch.</p>
             </div>
             <div class="level-right">
-              <div class="field is-grouped">
+              <div class="field is-grouped socialbuttons">
                 <p class="control">
                   <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
                     <span class="icon">
@@ -120,6 +120,10 @@ div, body{
   padding: 0;
 }
 
+#intro-container {
+  // height: 300vh;
+}
+
 .loading-overlay .loading-background {
   background: #0E0B16;
 }
@@ -130,6 +134,7 @@ div, body{
 
 .wrapper {
   width: 100%;
+  height: 100%;
 }
 
 .intro-title {
@@ -158,12 +163,6 @@ div, body{
   background-color: rgba(0,0,0,0.6);
   color: #fff;
   padding: 0.5em;
-}
-
-a.sales.button {
-  background-color: #697de3;
-  color: white;
-  font-size: 1.563em;
 }
 
 a.dev.button {
@@ -251,9 +250,40 @@ $corner-radius: 5px;
   }
 }
 
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 480.1px) and (max-width:1023px) {
+  a.dev.button, a.sales.button {
+    font-size: 1.4em;
+    margin: 0 auto;
+  }
+
+  .level-center {
+    margin-right: 0;
+  }
+
+  .field.is-grouped.socialbuttons {
+    margin: 0 27vw;
+  }
+
+  .field.is-grouped.intropage {
+    margin: 0 27vw;
+  }
+
+  a.dev.button {
+    margin: 0 23vw;
+  }
+
+  .message {
+    height: 35%;
+  }
+}
+
 @media screen and (max-width:480px) {
   a.dev.button, a.sales.button {
-    font-size: 1.375;
+    font-size: 1.4em;
     margin: 0 auto;
   }
 
@@ -263,6 +293,35 @@ $corner-radius: 5px;
 
   .field.is-grouped {
     margin-left: 10vw;
+  }
+
+  .message {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width:360px) {
+  a.dev.button {
+    font-size: 1em;
+    margin: 0 auto;
+  }
+
+  .level-center {
+    margin-right: 0;
+  }
+
+  .field.is-grouped {
+    margin-left: 0;
+    font-size: 1em;
+  }
+
+  .level-right {
+    margin: .5em;
+  }
+
+  .message {
+    // bottom: 10em;
+    height: 50%;
   }
 }
 

@@ -103,6 +103,12 @@ export default {
   margin-right: 1vw;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .navbar-item {
+    margin-right: -1vw;
+  }
+}
+
 @media screen and (min-width: 480.1px) (max-width:1023px) {
   #navbar-container {
     background-color: white;
@@ -118,16 +124,6 @@ export default {
     display: flex;
     flex-direction: row;
     text-align: center;
-  }
-
-  .navbar-dropdown {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .navbar-link {
-    flex: 1;
   }
 
   .navbar-item {
@@ -164,18 +160,7 @@ export default {
     flex-direction: row;
   }
 
-  .navbar-dropdown {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .navbar-link {
-    flex: 1;
-  }
-
   .navbar-item {
-    /*font-size: 16px;*/
     font-weight: bold;
     border-radius: 10px;
     flex: 1;
@@ -191,7 +176,55 @@ export default {
   }
 
   .field.is-grouped {
+    margin: 4vh 12vw;
+  }
+}
+
+@media screen and (max-width:360px) {
+  #navbar-container {
+    background-color: white;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    margin: 0 0;
+    min-height: 30vh;
+  }
+
+  .navbar-start {
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .navbar-item {
+    /*font-size: 16px;*/
+    font-weight: bold;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 0em;
+  }
+
+  .navbar-link {
+    flex: 1;
+  }
+
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .portfolio {
+    /*font-size: 26px;*/
+  }
+
+  .field.is-grouped {
+    margin: 0 7vw;
   }
 }
 

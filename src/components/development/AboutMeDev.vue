@@ -16,10 +16,14 @@
         <article class="tile is-child">
           <p class="title myname">Hi! I am Robert Jan,</p>
             <p class="aboutme">After ten awesome years in sales and business development I
-              felt it was time for a change in my career. I applied for a traineeship
-              with Codaisseur to become a junior developer. From January until March 2017
-              I have spent over 500 hours at Codaisseur to develop my skillset as a programmer.
+              felt it was time for a change in my career. In the last year I completed an extensive 9
+              week bootcamp with Codaisseur, worked on personal projects, built sites for relatives and worked on a large platform for a startup.
             </p>
+            <br>
+            <p class="aboutme"> Now I am moving on to my next challenge as a javascript developer. My coming years are focussed on intensive learning and gaining
+              more professional experience as a front end developer with a healthy dosis of back end. Feel free to contact me for any opportunities.
+            </p>
+
         </article>
       </div>
     </div>
@@ -92,6 +96,7 @@ export default {
 .aboutme {
   text-align: left;
   margin-bottom: 1em;
+  line-height: 30px;
 }
 
 .project-link {

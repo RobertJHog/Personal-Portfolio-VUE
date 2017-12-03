@@ -46,8 +46,7 @@ export default {
 .switch-container {
   position: relative;
   /*font-size: 26px;*/
-  margin-top: 4vh;
-  right: 12vw;
+  margin: 4vh 15vw 0 15vw;
 }
 
 #switch-sales {
@@ -123,28 +122,33 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width:480.1) and (max-width:1023px) {
-  .switch-container {
-    margin-top: 2.5vh;
-    margin-left: 10vw;
-    right: 0;
-  }
 
-  #switch-sales {
-    position: relative;
-    display: inline-block;
-    width: 10vw;
-    text-align: center;
-  }
+   .field .is-grouped {
+      margin-right: 8vw;
+    }
 
-  #switch-dev {
-    display: inline-block;
-    position: relative;
-    width: 10vw;
-  }
+    .navbar-menu .is-active {
+      font-size: 22px;
+    }
 
-  .switch {
-    top: 1vh;
-  }
+    .navbar-item {
+      width: 30vw;
+    }
+
+    .switch-container {
+      font-size: 24px;
+      margin-top: 1em;
+      left: 2em;
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      top: .25em;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -153,10 +157,49 @@ input:checked + .slider:before {
     margin-right: 8vw;
   }
 
+  .navbar-menu .is-active {
+    font-size: 22px;
+  }
+
+  .switch-container {
+    font-size: 24px;
+    margin-top: 1em;
+    left: 2em;
+  }
+
+  #switch-sales {
+    position: relative;
+    display: inline-block;
+    width: 30vw;
+    text-align: center;
+  }
+
+  #switch-dev {
+    display: inline-block;
+    position: relative;
+    width: 30vw;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: .25em;
+  }
+}
+
+@media screen and (max-width:360px) {
+
+ .field .is-grouped {
+    margin-right: 8vw;
+  }
+
   .switch-container {
     /*font-size: 24px;*/
-    margin-top: 1em;
-    left: 4em;
+    margin: 1em 0;
+    left: 2em;
   }
 
   #switch-sales {

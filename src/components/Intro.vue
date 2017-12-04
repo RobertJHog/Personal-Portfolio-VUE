@@ -33,8 +33,28 @@
               </p>
             </div>
             <div class="level-center">
-              <h1 class="intro-name">R.J. Hogerbrugge</h1>
-              <p> Welcome and mind the switch.</p>
+              <!-- <h1 class="intro-name">R.J. Hogerbrugge</h1> -->
+              <h1 class="intro-name">
+                <ul id="fly-in-id" class="fly-in-text hidden">
+                  <li>R</li>
+                  <li>.</li>
+                  <li>J</li>
+                  <li>.</li>
+                  <li></li>
+                  <li>H</li>
+                  <li>o</li>
+                  <li>g</li>
+                  <li>e</li>
+                  <li>r</li>
+                  <li>b</li>
+                  <li>r</li>
+                  <li>u</li>
+                  <li>g</li>
+                  <li>g</li>
+                  <li>e</li>
+                </ul>
+              </h1>
+              <p class="switch-message"> Welcome and mind the switch.</p>
             </div>
             <div class="level-right">
               <div class="field is-grouped socialbuttons">
@@ -79,6 +99,10 @@ export default {
   created: function () {
     this.openLoading()
   },
+  mounted: function () {
+    this.openLoading()
+    this.letterAnimation()
+  },
   methods: {
     goHomeDev () {
       this.$store.dispatch('goHomeDev')
@@ -91,6 +115,11 @@ export default {
       setTimeout(() => {
         vm.isLoading = false
       }, 1.5 * 1000)
+    },
+    letterAnimation () {
+      setTimeout(function () {
+        document.getElementById('fly-in-id').classList.remove('hidden')
+      }, 2500)
     }
   }
 }
@@ -109,6 +138,48 @@ html, body{
 div, body{
   margin: 0;
   padding: 0;
+}
+
+// Flying text
+
+.fly-in-text {
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.fly-in-text li {
+  display: inline-block;
+  margin-right: 0px;
+  opacity: 1;
+  transition: all 2.5s ease;
+}
+
+.fly-in-text.hidden li {
+  opacity: 0;
+}
+
+.fly-in-text.hidden li:nth-child(1) { transform: translateX(-200px) translateY(-200px); }
+.fly-in-text.hidden li:nth-child(2) { transform: translateX(30px) translateY(100px); }
+.fly-in-text.hidden li:nth-child(3) { transform: translateX(-150px) translateY(-80px); }
+.fly-in-text.hidden li:nth-child(4) { transform: translateX(70px) translateY(150px); }
+.fly-in-text.hidden li:nth-child(5) { transform: translateX(-100px) translateY(-20px); }
+.fly-in-text.hidden li:nth-child(6) { transform: translateX(200px) translateY(80px); }
+.fly-in-text.hidden li:nth-child(7) { transform: translateX(50px) translateY(-30px); }
+.fly-in-text.hidden li:nth-child(8) { transform: translateX(-180px) translateY(-100px); }
+.fly-in-text.hidden li:nth-child(9) { transform: translateX(-50px) translateY(120px); }
+.fly-in-text.hidden li:nth-child(10) { transform: translateX(40px) translateY(110px); }
+.fly-in-text.hidden li:nth-child(11) { transform: translateX(140px) translateY(-100px); }
+.fly-in-text.hidden li:nth-child(12) { transform: translateX(-120px) translateY(70px); }
+.fly-in-text.hidden li:nth-child(13) { transform: translateX(70px) translateY(180px); }
+.fly-in-text.hidden li:nth-child(14) { transform: translateX(140px) translateY(-30px); }
+.fly-in-text.hidden li:nth-child(15) { transform: translateX(-200px) translateY(200px); }
+.fly-in-text.hidden li:nth-child(16) { transform: translateX(-90px) translateY(100px); }
+
+.switch-message {
+  margin-top: 10vh;
 }
 
 .intro-container {

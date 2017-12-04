@@ -15,7 +15,7 @@ export default {
   name: 'SiteSwitch',
   data () {
     return {
-      checked: 'webdev'
+      checked: false
     }
   },
   mounted: function () {
@@ -23,19 +23,20 @@ export default {
   },
   methods: {
     switchEnvironment (value) {
-      console.log(this.salesEnvironment)
       if (this.salesEnvironment === true) {
-        this.$store.dispatch('changeComponent', 'AboutMeSales')
-        this.$store.dispatch('setChecked', true)
+        this.$store.dispatch('changeComponent', 'AboutMeSales').then(() => {
+          this.$store.dispatch('setChecked', true)
+        })
       } else {
-        this.$store.dispatch('changeComponent', 'AboutMeDev')
-        this.$store.dispatch('setChecked', false)
+        this.$store.dispatch('changeComponent', 'AboutMeDev').then(() => {
+          this.$store.dispatch('setChecked', false)
+        })
       }
       this.$store.dispatch('changeEnvironment', value)
       console.log('component CHANGE')
     },
-    setChecked () {
-      this.checked = false
+    setChecked (value) {
+      this.checked = value
     }
   }
 }
@@ -53,12 +54,14 @@ export default {
   position: relative;
   display: inline-block;
   width: 5em;
+  text-align: right;
 }
 
 #switch-dev {
   display: inline-block;
   position: relative;
   width: 5em;
+  text-align: left;
 }
 
 /* The switch - the box around the slider */
@@ -121,6 +124,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .switch-container {
+    margin: 4vh 6vw 0 6vw;
+  }
+}
+
 @media screen and (min-width:480.1) and (max-width:1023px) {
 
    .field .is-grouped {
@@ -137,8 +146,7 @@ input:checked + .slider:before {
 
     .switch-container {
       font-size: 24px;
-      margin-top: 1em;
-      left: 2em;
+      margin: 0vh 4vw 0 4vw;
     }
 
     /* The switch - the box around the slider */

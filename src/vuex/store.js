@@ -99,30 +99,44 @@ export default new Vuex.Store({
   },
   actions: {
     changeEnvironment ({commit}, payload) {
-      setTimeout(() => {
-        commit('changeEnvironment', payload)
-      }, 500)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('changeEnvironment', payload)
+          resolve()
+        }, 500)
+      })
     },
     changeComponent ({commit}, payload) {
-      setTimeout(() => {
-        commit('changeComponent', payload)
-      }, 500)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('changeComponent', payload)
+          resolve()
+        }, 500)
+      })
     },
     changeStartComponent ({commit}, payload) {
-      setTimeout(() => {
-        commit('changeStartComponent', payload)
-      }, 500)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('changeStartComponent', payload)
+          resolve()
+        }, 500)
+      })
     },
     goHomeSales ({commit}, payload) {
-      setTimeout(() => {
-        commit('goHomeSales', payload)
-      }, 500)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('goHomeSales', payload)
+          resolve()
+        }, 500)
+      })
     },
     setChecked ({commit}, payload) {
-      setTimeout(() => {
-        commit('setChecked', payload)
-      }, 500)
-      console.log('action checked')
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('setChecked', payload)
+          resolve()
+        }, 500)
+      })
     }
   },
   getters: {

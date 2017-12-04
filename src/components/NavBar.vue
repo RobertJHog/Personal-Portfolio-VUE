@@ -103,9 +103,9 @@ export default {
   margin-right: 1vw;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
   .navbar-item {
-    margin-right: -1vw;
+    margin-right: 2vw;
   }
 }
 

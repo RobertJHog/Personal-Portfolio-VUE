@@ -51,14 +51,13 @@ export default {
 
 <style lang="scss" scoped>
 
-.fadeOpacity-enter-active .fadeOpacity-leave-active {
-   transition: opacity 1.5s ease-in;
+.fadeOpacity-enter-active {
+   transition: opacity .5s ease-in;
  }
 
 .fadeOpacity-enter, .fadeOpacity-leave-active {
   opacity: 0;
 }
-
 
 .loading-overlay .loading-background {
   background: #0E0B16;

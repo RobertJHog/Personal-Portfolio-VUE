@@ -20,11 +20,6 @@ export default {
   },
   methods: {
     switchEnvironment (value) {
-      if (this.salesEnvironment === true) {
-        this.$store.dispatch('changeComponent', 'AboutMeSales')
-      } else {
-        this.$store.dispatch('changeComponent', 'AboutMeDev')
-      }
       this.$store.dispatch('changeEnvironment', value)
       console.log('component CHANGE')
     }
@@ -36,8 +31,6 @@ export default {
 
 .switch-container {
   position: relative;
-  /*font-size: 26px;*/
-  /*margin: 4vh 15vw 0 15vw;*/
 }
 
 #switch-sales {

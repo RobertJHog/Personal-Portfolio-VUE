@@ -1,5 +1,54 @@
 <template>
     <nav class="navbar is-transparent">
+      <div class="level">
+        <div class="level-item has-text-centered">
+            <div class="navbar-menu is-active">
+                <a class="navbar-item" @click="switchAboutMe">
+                  About me
+                </a>
+                <a class="navbar-item" @click="switchMyProjects">
+                  My projects
+                </a>
+                <a class="navbar-item" @click="switchMyJobs">
+                  My jobs
+                </a>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div id="navbar-logo">
+            <SiteSwitch></SiteSwitch>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
+                  <span class="icon">
+                    <i class="fa fa-github"></i>
+                  </span>
+                  <span>
+                    GitHub
+                  </span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
+                  <span class="icon">
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                  <span>Contact Me</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- <nav class="navbar is-transparent">
       <div class="navbar-menu is-active">
         <div class="navbar-start">
           <a class="navbar-item" @click="switchAboutMe">
@@ -41,7 +90,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
 </template>
 
 <script>
@@ -103,13 +152,13 @@ export default {
   margin-right: 1vw;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .navbar-item {
-    margin-right: 2vw;
-  }
+.level-item {
+  width: 33.33vw;
 }
 
-@media screen and (min-width: 480.1px) (max-width:1023px) {
+
+
+@media screen and (max-width:1023px) {
   #navbar-container {
     background-color: white;
     margin-bottom: 2em;
@@ -117,20 +166,7 @@ export default {
 
   .navbar {
     margin: 0 0;
-  }
-
-  .navbar-start {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-  }
-
-  .navbar-item {
-    font-weight: bold;
-    border-radius: 10px;
-    flex: 1;
-    margin-right: 0em;
+    min-height: 15vh;
   }
 
   a.navbar-link.menu {
@@ -138,10 +174,27 @@ export default {
   }
 
   .field.is-grouped {
-    margin-left: 55vw;
-    margin-top: -4vh;
+    margin: 2vh 12vw;
+  }
+
+  .level-item {
+    width: 100vw;
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-item {
+    font-weight: bold;
+    border-radius: 10px;
+    flex-basis: 33.33%;
+    margin-right: 0em;
   }
 }
+
+
 
 @media screen and (max-width:480px) {
   #navbar-container {
@@ -154,8 +207,19 @@ export default {
     min-height: 30vh;
   }
 
-  .navbar-start {
-    margin: 0 auto;
+  a.navbar-link.menu {
+    display: none;
+  }
+
+  .field.is-grouped {
+    margin: 2vh 12vw;
+  }
+
+  .level-item {
+    width: 100vw;
+  }
+
+  .navbar-menu {
     display: flex;
     flex-direction: row;
   }
@@ -163,20 +227,8 @@ export default {
   .navbar-item {
     font-weight: bold;
     border-radius: 10px;
-    flex: 1;
+    flex-basis: 33.33%;
     margin-right: 0em;
-  }
-
-  a.navbar-link.menu {
-    display: none;
-  }
-
-  .portfolio {
-    /*font-size: 26px;*/
-  }
-
-  .field.is-grouped {
-    margin: 4vh 12vw;
   }
 }
 
@@ -191,40 +243,30 @@ export default {
     min-height: 30vh;
   }
 
-  .navbar-start {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-
   .navbar-dropdown {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
 
-  .navbar-item {
-    /*font-size: 16px;*/
-    font-weight: bold;
-    border-radius: 10px;
-    flex: 1;
-    margin-right: 0em;
-  }
-
-  .navbar-link {
-    flex: 1;
-  }
-
   a.navbar-link.menu {
     display: none;
   }
 
-  .portfolio {
-    /*font-size: 26px;*/
+  .level-item {
+    width: 100vw;
   }
 
-  .field.is-grouped {
-    margin: 0 7vw;
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-item {
+    font-weight: bold;
+    border-radius: 10px;
+    flex-basis: 33.33%;
+    margin-right: 0em;
   }
 }
 

@@ -179,6 +179,7 @@ p.aboutme {
 
   .tile {
     width: 90vw;
+    padding: 2vh 2vw;
   }
 
   .tile .is-parent {

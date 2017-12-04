@@ -89,8 +89,8 @@ export default {
   }
 
   .tile {
-    margin: 0 5vw;
-    padding: 1em 0;
+    margin: 0;
+    padding: 3vh 5vw;
     width: 85vw;
     /*font-size: 1.5em;*/
     font-family: 'Raleway', sans-serif;

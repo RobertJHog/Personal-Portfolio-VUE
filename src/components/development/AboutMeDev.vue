@@ -146,6 +146,7 @@ p.aboutme {
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: left;
+    padding: 2vh 2vw;
   }
 
   .aboutdev-container {

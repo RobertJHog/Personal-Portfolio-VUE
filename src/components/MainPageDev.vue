@@ -103,7 +103,7 @@ a {
 
 @media screen and (max-width:480px) {
   .dev-container {
-    min-height: 180vh;
+    min-height: 190vh;
   }
 }
 

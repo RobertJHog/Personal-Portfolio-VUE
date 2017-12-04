@@ -1,11 +1,10 @@
 <template>
   <div class="sales-container">
-    <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
-      <div id="main-container-sales">
-        <transition name="fadeOpacity">
-          <component :is="activeComponent"></component>
-        </transition>
-      </div>
+    <div id="main-container-sales">
+      <transition name="fadeOpacity">
+        <component :is="activeComponent"></component>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -27,12 +26,8 @@ export default {
   },
   data () {
     return {
-      component: 'AboutMeSales',
-      isLoading: false
+      component: 'AboutMeSales'
     }
-  },
-  created: function () {
-    this.openLoading()
   },
   mounted:
     function () {
@@ -44,16 +39,7 @@ export default {
       return this.$store.getters.currentComponent
     }
   },
-  methods: {
-    openLoading () {
-      const vm = this
-      vm.isLoading = true
-      setTimeout(() => {
-        vm.isLoading = false
-      }, 1.5 * 1000)
-    }
-  },
-  transition: 'slide'
+  transition: 'fadeOpacity'
 }
 </script>
 
@@ -71,7 +57,10 @@ export default {
 
 /*Transitions*/
 
-.fadeOpacity-enter-active { transition: opacity 1s ease-out;}
+.fadeOpacity-enter-active {
+   transition: opacity 1s ease-in;
+ }
+
 .fadeOpacity-enter, .fadeOpacity-leave-active {opacity: 0;}
 
 h1, h2 {

@@ -82,19 +82,10 @@ export default new Vuex.Store({
       state.startComponent[0].active = value
       console.log('Store component CHANGE')
     },
-    goHomeSales (state) {
-      this.dispatch('changeComponent', 'AboutMeSales')
-      this.dispatch('changeEnvironment', true)
-      this.dispatch('changeStartComponent', 'Home')
-    },
     goHomeDev (state) {
       this.dispatch('changeComponent', 'AboutMeDev')
       this.dispatch('changeEnvironment', false)
       this.dispatch('changeStartComponent', 'Home')
-    },
-    setChecked (state, value) {
-      this.state.isChecked[0].checked = value
-      console.log('Store SET CHECKED!')
     }
   },
   actions: {
@@ -129,14 +120,6 @@ export default new Vuex.Store({
           resolve()
         }, 500)
       })
-    },
-    setChecked ({commit}, payload) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          commit('setChecked', payload)
-          resolve()
-        }, 500)
-      })
     }
   },
   getters: {
@@ -157,9 +140,6 @@ export default new Vuex.Store({
     },
     salesJobs (state) {
       return state.salesJobs
-    },
-    checked (state) {
-      return state.isChecked[0].checked
     }
   }
 })

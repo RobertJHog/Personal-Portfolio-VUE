@@ -59,6 +59,10 @@ export default {
   text-align: center;
 }
 
+.tile.is-ancestor {
+  margin-top: 0;
+}
+
 .tile .is-parent {
   margin: 0 4em;
 }

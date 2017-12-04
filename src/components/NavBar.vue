@@ -1,71 +1,25 @@
 <template>
-    <nav class="navbar is-transparent">
-      <div class="level">
-        <div class="level-item has-text-centered">
-            <div class="navbar-menu is-active">
-                <a class="navbar-item" @click="switchAboutMe">
-                  About me
-                </a>
-                <a class="navbar-item" @click="switchMyProjects">
-                  My projects
-                </a>
-                <a class="navbar-item" @click="switchMyJobs">
-                  My jobs
-                </a>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div id="navbar-logo">
-            <SiteSwitch></SiteSwitch>
+  <nav class="navbar is-transparent">
+    <div class="level">
+      <div class="level-item has-text-centered">
+          <div class="navbar-menu is-active">
+              <a class="navbar-item" @click="switchAboutMe">
+                About me
+              </a>
+              <a class="navbar-item" @click="switchMyProjects">
+                My projects
+              </a>
+              <a class="navbar-item" @click="switchMyJobs">
+                My jobs
+              </a>
           </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control">
-                <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="" target="_blank" href="https://github.com/RobertJHog">
-                  <span class="icon">
-                    <i class="fa fa-github"></i>
-                  </span>
-                  <span>
-                    GitHub
-                  </span>
-                </a>
-              </p>
-              <p class="control">
-                <a class="button contact-us" href="https://www.linkedin.com/in/robert-jan-hogerbrugge-38ab3a9/" target="_blank">
-                  <span class="icon">
-                    <i class="fa fa-linkedin"></i>
-                  </span>
-                  <span>Contact Me</span>
-                </a>
-              </p>
-            </div>
-          </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div id="navbar-logo">
+          <SiteSwitch></SiteSwitch>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
-
-    <!-- <nav class="navbar is-transparent">
-      <div class="navbar-menu is-active">
-        <div class="navbar-start">
-          <a class="navbar-item" @click="switchAboutMe">
-            About me
-          </a>
-          <a class="navbar-item" @click="switchMyProjects">
-            My projects
-          </a>
-          <a class="navbar-item" @click="switchMyJobs">
-            My jobs
-          </a>
-        </div>
-      </div>
-      <div class="navbar-end">
-          <div id="navbar-logo">
-            <SiteSwitch></SiteSwitch>
-          </div>
+      <div class="level-item has-text-centered">
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">
@@ -90,7 +44,7 @@
         </div>
       </div>
     </div>
-  </nav> -->
+  </nav>
 </template>
 
 <script>
@@ -142,6 +96,7 @@ export default {
   margin: 0 0;
   min-height: 15vh;
   /*font-size: 20px;*/
+  z-index: 9999;
 }
 
 .navbar-link {

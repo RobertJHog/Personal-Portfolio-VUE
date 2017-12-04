@@ -1,9 +1,11 @@
 <template>
   <div class="home-container">
     <b-loading :active.sync="isLoading" :canCancel="false"></b-loading>
-    <NavBar></NavBar>
-      <component v-bind:is="activeContainer"></component>
-    <VFooter></VFooter>
+      <NavBar></NavBar>
+        <transition name="fadeOpacity">
+          <component v-bind:is="activeContainer"></component>
+        </transition>
+      <VFooter></VFooter>
   </div>
 </template>
 
@@ -42,15 +44,21 @@ export default {
         vm.isLoading = false
       }, 1.5 * 1000)
     }
-  }
+  },
+  transition: 'fadeOpacity'
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-body {
-  background-color: #0E0B16;
+.fadeOpacity-enter-active .fadeOpacity-leave-active {
+   transition: opacity 1.5s ease-in;
+ }
+
+.fadeOpacity-enter, .fadeOpacity-leave-active {
+  opacity: 0;
 }
+
 
 .loading-overlay .loading-background {
   background: #0E0B16;

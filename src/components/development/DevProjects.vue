@@ -1,5 +1,6 @@
 <template>
   <div class="projects-container">
+
     <Modal v-if="showModal" :project="selectedProject" @close="deselectProject">
     </Modal>
 
@@ -16,6 +17,7 @@
         </article>
       </div>
     </div>
+
 
     <!-- <div class="tile is-ancestor">
       <div v-for="project in projectsRowTwo" class="tile is-5 is-parent">
@@ -75,7 +77,7 @@ export default {
       this.showModal = false
     }
   },
-  transition: 'moveIn'
+  transition: 'fadeOpacity'
 }
 </script>
 

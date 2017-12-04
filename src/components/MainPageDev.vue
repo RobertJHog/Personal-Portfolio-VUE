@@ -1,11 +1,10 @@
 <template>
   <div class="dev-container">
-    <b-loading :active.sync="isLoading" :canCancel="false">  </b-loading>
-      <div class="level" id="main-container-dev">
-        <transition name="fadeOpacity">
-            <component v-bind:is="activeComponent"></component>
-        </transition>
-      </div>
+    <div class="level" id="main-container-dev">
+      <transition name="fadeOpacity">
+        <component v-bind:is="activeComponent"></component>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -27,14 +26,9 @@ export default {
   },
   data () {
     return {
-      component: 'AboutMeDev',
-      isLoading: false
+      component: 'AboutMeDev'
     }
   },
-  created:
-    function () {
-      this.openLoading()
-    },
   mounted:
     function () {
       this.$store.dispatch('changeComponent', 'AboutMeDev')
@@ -42,15 +36,6 @@ export default {
   computed: {
     activeComponent () {
       return this.$store.getters.currentComponent
-    }
-  },
-  methods: {
-    openLoading () {
-      const vm = this
-      vm.isLoading = true
-      setTimeout(() => {
-        vm.isLoading = false
-      }, 1.5 * 1000)
     }
   },
   transition: 'fadeOpacity'
@@ -70,12 +55,10 @@ export default {
 }
 
 .fadeOpacity-enter-active {
-  transition: opacity 1s ease-out;
-}
+   transition: opacity 1s ease-in;
+ }
 
-.fadeOpacity-enter, .fadeOpacity-leave-active {
-  opacity: 0;
-}
+.fadeOpacity-enter, .fadeOpacity-leave-active {opacity: 0;}
 
 h1, h2 {
   font-weight: normal;

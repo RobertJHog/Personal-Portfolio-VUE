@@ -18,25 +18,15 @@ export default {
       checked: false
     }
   },
-  mounted: function () {
-    this.setChecked()
-  },
   methods: {
     switchEnvironment (value) {
       if (this.salesEnvironment === true) {
-        this.$store.dispatch('changeComponent', 'AboutMeSales').then(() => {
-          this.$store.dispatch('setChecked', true)
-        })
+        this.$store.dispatch('changeComponent', 'AboutMeSales')
       } else {
-        this.$store.dispatch('changeComponent', 'AboutMeDev').then(() => {
-          this.$store.dispatch('setChecked', false)
-        })
+        this.$store.dispatch('changeComponent', 'AboutMeDev')
       }
       this.$store.dispatch('changeEnvironment', value)
       console.log('component CHANGE')
-    },
-    setChecked (value) {
-      this.checked = value
     }
   }
 }

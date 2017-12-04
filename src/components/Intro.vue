@@ -106,22 +106,19 @@ html, body{
   height: 100%;
 }
 
-body {
-	background-image: url(../../static/images/intropicreversed.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #999;
-}
-
 div, body{
   margin: 0;
   padding: 0;
 }
 
-#intro-container {
-  // height: 300vh;
+.intro-container {
+  background-image: url(../../static/images/intropicreversed.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #999;
+  height: 100vh;
 }
 
 .loading-overlay .loading-background {
@@ -134,7 +131,6 @@ div, body{
 
 .wrapper {
   width: 100%;
-  height: 100%;
 }
 
 .intro-title {

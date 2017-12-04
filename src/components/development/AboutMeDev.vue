@@ -23,7 +23,6 @@
             <p class="aboutme"> Now I am moving on to my next challenge as a javascript developer. My coming years are focussed on intensive learning and gaining
               more professional experience as a front end developer with a healthy dosis of back end. Feel free to contact me for any opportunities.
             </p>
-
         </article>
       </div>
     </div>

@@ -162,6 +162,12 @@ p.aboutme {
   margin: 1em 1em;
 }
 
+@media screen and (max-width:1023px) {
+  .tile {
+    width: 80vw;
+  }
+}
+
 @media screen and (max-width:480px) {
   .aboutsales-container {
     min-height: 220vh;

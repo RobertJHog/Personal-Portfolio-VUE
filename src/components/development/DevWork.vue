@@ -69,6 +69,12 @@ export default {
   opacity: 1;
 }
 
+@media screen and (max-width:1023px) {
+  .tile {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width:480px) {
   .tile {
     margin: 0;

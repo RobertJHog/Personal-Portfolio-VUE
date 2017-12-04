@@ -95,6 +95,12 @@ a {
   color: #42b983;
 }
 
+@media screen and (max-width:1023px) {
+  .dev-container {
+    min-height: 220vh;
+  }
+}
+
 @media screen and (max-width:480px) {
   .dev-container {
     min-height: 180vh;

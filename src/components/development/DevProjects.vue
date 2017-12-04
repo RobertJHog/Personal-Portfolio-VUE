@@ -102,7 +102,7 @@ figure.image {
 .projects-container {
   /*width: 75%;*/
   height: 100vh;
-  margin-top: 15vh;
+  padding-top: 10vh;
 }
 
 #show-modal {
@@ -138,6 +138,7 @@ figure.image {
 
 .tile {
   padding: 2vh 1vw;
+  width: 33.33vw
 }
 
 .tile .is-ancestor {
@@ -146,6 +147,12 @@ figure.image {
 
 .project-tile {
   margin: 1em;
+}
+
+@media screen and (max-width:1023px) {
+  .tile {
+    width: 100vw;
+  }
 }
 
 @media screen and (max-width:480px) {

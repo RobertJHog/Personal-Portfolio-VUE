@@ -72,6 +72,12 @@ export default {
   opacity: 1;
 }
 
+@media screen and (max-width:1023px) {
+  .tile {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width:480px) {
   .saleswork-container {
     padding: 0;

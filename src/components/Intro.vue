@@ -408,7 +408,6 @@ $corner-radius: 5px;
 @media screen and (max-width:480px) {
   a.dev.button, a.sales.button {
     font-size: 1.4em;
-    margin: 0 auto;
   }
 
   .level-center {
@@ -422,12 +421,22 @@ $corner-radius: 5px;
   .message {
     height: 50%;
   }
+
+  #fly-in-id {
+    font-size: 1em;
+    width: 90vw;
+    bottom: 2.5em;
+  }
+
+  .switch-message {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width:360px) {
   a.dev.button {
     font-size: 1em;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .level-center {
@@ -446,6 +455,16 @@ $corner-radius: 5px;
   .message {
     // bottom: 10em;
     height: 50%;
+  }
+
+  #fly-in-id {
+    font-size: .75em;
+    width: 90vw;
+    bottom: 3.5em;
+  }
+
+  .switch-message {
+    font-size: 1.25em;
   }
 }
 

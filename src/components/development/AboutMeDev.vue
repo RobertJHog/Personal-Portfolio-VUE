@@ -5,9 +5,9 @@
         <article class="tile is-child">
           <p class="title myskills">My Skills</p>
           <p class="subtitle skills"> Front-end </p>
-          <p class="aboutme"> CSS3, Javascript, ES6, React, Vue, Angular </p>
+          <p class="aboutme"> HTML5, CSS3, Javascript(ES6), React, Vue </p>
           <p class="subtitle skills"> Back-end</p>
-          <p class="aboutme"> NodeJS, PHP, APIs, MySql, MongoDB </p>
+          <p class="aboutme"> NodeJS, ExpressJs, Ruby on Rails, MySql, MongoDB </p>
           <p class="subtitle skills"> Apps </p>
           <p class="aboutme"> React Native </p>
         </article>
@@ -76,6 +76,7 @@ export default {
   font-family: 'Raleway', sans-serif;
   color: white;
   text-align: left;
+  line-height: 35px;
 }
 
 .skills {
@@ -96,7 +97,7 @@ export default {
 .aboutme {
   text-align: left;
   margin-bottom: 1em;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 .project-link {

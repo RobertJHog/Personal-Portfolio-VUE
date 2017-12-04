@@ -170,6 +170,14 @@ p.aboutme {
   .logo {
     width: 3.5em;
   }
+
+  .tile {
+    width: 90vw;
+  }
+
+  .tile .is-parent {
+    margin: 0 2em;
+  }
 }
 
 </style>

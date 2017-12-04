@@ -138,7 +138,6 @@ figure.image {
 
 .tile {
   padding: 2vh 1vw;
-  width: 32.5vw;
 }
 
 .tile .is-ancestor {

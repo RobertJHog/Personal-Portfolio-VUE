@@ -222,6 +222,7 @@ export default {
   .navbar-menu {
     display: flex;
     flex-direction: row;
+    width: 100vw;
   }
 
   .navbar-item {
@@ -260,6 +261,7 @@ export default {
   .navbar-menu {
     display: flex;
     flex-direction: row;
+    width: 100vw;
   }
 
   .navbar-item {

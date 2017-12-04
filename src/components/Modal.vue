@@ -166,11 +166,10 @@ figure.image {
   margin: -20px auto 50px auto;
   padding: 10px 20px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  border: black solid 1px;
 }
 
 .modal-header h3 {
@@ -223,7 +222,6 @@ figure.image {
   }
   .modal-container {
     width: 100vw;
-    height: 120vh;
   }
 }
 

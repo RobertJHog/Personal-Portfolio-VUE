@@ -102,7 +102,7 @@ export default new Vuex.Store({
         setTimeout(() => {
           commit('changeComponent', payload)
           resolve()
-        }, 500)
+        }, 0)
       })
     },
     changeStartComponent ({commit}, payload) {

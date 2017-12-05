@@ -14,15 +14,19 @@ import AboutMeDev from '@/components/development/AboutMeDev'
 import DevWork from '@/components/development/DevWork'
 import DevProjects from '@/components/development/DevProjects'
 import AboutMeSales from '@/components/sales/AboutMeSales'
+import SalesWork from '@/components/sales/SalesWork'
+import SalesProjects from '@/components/sales/SalesProjects'
 
 export default {
   name: 'MainPageDev',
   components: {
     SiteSwitch,
     AboutMeDev,
-    AboutMeSales,
     DevProjects,
-    DevWork
+    DevWork,
+    AboutMeSales,
+    SalesWork,
+    SalesProjects
   },
   data () {
     return {

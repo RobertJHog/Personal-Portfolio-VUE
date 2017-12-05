@@ -151,6 +151,7 @@ div, body{
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
 }
 
 .fly-in-text li {
@@ -237,6 +238,7 @@ div, body{
 
 .switch-message {
   margin-top: 10vh;
+  text-align: center;
 }
 
 .intro-container {
@@ -271,10 +273,6 @@ div, body{
   color: #c6e3ef;
 }
 
-.level-center {
-  margin-right: 5em;
-}
-
 .message {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -307,7 +305,6 @@ a.dev.button {
   font-family: 'Raleway', sans-serif;
   color: red;
   font-size: 1.75em;
-  margin: 1em;
 }
 
 .level-center {
@@ -374,8 +371,14 @@ $corner-radius: 5px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .fly-in-text {
+    top: 45%;
+  }
 
+  .level-left .control {
+    font-size: .4em;
+  }
 }
 
 @media screen and (min-width: 480.1px) and (max-width:1023px) {
@@ -406,8 +409,13 @@ $corner-radius: 5px;
 }
 
 @media screen and (max-width:480px) {
-  a.dev.button, a.sales.button {
+  a.dev.button{
     font-size: 1.4em;
+    left: 8vw;
+  }
+
+  .level-left .control {
+    width: 100vw;
   }
 
   .level-center {
@@ -430,6 +438,44 @@ $corner-radius: 5px;
 
   .switch-message {
     font-size: 1.5em;
+  }
+
+  .intro-name {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width:420px) {
+  a.dev.button {
+    font-size: 1.25em;
+    left: 6vw;
+  }
+
+  .level-center, .level-right, .level-left {
+    margin-top: 1.5em;
+    margin-right: .8em;
+  }
+
+  .field.is-grouped {
+    margin-left: 14vw;
+  }
+
+  .message {
+    height: 50%;
+  }
+
+  #fly-in-id {
+    font-size: 1em;
+    width: 90vw;
+    bottom: 2.5em;
+  }
+
+  .switch-message {
+    font-size: 1.5em;
+  }
+
+  .intro-name {
+    font-size: 1.6em;
   }
 }
 

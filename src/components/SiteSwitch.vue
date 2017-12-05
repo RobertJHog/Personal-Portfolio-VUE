@@ -33,18 +33,19 @@ export default {
   position: relative;
 }
 
-#switch-sales {
+#switch-sales, #switch-dev {
   position: relative;
   display: inline-block;
   width: 5em;
-  text-align: right;
+  bottom: .5em
 }
 
 #switch-dev {
-  display: inline-block;
-  position: relative;
-  width: 5em;
   text-align: left;
+}
+
+#switch-sales {
+  text-align: right;
 }
 
 /* The switch - the box around the slider */
@@ -132,17 +133,16 @@ input:checked + .slider:before {
     font-size: 24px;
   }
 
-  #switch-sales {
+  #switch-sales, #switch-dev {
     position: relative;
     display: inline-block;
-    width: 30vw;
-    text-align: center;
+    width: 5em;
+    bottom: .5em
   }
 
-  #switch-dev {
-    display: inline-block;
-    position: relative;
+  #switch-sales, #switch-dev {
     width: 30vw;
+    bottom: 0;
   }
 
   /* The switch - the box around the slider */

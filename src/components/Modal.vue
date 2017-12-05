@@ -180,7 +180,7 @@ figure.image {
 
 .modal-body {
   margin: 20px 0;
-  padding: 0em;
+  padding: .25em;
 }
 
 .modal-footer {

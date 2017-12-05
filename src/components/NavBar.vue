@@ -111,6 +111,10 @@ export default {
   width: 33.33vw;
 }
 
+.navbar-menu {
+  margin-left: 5vw;
+}
+
 
 
 @media screen and (max-width:1023px) {
@@ -179,6 +183,7 @@ export default {
     display: flex;
     flex-direction: row;
     width: 100vw;
+    margin-left: 0;
   }
 
   .navbar-item {

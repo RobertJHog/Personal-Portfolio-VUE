@@ -14,6 +14,8 @@ import AboutMeSales from '@/components/sales/AboutMeSales'
 import SalesWork from '@/components/sales/SalesWork'
 import SalesProjects from '@/components/sales/SalesProjects'
 import AboutMeDev from '@/components/development/AboutMeDev'
+import DevWork from '@/components/development/DevWork'
+import DevProjects from '@/components/development/DevProjects'
 
 export default {
   name: 'MainPageSales',
@@ -22,7 +24,9 @@ export default {
     AboutMeSales,
     SalesProjects,
     SalesWork,
-    AboutMeDev
+    AboutMeDev,
+    DevWork,
+    DevProjects
   },
   data () {
     return {

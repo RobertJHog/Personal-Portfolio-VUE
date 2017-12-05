@@ -4,12 +4,12 @@
       <div class="tile is-5 is-parent">
         <article class="tile is-child">
           <p class="title myskills">My Skills</p>
-          <p class="subtitle skills"> Front-end </p>
-          <p class="aboutme"> HTML5, CSS3, Javascript(ES6), React, Vue </p>
-          <p class="subtitle skills"> Back-end</p>
-          <p class="aboutme"> NodeJS, ExpressJs, Ruby on Rails, MySql, MongoDB </p>
-          <p class="subtitle skills"> Apps </p>
-          <p class="aboutme"> React Native </p>
+          <p class="subtitle skills"> Programming Languages</p>
+          <p class="aboutme"> HTML5, CSS3, SASS, Ruby, Javascript(ES6)</p>
+          <p class="subtitle skills"> Frameworks & libraries </p>
+          <p class="aboutme"> Vue, React(native), Ruby on Rails, NodeJs, Express </p>
+          <p class="subtitle skills"> Tools and databases</p>
+          <p class="aboutme"> MySQL, MongoDB, Gulp, Webpack, Docker </p>
         </article>
       </div>
       <div class="tile is-parent">

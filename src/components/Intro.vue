@@ -140,6 +140,10 @@ div, body{
   padding: 0;
 }
 
+.particles {
+  height: 100vh;
+}
+
 // Flying text
 
 .fly-in-text {
@@ -305,6 +309,7 @@ a.dev.button {
   font-family: 'Raleway', sans-serif;
   color: red;
   font-size: 1.75em;
+  margin: 0 3vw;
 }
 
 .level-center {
@@ -314,7 +319,8 @@ a.dev.button {
 }
 
 .level-left, .level-right, .level-center {
-  margin-top: 2em;
+  margin-top: 5vh;
+  width: 33.33vw;
 }
 
 .dev-button a, .sales-button a {
@@ -406,6 +412,10 @@ $corner-radius: 5px;
   .message {
     height: 35%;
   }
+
+  .switch-message {
+    width: 100vw;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -438,6 +448,7 @@ $corner-radius: 5px;
 
   .switch-message {
     font-size: 1.5em;
+    width: 100vw;
   }
 
   .intro-name {
@@ -472,6 +483,7 @@ $corner-radius: 5px;
 
   .switch-message {
     font-size: 1.5em;
+    width: 100vw;
   }
 
   .intro-name {

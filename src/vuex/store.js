@@ -42,7 +42,7 @@ export default new Vuex.Store({
         title: 'My Portfolio',
         description: 'Using the Vue.js framework I have built my own portfolio site from the ground up. Going in my idea was to make a responsive single page application that feels like a menu and the possibility to switch between professions.',
         image: './static/images/rjhportfolio.png',
-        siteurl: 'rjhogerbrugge.herokuapp.com',
+        siteurl: '',
         devlogos: ['javascript: devicon-javascript-plain icon', 'html: devicon-html5-plain icon', 'sass: devicon-sass-plain icon', 'vue: devicon-vuejs-plain icon'] }
       // {id: 5,
       //   title: 'Future Project',

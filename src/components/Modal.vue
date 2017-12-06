@@ -216,12 +216,20 @@ figure.image {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+@media screen and (max-width:736px) and (orientation: landscape) {
+  .modal-mask {
+    display: none;
+  }
+}
+
 @media screen and (max-width:480px) {
   figure.image {
     display: none;
   }
   .modal-container {
     width: 100vw;
+    height: 35%;
   }
 }
 

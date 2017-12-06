@@ -344,15 +344,15 @@ $corner-radius: 5px;
     box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
     transition: all 0.2s ease-out;
     &:before {
-      -webkit-transform: translateX(300px) skewX(-15deg);
-      transform: translateX(300px) skewX(-15deg);
+      -webkit-transform: translateX(220px) skewX(-15deg);
+      transform: translateX(220px) skewX(-15deg);
       opacity: 0.6;
       -webkit-transition: .7s;
       transition: .7s;
     }
     &:after {
-      -webkit-transform: translateX(300px) skewX(-15deg);
-    	transform: translateX(300px) skewX(-15deg);
+      -webkit-transform: translateX(220px) skewX(-15deg);
+    	transform: translateX(220px) skewX(-15deg);
     	opacity: 1;
     	-webkit-transition: .7s;
     	transition: .7s;

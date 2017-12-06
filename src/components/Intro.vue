@@ -413,8 +413,76 @@ $corner-radius: 5px;
     height: 35%;
   }
 
+  .level-left, .level-right {
+
+  }
+
   .switch-message {
     width: 100vw;
+  }
+}
+
+@media screen and (max-width:736px) and (orientation: landscape) {
+  .intro-name {
+    top: 10em;
+  }
+
+  a.dev.button {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .level-left, .level-right {
+    margin: 0;
+  }
+
+  .fly-in-text {
+    font-size: .8em;
+    left: 70%;
+    top: 25%;
+    width: 50%;
+  }
+
+  .message {
+    height: 50vh;
+  }
+
+  .level-left, .level-right {
+    margin: .75em 0;
+  }
+
+  .level-right {
+    font-size: .6em;
+  }
+}
+
+@media screen and (max-width:600px) and (orientation: landscape) {
+  .intro-name {
+    top: 10em;
+  }
+
+  a.dev.button {
+    margin: 0;
+    font-size: .7em;
+  }
+
+  .fly-in-text {
+    font-size: .6em;
+    left: 75%;
+    top: 25%;
+    width: 50%;
+  }
+
+  .message {
+    height: 50vh;
+  }
+
+  .level-left, .level-right {
+    margin: .75em 0;
+  }
+
+  .level-right {
+    font-size: .6em;
   }
 }
 

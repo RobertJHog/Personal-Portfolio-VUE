@@ -88,6 +88,7 @@ export default {
   font-family: 'Raleway', sans-serif;
   color: white;
   text-align: left;
+  line-height: 35px;
 }
 
 .skills {
